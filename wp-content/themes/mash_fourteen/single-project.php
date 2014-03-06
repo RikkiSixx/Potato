@@ -1,3 +1,9 @@
+<?php
+/*
+Template Name: Project
+*/
+?>
+
 <?php get_header(); ?>
 
 <section id="content" role="main">
