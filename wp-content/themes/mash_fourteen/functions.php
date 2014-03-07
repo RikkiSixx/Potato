@@ -1,69 +1,74 @@
 <?php
 
 add_action( 'after_setup_theme', 'mash_fourteen_setup' );
-	function mash_fourteen_setup() {
+function mash_fourteen_setup() {
 
-		// Definitions
-		define( 'THEME_SLUG', get_template() );
-		define( 'THEME_LIBRARY', TEMPLATEPATH . '/library' );
+	// Definitions
+	define( 'THEME_SLUG', get_template() );
+	define( 'THEME_LIBRARY', TEMPLATEPATH . '/library' );
 
-		// Library files
-		// require_once( THEME_LIBRARY . '/theme-options.php');	
+	// Library files
+	require_once( THEME_LIBRARY . '/theme-options.php');	
 
-		load_theme_textdomain( 'mash_fourteen', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'mash_fourteen', get_template_directory() . '/languages' );
 
-		// Support
-		add_theme_support( 'automatic-feed-links' );
-		add_theme_support( 'post-thumbnails' );				
-		global $content_width;
-		if ( ! isset( $content_width ) ) $content_width = 640;
+	// Support
+	add_theme_support( 'automatic-feed-links' );
+	add_theme_support( 'post-thumbnails' );				
+	global $content_width;
+	if ( ! isset( $content_width ) ) $content_width = 640;
 
-		register_nav_menus(
-			array( 'main-menu' => __( 'Main Menu', 'mash_fourteen' ) )
-		);
+	register_nav_menus(
+		array( 'main-menu' => __( 'Main Menu', 'mash_fourteen' ) )
+	);
 
-		// Objects
-		add_action( 'init', 'theme_post_types_init' );
-		add_action( 'init', 'theme_taxonomies_init' );
-	}
+	// Objects
+	add_action( 'init', 'theme_post_types_init' );
+	add_action( 'init', 'theme_taxonomies_init' );
+}
 
 add_action( 'wp_enqueue_scripts', 'mash_fourteen_load_scripts' );
-	function mash_fourteen_load_scripts() {
-		wp_enqueue_script( 'jquery' );
-	}
+function mash_fourteen_load_scripts() {
+	wp_enqueue_script( 'jquery' );
+}
 
 add_action( 'comment_form_before', 'mash_fourteen_enqueue_comment_reply_script' );
-	function mash_fourteen_enqueue_comment_reply_script() {
-		if ( get_option( 'thread_comments' ) ) { 
-			wp_enqueue_script( 'comment-reply' ); 
-		}
+function mash_fourteen_enqueue_comment_reply_script() {
+	if ( get_option( 'thread_comments' ) ) { 
+		wp_enqueue_script( 'comment-reply' ); 
 	}
+}
 
 add_filter( 'the_title', 'mash_fourteen_title' );
-	function mash_fourteen_title( $title ) {
-		if ( $title == '' ) {
-			return '&rarr;';
-		} else {
-			return $title;
-		}
+function mash_fourteen_title( $title ) {
+	if ( $title == '' ) {
+		return '&rarr;';
+	} else {
+		return $title;
 	}
+}
 
 add_filter( 'wp_title', 'mash_fourteen_filter_wp_title' );
-	function mash_fourteen_filter_wp_title( $title ) {
-		return $title . esc_attr( get_bloginfo( 'name' ) );
-	}
+function mash_fourteen_filter_wp_title( $title ) {
+	return $title . esc_attr( get_bloginfo( 'name' ) );
+}
+
+add_action( 'init', 'mash_fourteen_page_excerpts' );
+function mash_fourteen_page_excerpts() {
+     add_post_type_support( 'page', 'excerpt' );
+}
 
 add_action( 'widgets_init', 'mash_fourteen_widgets_init' );
-	function mash_fourteen_widgets_init() {
-		register_sidebar( array (
-			'name' => __( 'Sidebar Widget Area', 'mash_fourteen' ),
-			'id' => 'primary-widget-area',
-			'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
-			'after_widget' => "</li>",
-			'before_title' => '<h3 class="widget-title">',
-			'after_title' => '</h3>',
-		) );
-	}
+function mash_fourteen_widgets_init() {
+	register_sidebar( array (
+		'name' => __( 'Sidebar Widget Area', 'mash_fourteen' ),
+		'id' => 'primary-widget-area',
+		'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
+		'after_widget' => "</li>",
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+	) );
+}
 
 
 
@@ -74,6 +79,8 @@ add_action( 'widgets_init', 'mash_fourteen_widgets_init' );
 ----------------------------------------*/
 
 function theme_post_types_init() {
+
+	// Project Post Type
 	register_post_type( 
 		'project',
 		array(
@@ -94,7 +101,7 @@ function theme_post_types_init() {
 			),
 			'description' => __( 'Projects are case studies of client work.', THEME_SLUG ),
 			'public' => true,
-			'menu_icon' => get_stylesheet_directory_uri() . '/img/admin-post-icon.png',
+			'menu_icon' => 'dashicons-admin-post',
 			'supports' => array( 
 				'title',
 				'editor',
@@ -113,15 +120,13 @@ function theme_post_types_init() {
 			),
 		)
 	);
+
 }
 
 
 function theme_taxonomies_init() {
 	
 }
-
-
-
 
 
 

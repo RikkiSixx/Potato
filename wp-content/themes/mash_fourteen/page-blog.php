@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Projects
+Template Name: Blog
 */
 ?>
 
@@ -10,8 +10,8 @@ Template Name: Projects
 
 	<?php                  
         $args = array(
-            'post_type' => 'project',
-            'posts_per_page' => 9
+            'post_type' => 'post',
+            'posts_per_page' => 10
         );
         query_posts( $args );
     ?>
@@ -20,16 +20,13 @@ Template Name: Projects
 
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<header class="header">
-			<h1 class="entry-title">
-				<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1> <?php edit_post_link(); ?>
+			<h1 class="entry-title"><?php the_title(); ?></h1> <?php edit_post_link(); ?>
 		</header>
 
 		<section class="entry-content">
-			<?php if ( has_post_thumbnail() ) { ?>
-				<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail(); ?></a> 
-			<?php } ?>
+			<?php if ( has_post_thumbnail() ) { the_post_thumbnail(); } ?>
 
-			<?php // the_content(); ?>
+			<?php the_content(); ?>
 
 			<div class="entry-links">
 				<?php wp_link_pages(); ?>
