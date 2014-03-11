@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<section id="content" role="main">
+<section id="content" role="main" class="grid clearfix">
 	
 	<?php
 		// Find posts in 'Projects' post type 
@@ -12,25 +12,14 @@
 		if ( have_posts() ) : while ( have_posts() ) : the_post();
 	?>
 
-	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-		<header class="header">
-			<h1 class="entry-title">
-				<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-			</h1> 
-
-			<?php edit_post_link(); ?>
-		</header>
+	<article id="post-<?php the_ID(); ?>" <?php post_class('grid__item one-third'); ?>>		
 
 		<section class="entry-content">
 			<?php if ( has_post_thumbnail() ) { ?>
-				<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
+				<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium'); ?></a>
 			<?php } ?>
 
 			<?php // the_content(); ?>
-
-			<div class="entry-links">
-				<?php wp_link_pages(); ?>
-			</div>
 		</section>
 
 	</article>

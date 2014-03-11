@@ -121,6 +121,122 @@ function theme_post_types_init() {
 		)
 	);
 
+
+	// Service Post Type
+	register_post_type( 
+		'service',
+		array(
+			'labels' => array(			
+				'name' => __( 'Services', THEME_SLUG ),
+				'singular_name' => __( 'Service', THEME_SLUG ),
+				'add_new' => __( 'Add New', THEME_SLUG ),
+				'add_new_item' => __( 'Add New Service', THEME_SLUG ),
+				'edit' => __( 'Edit', THEME_SLUG ),
+				'edit_item' => __( 'Edit Service', THEME_SLUG ),
+				'new_item' => __( 'New Service', THEME_SLUG ),
+				'view' => __( 'View Service', THEME_SLUG ),
+				'view_item' => __( 'View Service', THEME_SLUG ),
+				'search_items' => __( 'Search Services', THEME_SLUG ),
+				'not_found' => __( 'No services found', THEME_SLUG ),
+				'not_found_in_trash' => __( 'No services found in Trash', THEME_SLUG ),
+				'parent' => __( 'Parent Service', THEME_SLUG  )				
+			),
+			'description' => __( 'Services are services we provide.', THEME_SLUG ),
+			'public' => true,
+			'menu_icon' => 'dashicons-admin-post',
+			'supports' => array( 
+				'title',
+				'editor',
+				'excerpt',
+				'custom-fields',
+				'thumbnail',
+				'page-attributes',
+				'comments',
+				'trackbacks',
+				'author',
+				'revisions'
+			),
+			'taxonomies' => array( 'category' ),
+			'rewrite' => array(			
+				'slug' => __('services', THEME_SLUG),
+			),
+		)
+	);
+
+	// Testimonial Post Type
+	register_post_type( 
+		'testimonial',
+		array(
+			'labels' => array(			
+				'name' => __( 'Testimonials', THEME_SLUG ),
+				'singular_name' => __( 'Testimonial', THEME_SLUG ),
+				'add_new' => __( 'Add New', THEME_SLUG ),
+				'add_new_item' => __( 'Add New Testimonial', THEME_SLUG ),
+				'edit' => __( 'Edit', THEME_SLUG ),
+				'edit_item' => __( 'Edit Testimonial', THEME_SLUG ),
+				'new_item' => __( 'New Testimonial', THEME_SLUG ),
+				'view' => __( 'View Testimonial', THEME_SLUG ),
+				'view_item' => __( 'View Testimonial', THEME_SLUG ),
+				'search_items' => __( 'Search Testimonials', THEME_SLUG ),
+				'not_found' => __( 'No testimonial found', THEME_SLUG ),
+				'not_found_in_trash' => __( 'No testimonials found in Trash', THEME_SLUG ),
+				'parent' => __( 'Parent Testimonial', THEME_SLUG  )				
+			),
+			'description' => __( 'Testimonials are quotes from clients.', THEME_SLUG ),
+			'public' => true,
+			'menu_icon' => 'dashicons-admin-post',
+			'supports' => array( 
+				'title',
+				'editor',
+				'excerpt',
+				'custom-fields',
+				'thumbnail',
+				'page-attributes',
+				'comments',
+				'trackbacks',
+				'author',
+				'revisions'
+			),
+		)
+	);
+
+	// Person Post Type
+	register_post_type( 
+		'person',
+		array(
+			'labels' => array(			
+				'name' => __( 'Person', THEME_SLUG ),
+				'singular_name' => __( 'Person', THEME_SLUG ),
+				'add_new' => __( 'Add New', THEME_SLUG ),
+				'add_new_item' => __( 'Add New Person', THEME_SLUG ),
+				'edit' => __( 'Edit', THEME_SLUG ),
+				'edit_item' => __( 'Edit Person', THEME_SLUG ),
+				'new_item' => __( 'New Person', THEME_SLUG ),
+				'view' => __( 'View Person', THEME_SLUG ),
+				'view_item' => __( 'View Person', THEME_SLUG ),
+				'search_items' => __( 'Search People', THEME_SLUG ),
+				'not_found' => __( 'No people found', THEME_SLUG ),
+				'not_found_in_trash' => __( 'No people found in Trash', THEME_SLUG ),
+				'parent' => __( 'Parent person', THEME_SLUG  )				
+			),
+			'description' => __( '"Person" is for staff bios.', THEME_SLUG ),
+			'public' => true,
+			'menu_icon' => 'dashicons-admin-post',
+			'supports' => array( 
+				'title',
+				'editor',
+				'excerpt',
+				'custom-fields',
+				'thumbnail',
+				'page-attributes',
+				'comments',
+				'trackbacks',
+				'author',
+				'revisions'
+			),
+		)
+	);
+
 }
 
 
