@@ -50,11 +50,14 @@ function get_theme_options_value( $key ) {
 
 function get_theme_options_default() {
 	$default_options = array(
+		'phone_number' => '',
+		'contact_email' => '',
+		'address_line_1' => '',
+		'address_line_2' => '',
+		'address_line_3' => '',
 		'connect_facebook' => '',
 		'connect_twitter' => '',
-		'connect_behance' => '',
-		'phone_number' => '',
-		'contact_email' => ''
+		'connect_behance' => ''
 	);
 	return $default_options;
 }
@@ -62,11 +65,15 @@ function get_theme_options_default() {
 function theme_options_validate( $input ) {
 	$valid_options = get_theme_options_array();
 	$default_options = get_theme_options_default();
+	$valid_options['phone_number'] = wp_filter_nohtml_kses( $input['phone_number'] );
+	$valid_options['contact_email'] = wp_filter_nohtml_kses( $input['contact_email'] );
+	$valid_options['address_line_1'] = wp_filter_nohtml_kses( $input['address_line_1'] );
+	$valid_options['address_line_2'] = wp_filter_nohtml_kses( $input['address_line_2'] );
+	$valid_options['address_line_3'] = wp_filter_nohtml_kses( $input['address_line_3'] );
+
 	$valid_options['connect_facebook'] = wp_filter_nohtml_kses( $input['connect_facebook'] );
 	$valid_options['connect_twitter'] = wp_filter_nohtml_kses( $input['connect_twitter'] );	
 	$valid_options['connect_behance'] = wp_filter_nohtml_kses( $input['connect_behance'] );
-	$valid_options['phone_number'] = wp_filter_nohtml_kses( $input['phone_number'] );
-	$valid_options['contact_email'] = wp_filter_nohtml_kses( $input['contact_email'] );
 	return $valid_options;
 }
 
@@ -87,6 +94,42 @@ function theme_options_render_page() {
 			$options = get_theme_options_array();
 			$default_options = get_theme_options_default();
 			?>
+
+
+			<h3><?php _e( 'Contact Information', THEME_SLUG ); ?></h3>
+			<table class="form-table">			
+				
+				<tr valign="top"><th scope="row"><label for="<?php echo THEME_SLUG; ?>_theme_options[phone_number]"><?php _e( 'Phone Number', THEME_SLUG ); ?></label></th>
+					<td>
+						<input id="<?php echo THEME_SLUG; ?>_theme_options[phone_number]" class="regular-text" type="text" name="<?php echo THEME_SLUG; ?>_theme_options[phone_number]" value="<?php esc_attr_e( $options['phone_number'] ); ?>" />
+						<br/><small><?php _e( 'This phone number will be displayed in the CTA in the header, and in the footer.', THEME_SLUG ); ?></small>
+					</td>
+				</tr>                                                                
+				
+				<tr valign="top"><th scope="row"><label for="<?php echo THEME_SLUG; ?>_theme_options[contact_email]"><?php _e( 'Contact Email Address', THEME_SLUG ); ?></label></th>
+					<td>
+						<input id="<?php echo THEME_SLUG; ?>_theme_options[contact_email]" class="regular-text" type="text" name="<?php echo THEME_SLUG; ?>_theme_options[contact_email]" value="<?php esc_attr_e( $options['contact_email'] ); ?>" />
+						<br/><small><?php _e( 'This email address will be shown in the footer.', THEME_SLUG ); ?></small>
+					</td>
+				</tr>			
+				
+				<tr valign="top"><th scope="row"><label for="<?php echo THEME_SLUG; ?>_theme_options[address_line_1]"><?php _e( 'Contact Email Address', THEME_SLUG ); ?></label></th>
+					<td>
+						<input id="<?php echo THEME_SLUG; ?>_theme_options[address_line_1]" class="regular-text" type="text" name="<?php echo THEME_SLUG; ?>_theme_options[address_line_1]" value="<?php esc_attr_e( $options['address_line_1'] ); ?>" />
+						<br/>
+						<input id="<?php echo THEME_SLUG; ?>_theme_options[address_line_2]" class="regular-text" type="text" name="<?php echo THEME_SLUG; ?>_theme_options[address_line_2]" value="<?php esc_attr_e( $options['address_line_2'] ); ?>" />
+						<br />
+						<input id="<?php echo THEME_SLUG; ?>_theme_options[address_line_3]" class="regular-text" type="text" name="<?php echo THEME_SLUG; ?>_theme_options[address_line_3]" value="<?php esc_attr_e( $options['address_line_3'] ); ?>" />
+						<br /><small><?php _e( 'This email address will be shown in the footer.', THEME_SLUG ); ?></small>
+					</td>
+				</tr>	
+
+			</table>
+
+			<?php submit_button(); ?>
+
+
+
 			
 			<h3><?php _e( 'Social Media', THEME_SLUG ); ?></h3>
 			<table class="form-table">			
@@ -110,27 +153,9 @@ function theme_options_render_page() {
 				</tr>
 	
 			</table>
-			
-			<h3><?php _e( 'Contact Information', THEME_SLUG ); ?></h3>
-			<table class="form-table">			
-				
-				<tr valign="top"><th scope="row"><label for="<?php echo THEME_SLUG; ?>_theme_options[phone_number]"><?php _e( 'Phone Number', THEME_SLUG ); ?></label></th>
-					<td>
-						<input id="<?php echo THEME_SLUG; ?>_theme_options[phone_number]" class="regular-text" type="text" name="<?php echo THEME_SLUG; ?>_theme_options[phone_number]" value="<?php esc_attr_e( $options['phone_number'] ); ?>" />
-						<br/><small><?php _e( 'This phone number will be displayed in the CTA in the header, and in the footer.', THEME_SLUG ); ?></small>
-					</td>
-				</tr>                                                                
-				
-				<tr valign="top"><th scope="row"><label for="<?php echo THEME_SLUG; ?>_theme_options[contact_email]"><?php _e( 'Contact Email Address', THEME_SLUG ); ?></label></th>
-					<td>
-						<input id="<?php echo THEME_SLUG; ?>_theme_options[contact_email]" class="regular-text" type="text" name="<?php echo THEME_SLUG; ?>_theme_options[contact_email]" value="<?php esc_attr_e( $options['contact_email'] ); ?>" />
-						<br/><small><?php _e( 'This email address will be shown in the footer.', THEME_SLUG ); ?></small>
-					</td>
-				</tr>			
-				
-			</table>
 
 			<?php submit_button(); ?>
+			
 			
 		</form>
 	</div>

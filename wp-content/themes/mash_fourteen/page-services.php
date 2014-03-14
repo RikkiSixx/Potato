@@ -73,18 +73,19 @@ Template Name: Services
 	<?php                  
         $args = array(
             'post_type' => 'testimonial',
+            'orderby'=>'rand',
             'posts_per_page' => 1
         );
         query_posts( $args );
     ?>
 
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-	<aside class="testimonial">
-		<blockquote>
-			<?php the_content(); ?>
-			<?php the_title_attribute(); ?>
-		</blockquote>		
-	</aside>
+		<aside class="testimonial">
+			<blockquote>
+				<?php the_content(); ?>
+				<?php the_title_attribute(); ?>
+			</blockquote>		
+		</aside>
 	<?php endwhile; endif; ?>
 
 	<?php wp_reset_query(); ?>

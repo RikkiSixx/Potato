@@ -6,7 +6,7 @@ Template Name: Contact
 
 <?php get_header(); ?>
 
-<section id="content" role="main">
+<section role="main">
 	
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
@@ -15,21 +15,42 @@ Template Name: Contact
 			<h1 class="entry-title"><?php the_title(); ?></h1> <?php edit_post_link(); ?>
 		</header>
 
-		<section class="entry-content">
-			<?php if ( has_post_thumbnail() ) { the_post_thumbnail(); } ?>
+		<div class="cf grid">
+			<section class="entry-content two-thirds float--left grid__item">
+				<?php if ( has_post_thumbnail() ) { the_post_thumbnail(); } ?>
 
-			<?php the_content(); ?>
+				<?php the_content(); ?>
 
-			<div class="entry-links">
-				<?php wp_link_pages(); ?>
-			</div>
-		</section>
+				<div class="entry-links">
+					<?php wp_link_pages(); ?>
+				</div>
+			</section>
 
-	</article>
+			<aside class="grid__item one-third float--right">
+				<?php $options = get_option('mash_fourteen_theme_options'); ?>
 
-	<?php if ( ! post_password_required() ) comments_template( '', true ); ?>
+				<?php 
+					echo '<p>'.($options["address_line_1"]).'<br />'.($options["address_line_2"]).'<br />'.($options["address_line_3"]).'</p>';
+					echo '<p>'.($options["phone_number"]).'</p>';
+					echo '<p><a href='.($options["contact_email"]).'>'.($options["contact_email"]).'</a></p>'; 
+				?>			
+			</aside>
+		</div>
+	</article><!-- .grid -->
+
 	<?php endwhile; endif; ?>
 
+</section>
+
+
+<section class="cf">
+
+	<div class="map">
+		MAP
+	</div>
+
+
+	
 </section>
 
 <?php get_footer(); ?>
