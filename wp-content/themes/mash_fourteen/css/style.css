@@ -61,10 +61,73 @@ h1, h2, h3, h4, h5, h6,
   font-family: "Roboto Slab", serif;
 }
 
-/* line 14, _theme.scss */
+/* line 13, _theme.scss */
+a {
+  color: #999;
+  text-decoration: none;
+}
+/* line 16, _theme.scss */
+a:hover {
+  text-decoration: underline;
+}
+
+/* line 21, _theme.scss */
 .wrapper {
   margin: auto;
   max-width: 1100px;
+}
+
+/* line 27, _theme.scss */
+.site-header .logo {
+  background: url("../img/logo.png") 0 0 no-repeat transparent;
+  height: 62px;
+  width: 62px;
+}
+
+/* line 34, _theme.scss */
+.site-footer {
+  background: #fff200;
+}
+
+/* Non-semantic helpers */
+/* line 41, _theme.scss */
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+/* line 44, _theme.scss */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/* line 47, _theme.scss */
+.invisible {
+  visibility: hidden;
+}
+
+/* line 49, _theme.scss */
+.ir {
+  display: block;
+  border: 0;
+  text-indent: -999em;
+  overflow: hidden;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  text-align: left;
+  direction: ltr;
+}
+
+/* line 50, _theme.scss */
+.ir br {
+  display: none;
 }
 
 /*------------------------------------*\

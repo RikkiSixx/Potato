@@ -46,7 +46,7 @@ Template Name: Studio
 
 	<article>
 		<h2><?php the_title_attribute(); ?></h2>
-		<?php the_content(); ?>
+		<?php the_excerpt(); ?>
 
 		<?php if ( has_post_thumbnail() ) { the_post_thumbnail(); } ?>
 

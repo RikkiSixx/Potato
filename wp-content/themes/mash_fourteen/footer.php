@@ -2,7 +2,7 @@
 			
 		</div><!-- #container .wrapper -->
 
-		<footer class="site-footer" role="contentinfo" style="background: #f0f0f0;">
+		<footer class="site-footer" role="contentinfo">
 			<div class="wrapper">
 				<div class="cf">
 
@@ -25,10 +25,11 @@
 					</ul>
 
 					<div>
+						<?php $options = get_option('mash_fourteen_theme_options'); ?>
 						<?php 
 							echo '<p>'.($options["address_line_1"]).'<br />'.($options["address_line_2"]).'<br />'.($options["address_line_3"]).'</p>';
-							echo '<p>'.($options["phone_number"]).'</p>';
-							echo '<p><a href='.($options["contact_email"]).'>'.($options["contact_email"]).'</a></p>'; 
+							echo '<p>Telephone: '.($options["phone_number"]).'<br />';
+							echo 'Email: <a href='.($options["contact_email"]).'>'.($options["contact_email"]).'</a></p>'; 
 						?>	
 					</div>
 

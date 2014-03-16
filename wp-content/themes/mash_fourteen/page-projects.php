@@ -1,12 +1,16 @@
 <?php
 /*
-Template Name: Projects
+Template Name: Projects List
 */
 ?>
 
 <?php get_header(); ?>
 
 <section id="content" role="main">
+	
+	<header class="header">
+		<h1 class="entry-title"><?php the_title(); ?></h1>
+	</header>
 
 	<?php                  
         $args = array(

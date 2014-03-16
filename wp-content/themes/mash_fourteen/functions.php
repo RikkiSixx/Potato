@@ -205,7 +205,7 @@ function theme_post_types_init() {
 		'person',
 		array(
 			'labels' => array(			
-				'name' => __( 'Person', THEME_SLUG ),
+				'name' => __( 'People', THEME_SLUG ),
 				'singular_name' => __( 'Person', THEME_SLUG ),
 				'add_new' => __( 'Add New', THEME_SLUG ),
 				'add_new_item' => __( 'Add New Person', THEME_SLUG ),
