@@ -72,31 +72,46 @@ a:hover {
 }
 
 /* line 21, _theme.scss */
-.wrapper {
+.container {
   margin: auto;
   max-width: 1100px;
+  padding: 0 10px;
 }
 
-/* line 27, _theme.scss */
+/* line 28, _theme.scss */
 .site-header .logo {
   background: url("../img/logo.png") 0 0 no-repeat transparent;
   height: 62px;
   width: 62px;
 }
 
-/* line 34, _theme.scss */
+/* line 35, _theme.scss */
 .site-footer {
   background: #fff200;
 }
+/* line 37, _theme.scss */
+.site-footer a, .site-footer a:visited {
+  color: #333;
+}
+/* line 39, _theme.scss */
+.site-footer ul {
+  list-style: none;
+  margin-left: 0;
+}
+
+/* line 45, _theme.scss */
+.project-block {
+  float: left;
+}
 
 /* Non-semantic helpers */
-/* line 41, _theme.scss */
+/* line 52, _theme.scss */
 .hidden {
   display: none !important;
   visibility: hidden;
 }
 
-/* line 44, _theme.scss */
+/* line 55, _theme.scss */
 .visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -108,12 +123,12 @@ a:hover {
   width: 1px;
 }
 
-/* line 47, _theme.scss */
+/* line 58, _theme.scss */
 .invisible {
   visibility: hidden;
 }
 
-/* line 49, _theme.scss */
+/* line 60, _theme.scss */
 .ir {
   display: block;
   border: 0;
@@ -125,7 +140,7 @@ a:hover {
   direction: ltr;
 }
 
-/* line 50, _theme.scss */
+/* line 61, _theme.scss */
 .ir br {
   display: none;
 }

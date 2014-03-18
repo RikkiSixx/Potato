@@ -19,24 +19,20 @@
 
 	<body <?php body_class(); ?>>		
 
-		<header class="site-header" role="banner">
+		<header class="site-header wrapper" role="banner">
 
-			<div class="wrapper">
-
-				<nav id="menu" role="navigation">
-					<?php wp_nav_menu( array( 
-						'theme_location' => 'main-menu', 
-						'container' => false,
-						'menu_class' => 'nav nav--block'
-						) ); ?>
-				</nav>
-
-				<section id="branding">
-					<h1 class="logo ir"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php esc_attr_e( get_bloginfo( 'name' ), 'mash_fourteen' ); ?>" rel="home"><?php echo esc_html( get_bloginfo( 'name' ) ); ?></a></h1>
-				</section><!-- #branding -->
-
-			</div>
+			<nav id="menu" role="navigation">
+				<?php wp_nav_menu( array( 
+					'theme_location' => 'main-menu', 
+					'container' => false,
+					'menu_class' => 'nav nav--block'
+					) ); ?>
+			</nav>
+			
+			<h1 class="logo ir">
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php esc_attr_e( get_bloginfo( 'name' ), 'mash_fourteen' ); ?>" rel="home"><?php echo esc_html( get_bloginfo( 'name' ) ); ?></a>
+			</h1>
 			
 		</header>
 
-		<div id="container" class="wrapper">
+		<div class="wrapper">

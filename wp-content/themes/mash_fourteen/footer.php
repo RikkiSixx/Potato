@@ -1,15 +1,28 @@
 			<div class="clear"></div>
 			
-		</div><!-- #container .wrapper -->
+		</div><!-- .wrapper -->
 
 		<footer class="site-footer" role="contentinfo">
-			<div class="wrapper">
+			<div class="container">
 				<div class="cf">
 
 					<ul>
 						<li>
 							<h3>Recent Projects</h3>
 						</li>
+
+						<?php                  
+					        $args = array(
+					            'post_type' => 'project',
+					            'posts_per_page' => 5
+					        );
+					        query_posts( $args );
+					    ?>
+						<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+							<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li> 
+						<?php endwhile; endif; ?>
+						<?php wp_reset_query(); ?>
+						
 					</ul>
 
 					<ul>

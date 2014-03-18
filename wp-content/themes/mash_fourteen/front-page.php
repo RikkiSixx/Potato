@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<section id="content" role="main" class="grid clearfix">
+<section id="content" role="main" class="grid cf">
 	
 	<?php
 		// Find posts in 'Projects' post type 
@@ -12,7 +12,7 @@
 		if ( have_posts() ) : while ( have_posts() ) : the_post();
 	?>
 
-	<article <?php post_class('grid__item one-third'); ?>>		
+	<article class="desk-one-third grid__item project-block">		
 
 		<section class="entry-content">
 			<header class="header">
