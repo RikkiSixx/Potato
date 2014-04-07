@@ -14,7 +14,11 @@ function mash_fourteen_setup() {
 
 	// Support
 	add_theme_support( 'automatic-feed-links' );
-	add_theme_support( 'post-thumbnails' );				
+	add_theme_support( 'post-thumbnails' );		
+
+	add_image_size( 'project-sm', 393, 296, true );
+	add_image_size( 'project-lg', 776, 602, true );
+
 	global $content_width;
 	if ( ! isset( $content_width ) ) $content_width = 640;
 
@@ -241,7 +245,31 @@ function theme_post_types_init() {
 
 
 function theme_taxonomies_init() {
-	
+
+	// Service-type taxonomy
+	register_taxonomy(
+		'service-type',
+		array( 'service', 'project' ),
+		array(
+			'public' => true,
+			'hierarchical' => true,
+			'labels' => array(
+				'name' => __( 'Service Types', 'seed' ),
+				'singular_name' => __( 'Service Type', 'seed' ),
+				'search_items' => __( 'Search Service Types', 'seed' ),
+				'popular_items' => __( 'Popular Service Types', 'seed' ),
+				'all_items' => __( 'All Service Types', 'seed' ),
+				'parent_item' => __( 'Parent Service Type', 'seed' ),
+				'parent_item_colon' => __( 'Parent Service Type:', 'seed' ),
+				'edit_item' => __( 'Edit Service Type', 'seed' ),
+				'update_item' => __( 'Update Service Type', 'seed' ),
+				'add_new_item' => __( 'Add New Service Type', 'seed' ),
+				'new_item_name' => __( 'New Service Type Name', 'seed' ),
+			),
+			'rewrite' => true,
+		)
+	); 
+
 }
 
 

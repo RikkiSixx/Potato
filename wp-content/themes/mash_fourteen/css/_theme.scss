@@ -1,13 +1,53 @@
+/* 
 
-html { 
+Rik Kendell, UI developer & designer website and blog
+
+Author: Rik Kendell - @Rikki_Sixx
+Version: 2.5;
+URL: http://www.rikkendell.co.uk/
+
+CONTENTS - GLOBAL.CSS
+-----------------------------------------
+1. BASE STYLES
+2. BASE TYPOGRAPHY & LINKS
+3. GLOBAL LAYOUT & GLOBAL CUSTOM TYPOGRAPHY
+4. CUSTOM LAYOUT & TYPOGRAPHY, INC. MEDIA QUERIES
+5. BROWSER AND NON-SEMANTIC STYLING 
+
+*/
+
+/* ==========================================================================
+   1. Base styles
+   ========================================================================== */
+
+
+@import url("http://fonts.googleapis.com/css?family=Roboto:300,700|Roboto+Slab:300");
+
+/* $brand-color: #539FF4;
+$support-color: #cc0033;
+
+$brand-face: 'Open Sans', sans-serif;
+$support-face: 'Raleway', sans-serif; */
+
+body {
+	background: #fff;
+	color: #000;
 	letter-spacing: -0.05px; 
 }
 
-/* Type */
-h1, h2, h3, h4, h5, h6, 
+
+/* ==========================================================================
+   2. Base Typography & Links
+   ========================================================================== */
+
+h1, h2,  
 .alpha, .beta, .gamma, .delta, .epsilon, .zeta,
 .giga, .mega, .kilo {
 	font-family: "Roboto Slab", serif;
+}
+h3, h4, h5, h6 {
+	font-family: $base-font-family;
+	letter-spacing: 0;
 }
 
 a {
@@ -18,10 +58,15 @@ a {
 	}
 }
 
+
+/* ==========================================================================
+   3. Global layout & Typography
+   ========================================================================== */
+
 .container {
 	margin: auto;
 	max-width: 1100px;
-	padding: 0 10px;
+	padding: 1em;
 }
 
 .site-header {
@@ -31,7 +76,13 @@ a {
 		width: 62px
 	}
 }
-
+.main-menu {
+	background: #232323;
+	.nav > li {
+		display: block;
+		> a { display: block; }
+	}
+}
 .site-footer {
 	background: #fff200;
 	a, a:visited { color: #333; }
@@ -42,8 +93,72 @@ a {
 	}
 }
 
-.project-block {
-	float: left;
+.project-item {
+	background: #444;
+	margin-bottom: 10px;
+	width: 100%;
+	position: relative;
+	header {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	img {
+		@extend .mobile-image;
+	}
+
+}
+
+.mobile-image {
+	width: 100%;
+	height: auto;
+}
+.entry-content, .bio-image {
+	img {
+		@extend .mobile-image;
+	}
+}
+
+
+/* ==========================================================================
+   4. Custom layout, inc Media Queries
+   ========================================================================== */
+
+@media screen and (max-width: $lap-start) {
+
+	.site-footer .foot-item {
+		display: none;
+		&.foot-address {
+			display: inherit;
+		}
+	}
+
+}
+
+@media screen and (min-width: $lap-start) {
+	.project-item {
+		float: left;
+		width: 33%;
+	}
+
+	.bio-info {
+		float: left;
+	}
+	.bio-image {
+		float: right;
+	}
+
+	.studio-images-sm { 
+		float: left; 
+		img:first-child { margin-bottom: 1.5em; }
+	}
+	.studio-images-lg { float: right; }
+
+	.foot-item { float: left;}
+}
+
+@media screen and (min-width: $desk-start) {
+
 }
 
 

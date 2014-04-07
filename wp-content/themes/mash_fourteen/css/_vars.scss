@@ -64,7 +64,22 @@ $use-greybox:       false;
  */
 $base-font-family:  Roboto, sans-serif!default;
 
+/**
+* Responsiveness?
+* Tell inuit.css when breakpoints start, in pixels.
+*/
+$use-responsive: true;
 
+$lap-start: 640px;
+$desk-start: 860px;
+$desk-wide-start: 1024px;
+
+/* palm
+* lap
+* lap-and-up
+* portable
+* desk
+* desk-wide */
 
 
 

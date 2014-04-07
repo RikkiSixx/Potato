@@ -16,7 +16,7 @@ Template Name: Studio
 		</header>
 
 		<section class="entry-content">
-			<?php if ( has_post_thumbnail() ) { the_post_thumbnail(); } ?>
+			<?php if ( has_post_thumbnail() ) { the_post_thumbnail('project-lg'); } ?>
 
 			<?php the_content(); ?>
 
@@ -29,6 +29,14 @@ Template Name: Studio
 
 	<?php endwhile; endif; ?>
 
+	<div class="grid cf">
+		<div class="grid__item lap-and-up-one-third studio-images-sm">
+			<img src="<?php echo get_template_directory_uri(); ?>/img/studio-1.jpg" title="Studio" />
+			<img src="<?php echo get_template_directory_uri(); ?>/img/studio-1.jpg" title="Studio" />
+		</div>
+		<div class="grid__item lap-and-up-two-thirds studio-images-lg">
+			<img src="<?php echo get_template_directory_uri(); ?>/img/studio-3.jpg" title="Studio" />
+		</div>
 </section>
 
 
@@ -44,11 +52,15 @@ Template Name: Studio
 
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-	<article>
-		<h2><?php the_title_attribute(); ?></h2>
-		<?php the_excerpt(); ?>
+	<article class="cf grid bio">
+		<div class="lap-two-thirds grid__item desk-one-third bio-info">
+			<h3><?php the_title_attribute(); ?></h3>
+			<?php the_excerpt(); ?>
+		</div>
 
-		<?php if ( has_post_thumbnail() ) { the_post_thumbnail(); } ?>
+		<div class="lap-one-third grid__item desk-two-thirds bio-image">
+			<?php if ( has_post_thumbnail() ) { the_post_thumbnail('project-lg'); } ?>
+		</div>
 
 	</article>
 	<?php endwhile; endif; ?>

@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<section id="content" role="main" class="grid cf">
+<section id="content" role="main" class="project-grid cf">
 	
 	<?php
 		// Find posts in 'Projects' post type 
@@ -12,7 +12,7 @@
 		if ( have_posts() ) : while ( have_posts() ) : the_post();
 	?>
 
-	<article class="desk-one-third grid__item project-block">		
+	<article class="project-item">		
 
 		<section class="entry-content">
 			<header class="header">
@@ -22,7 +22,9 @@
 			</header>
 
 			<?php if ( has_post_thumbnail() ) { ?>
-				<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium'); ?></a>
+				<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('project-sm'); ?></a>
+			<?php } else { ?>
+				<a href="<?php the_permalink(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/placeholder-sm.jpg" width="100%" height="auto" /></a>
 			<?php } ?>
 
 			<?php // the_content(); ?>

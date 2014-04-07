@@ -6,51 +6,60 @@ Template Name: Services
 
 <?php get_header(); ?>
 
-<section id="content" role="main" class="grid">
+<section role="main">
 
-	<?php                  
-        $args = array(
-            'post_type' => 'service',
-            'posts_per_page' => 8
-        );
-        query_posts( $args );
-    ?>
-	
-	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+	<?php the_excerpt(); ?>
 
-	<article id="post-<?php the_ID(); ?>" <?php post_class('grid__item one-third'); ?>>
-		<header class="header">
-			<h1 class="entry-title">
-				<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-			</h1>
-		</header>
+	<section class="grid service-list">
 
-		<section class="entry-content">
-			<?php if ( has_post_thumbnail() ) { ?>
-				<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail(); ?></a> 
-			<?php } ?>
+		<?php                  
+	        $args = array(
+	            'post_type' => 'service',
+	            'posts_per_page' => 10,            
+            	'orderby'=> 'ID',
+    			'order' => 'asc'
+	        );
+	        query_posts( $args );
+	    ?>
+		
+		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-			<?php the_excerpt(); ?>
+		<article <?php post_class('grid__item desk-one-third'); ?>>
+			<header class="header">
+				<h1 class="entry-title">
+					<?php the_title(); ?>
+				</h1>
+			</header>
 
-			<div class="entry-links">
-				<?php wp_link_pages(); ?>
-			</div>
+			<section class="entry-content">
+				<?php if ( has_post_thumbnail() ) { ?>
+					<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail(); ?></a> 
+				<?php } ?>
 
-			<?php edit_post_link(); ?>
-		</section>
+				<?php the_excerpt(); ?>
 
-	</article>
+				<div class="entry-links">
+					<?php wp_link_pages(); ?>
+				</div>
 
-	<?php if ( ! post_password_required() ) comments_template( '', true ); ?>
-	<?php endwhile; endif; ?>
+				<?php edit_post_link(); ?>
+			</section>
 
-	<?php wp_reset_query(); ?>
+		</article>
+
+		<?php endwhile; endif; ?>
+
+		<?php wp_reset_query(); ?>
+
+	</section>
 
 </section>
 
 
 <section>
-	<h2>OUR PROCESS</h2>
+	<h2>Our Process</h2>
+
+	<p>Mash was founded in 2002 and offers creative consultancy, great design and exacting production values for every project large or small. The service we provide is personal.</p>
 	
 </section>
 

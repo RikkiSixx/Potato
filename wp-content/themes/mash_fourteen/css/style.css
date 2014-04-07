@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url(http://fonts.googleapis.com/css?family=Roboto:300,700|Roboto+Slab:300);
+@import url("http://fonts.googleapis.com/css?family=Roboto:300,700|Roboto+Slab:300");
 /*------------------------------------*\
     STYLE.CSS
 \*------------------------------------*/
@@ -42,76 +42,201 @@
 /**
 * Base font
 */
+/**
+* Responsiveness?
+* Tell inuit.css when breakpoints start, in pixels.
+*/
+/* palm
+* lap
+* lap-and-up
+* portable
+* desk
+* desk-wide */
 /*------------------------------------*\
     $CUSTOM
 \*------------------------------------*/
 /**
  * Place any of your own variables that sit on top of inuit.css here.
  */
-/* line 2, _theme.scss */
-html {
+/* 
+
+Rik Kendell, UI developer & designer website and blog
+
+Author: Rik Kendell - @Rikki_Sixx
+Version: 2.5;
+URL: http://www.rikkendell.co.uk/
+
+CONTENTS - GLOBAL.CSS
+-----------------------------------------
+1. BASE STYLES
+2. BASE TYPOGRAPHY & LINKS
+3. GLOBAL LAYOUT & GLOBAL CUSTOM TYPOGRAPHY
+4. CUSTOM LAYOUT & TYPOGRAPHY, INC. MEDIA QUERIES
+5. BROWSER AND NON-SEMANTIC STYLING 
+
+*/
+/* ==========================================================================
+   1. Base styles
+   ========================================================================== */
+/* $brand-color: #539FF4;
+$support-color: #cc0033;
+
+$brand-face: 'Open Sans', sans-serif;
+$support-face: 'Raleway', sans-serif; */
+/* line 32, _theme.scss */
+body {
+  background: #fff;
+  color: #000;
   letter-spacing: -0.05px;
 }
 
-/* Type */
-/* line 9, _theme.scss */
-h1, h2, h3, h4, h5, h6,
+/* ==========================================================================
+   2. Base Typography & Links
+   ========================================================================== */
+/* line 45, _theme.scss */
+h1, h2,
 .alpha, .beta, .gamma, .delta, .epsilon, .zeta,
 .giga, .mega, .kilo {
   font-family: "Roboto Slab", serif;
 }
 
-/* line 13, _theme.scss */
+/* line 48, _theme.scss */
+h3, h4, h5, h6 {
+  font-family: Roboto, sans-serif;
+  letter-spacing: 0;
+}
+
+/* line 53, _theme.scss */
 a {
   color: #999;
   text-decoration: none;
 }
-/* line 16, _theme.scss */
+/* line 56, _theme.scss */
 a:hover {
   text-decoration: underline;
 }
 
-/* line 21, _theme.scss */
+/* ==========================================================================
+   3. Global layout & Typography
+   ========================================================================== */
+/* line 66, _theme.scss */
 .container {
   margin: auto;
   max-width: 1100px;
-  padding: 0 10px;
+  padding: 1em;
 }
 
-/* line 28, _theme.scss */
+/* line 73, _theme.scss */
 .site-header .logo {
   background: url("../img/logo.png") 0 0 no-repeat transparent;
   height: 62px;
   width: 62px;
 }
 
-/* line 35, _theme.scss */
+/* line 79, _theme.scss */
+.main-menu {
+  background: #232323;
+}
+/* line 81, _theme.scss */
+.main-menu .nav > li {
+  display: block;
+}
+/* line 83, _theme.scss */
+.main-menu .nav > li > a {
+  display: block;
+}
+
+/* line 86, _theme.scss */
 .site-footer {
   background: #fff200;
 }
-/* line 37, _theme.scss */
+/* line 88, _theme.scss */
 .site-footer a, .site-footer a:visited {
   color: #333;
 }
-/* line 39, _theme.scss */
+/* line 90, _theme.scss */
 .site-footer ul {
   list-style: none;
   margin-left: 0;
 }
 
-/* line 45, _theme.scss */
-.project-block {
-  float: left;
+/* line 96, _theme.scss */
+.project-item {
+  background: #444;
+  margin-bottom: 10px;
+  width: 100%;
+  position: relative;
+}
+/* line 101, _theme.scss */
+.project-item header {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
+/* line 112, _theme.scss */
+.mobile-image, .project-item img, .entry-content img, .bio-image img {
+  width: 100%;
+  height: auto;
+}
+
+/* ==========================================================================
+   4. Custom layout, inc Media Queries
+   ========================================================================== */
+@media screen and (max-width: 640px) {
+  /* line 129, _theme.scss */
+  .site-footer .foot-item {
+    display: none;
+  }
+  /* line 131, _theme.scss */
+  .site-footer .foot-item.foot-address {
+    display: inherit;
+  }
+}
+@media screen and (min-width: 640px) {
+  /* line 139, _theme.scss */
+  .project-item {
+    float: left;
+    width: 33%;
+  }
+
+  /* line 144, _theme.scss */
+  .bio-info {
+    float: left;
+  }
+
+  /* line 147, _theme.scss */
+  .bio-image {
+    float: right;
+  }
+
+  /* line 151, _theme.scss */
+  .studio-images-sm {
+    float: left;
+  }
+  /* line 153, _theme.scss */
+  .studio-images-sm img:first-child {
+    margin-bottom: 1.5em;
+  }
+
+  /* line 155, _theme.scss */
+  .studio-images-lg {
+    float: right;
+  }
+
+  /* line 157, _theme.scss */
+  .foot-item {
+    float: left;
+  }
+}
 /* Non-semantic helpers */
-/* line 52, _theme.scss */
+/* line 167, _theme.scss */
 .hidden {
   display: none !important;
   visibility: hidden;
 }
 
-/* line 55, _theme.scss */
+/* line 170, _theme.scss */
 .visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -123,12 +248,12 @@ a:hover {
   width: 1px;
 }
 
-/* line 58, _theme.scss */
+/* line 173, _theme.scss */
 .invisible {
   visibility: hidden;
 }
 
-/* line 60, _theme.scss */
+/* line 175, _theme.scss */
 .ir {
   display: block;
   border: 0;
@@ -140,7 +265,7 @@ a:hover {
   direction: ltr;
 }
 
-/* line 61, _theme.scss */
+/* line 176, _theme.scss */
 .ir br {
   display: none;
 }
@@ -2324,7 +2449,7 @@ label,
  * Demo: jsfiddle.net/inuitcss/WS4Ge
  *
  */
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 639px) {
   /**
   * Whole
   */
@@ -2472,7 +2597,7 @@ label,
     width: 91.666%;
   }
 }
-@media only screen and (min-width: 481px) and (max-width: 1023px) {
+@media only screen and (min-width: 640px) and (max-width: 859px) {
   /**
   * Whole
   */
@@ -2620,7 +2745,7 @@ label,
     width: 91.666%;
   }
 }
-@media only screen and (min-width: 481px) {
+@media only screen and (min-width: 640px) {
   /**
   * Whole
   */
@@ -2768,7 +2893,7 @@ label,
     width: 91.666%;
   }
 }
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: 859px) {
   /**
   * Whole
   */
@@ -2916,7 +3041,7 @@ label,
     width: 91.666%;
   }
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 860px) {
   /**
   * Whole
   */
@@ -3479,7 +3604,7 @@ label,
   width: 1px!important;
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 639px) {
   /* line 179, inuit.css/generic/_helper.scss */
   .accessibility--palm,
   .visuallyhidden--palm {
@@ -3493,7 +3618,7 @@ label,
     width: 1px!important;
   }
 }
-@media only screen and (min-width: 481px) and (max-width: 1023px) {
+@media only screen and (min-width: 640px) and (max-width: 859px) {
   /* line 179, inuit.css/generic/_helper.scss */
   .accessibility--lap,
   .visuallyhidden--lap {
@@ -3507,7 +3632,7 @@ label,
     width: 1px!important;
   }
 }
-@media only screen and (min-width: 481px) {
+@media only screen and (min-width: 640px) {
   /* line 179, inuit.css/generic/_helper.scss */
   .accessibility--lap-and-up,
   .visuallyhidden--lap-and-up {
@@ -3521,7 +3646,7 @@ label,
     width: 1px!important;
   }
 }
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: 859px) {
   /* line 179, inuit.css/generic/_helper.scss */
   .accessibility--portable,
   .visuallyhidden--portable {
@@ -3535,7 +3660,7 @@ label,
     width: 1px!important;
   }
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 860px) {
   /* line 179, inuit.css/generic/_helper.scss */
   .accessibility--desk,
   .visuallyhidden--desk {
@@ -3549,7 +3674,7 @@ label,
     width: 1px!important;
   }
 }
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1024px) {
   /* line 179, inuit.css/generic/_helper.scss */
   .accessibility--desk-wide,
   .visuallyhidden--desk-wide {

@@ -19,20 +19,20 @@
 
 	<body <?php body_class(); ?>>		
 
-		<header class="site-header wrapper" role="banner">
+		<header class="site-header container" role="banner">
+					
+				<h1 class="logo ir">
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php esc_attr_e( get_bloginfo( 'name' ), 'mash_fourteen' ); ?>" rel="home"><?php echo esc_html( get_bloginfo( 'name' ) ); ?></a>
+				</h1>
 
-			<nav id="menu" role="navigation">
-				<?php wp_nav_menu( array( 
-					'theme_location' => 'main-menu', 
-					'container' => false,
-					'menu_class' => 'nav nav--block'
+				<nav class="main-menu" role="navigation">
+					<?php wp_nav_menu( array( 
+						'theme_location' => 'main-menu', 
+						'container' => false,
+						'menu_class' => 'nav'
 					) ); ?>
-			</nav>
+				</nav>
 			
-			<h1 class="logo ir">
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php esc_attr_e( get_bloginfo( 'name' ), 'mash_fourteen' ); ?>" rel="home"><?php echo esc_html( get_bloginfo( 'name' ) ); ?></a>
-			</h1>
-			
-		</header>
+		</header><!-- .site-header -->
 
-		<div class="wrapper">
+		<div class="container">
