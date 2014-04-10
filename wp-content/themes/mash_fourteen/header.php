@@ -19,7 +19,7 @@
 
 	<body <?php body_class(); ?>>		
 
-		<header class="site-header container" role="banner">
+		<header class="site-header container cf" role="banner">
 					
 				<h1 class="logo ir">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php esc_attr_e( get_bloginfo( 'name' ), 'mash_fourteen' ); ?>" rel="home"><?php echo esc_html( get_bloginfo( 'name' ) ); ?></a>
@@ -29,7 +29,7 @@
 					<?php wp_nav_menu( array( 
 						'theme_location' => 'main-menu', 
 						'container' => false,
-						'menu_class' => 'nav'
+						'menu_class' => 'nav flexnav'
 					) ); ?>
 				</nav>
 			

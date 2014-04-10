@@ -58,6 +58,363 @@
 /**
  * Place any of your own variables that sit on top of inuit.css here.
  */
+/* Flexnav Base Styles */
+/* line 2, utilities/_flexnav.scss */
+.flexnav {
+  -webkit-transition: none;
+  -moz-transition: none;
+  -ms-transition: none;
+  transition: none;
+  -webkit-transform-style: preserve-3d;
+  overflow: hidden;
+  margin: 0 auto;
+  width: 100%;
+  max-height: 0;
+}
+
+/* line 12, utilities/_flexnav.scss */
+.flexnav.opacity {
+  opacity: 0;
+}
+
+/* line 14, utilities/_flexnav.scss */
+.flexnav.flexnav-show {
+  max-height: 2000px;
+  opacity: 1;
+  -webkit-transition: all .5s ease-in-out;
+  -moz-transition: all .5s ease-in-out;
+  -ms-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+/* line 21, utilities/_flexnav.scss */
+.flexnav.one-page {
+  position: fixed;
+  top: 50px;
+  right: 5%;
+  max-width: 200px;
+}
+
+/* line 26, utilities/_flexnav.scss */
+.flexnav li {
+  font-size: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* line 30, utilities/_flexnav.scss */
+.flexnav li a {
+  position: relative;
+  display: block;
+  padding: .96em;
+  z-index: 2;
+  overflow: hidden;
+  color: #222222;
+  background: #a6a6a2;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+/* line 39, utilities/_flexnav.scss */
+.flexnav li ul {
+  width: 100%;
+}
+
+/* line 41, utilities/_flexnav.scss */
+.flexnav li ul li {
+  font-size: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* line 45, utilities/_flexnav.scss */
+.flexnav li ul.flexnav-show li {
+  overflow: visible;
+}
+
+/* line 47, utilities/_flexnav.scss */
+.flexnav li ul li a {
+  display: block;
+  background: #b2b2af;
+}
+
+/* line 50, utilities/_flexnav.scss */
+.flexnav ul li ul li a {
+  background: #bfbfbc;
+}
+
+/* line 52, utilities/_flexnav.scss */
+.flexnav ul li ul li ul li a {
+  background: #cbcbc9;
+}
+
+/* line 54, utilities/_flexnav.scss */
+.flexnav .touch-button {
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 100%;
+  display: inline-block;
+  background: #acaca1;
+  background: rgba(0, 0, 0, 0.075);
+  text-align: center;
+}
+
+/* line 65, utilities/_flexnav.scss */
+.flexnav .touch-button:hover {
+  cursor: pointer;
+}
+
+/* line 67, utilities/_flexnav.scss */
+.flexnav .touch-button .navicon {
+  position: relative;
+  font-size: arial;
+  top: 1.4em;
+  font-size: 12px;
+  color: #666;
+}
+
+/* line 74, utilities/_flexnav.scss */
+.menu-button {
+  position: relative;
+  display: block;
+  padding: 1em;
+  background: #a6a6a2;
+  color: #222222;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+/* line 82, utilities/_flexnav.scss */
+.menu-button.one-page {
+  position: fixed;
+  top: 0;
+  right: 5%;
+  padding-right: 45px;
+}
+
+/* line 87, utilities/_flexnav.scss */
+.menu-button .touch-button {
+  background: transparent;
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  text-align: center;
+}
+
+/* line 97, utilities/_flexnav.scss */
+.menu-button .touch-button .navicon {
+  font-size: 16px;
+  position: relative;
+  top: 1em;
+  color: #666;
+}
+
+@media all and (min-width: 800px) {
+  /* line 104, utilities/_flexnav.scss */
+  body.one-page {
+    padding-top: 70px;
+  }
+
+  /* line 108, utilities/_flexnav.scss */
+  .flexnav {
+    overflow: visible;
+  }
+
+  /* line 111, utilities/_flexnav.scss */
+  .flexnav.opacity {
+    opacity: 1;
+  }
+
+  /* line 114, utilities/_flexnav.scss */
+  .flexnav.one-page {
+    top: 0;
+    right: auto;
+    max-width: 1080px;
+  }
+
+  /* line 119, utilities/_flexnav.scss */
+  .flexnav li {
+    position: relative;
+    list-style: none;
+    float: left;
+    display: block;
+    background-color: #a6a6a2;
+    overflow: visible;
+    /*width: 20%; */
+  }
+
+  /* line 128, utilities/_flexnav.scss */
+  .flexnav .menu-item-has-children {
+    padding-right: 50px;
+  }
+
+  /* line 131, utilities/_flexnav.scss */
+  .flexnav li a {
+    border-left: 1px solid #acaca1;
+    border-bottom: none;
+  }
+
+  /* line 135, utilities/_flexnav.scss */
+  .flexnav li > ul {
+    position: absolute;
+    top: auto;
+    left: 0;
+  }
+
+  /* line 140, utilities/_flexnav.scss */
+  .flexnav li > ul li {
+    width: 100%;
+  }
+
+  /* line 143, utilities/_flexnav.scss */
+  .flexnav li ul li > ul {
+    margin-left: 100%;
+    top: 0;
+  }
+
+  /* line 147, utilities/_flexnav.scss */
+  .flexnav li ul li a {
+    border-bottom: none;
+  }
+
+  /* line 150, utilities/_flexnav.scss */
+  .flexnav li ul.open {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    z-index: 1;
+  }
+
+  /* line 156, utilities/_flexnav.scss */
+  .flexnav li ul.open li {
+    overflow: visible;
+    max-height: 100px;
+  }
+
+  /* line 160, utilities/_flexnav.scss */
+  .flexnav li ul.open ul.open {
+    margin-left: 100%;
+    top: 0;
+  }
+
+  /* line 165, utilities/_flexnav.scss */
+  .menu-button {
+    display: none;
+  }
+}
+/* line 171, utilities/_flexnav.scss */
+.oldie body.one-page {
+  padding-top: 70px;
+}
+
+/* line 173, utilities/_flexnav.scss */
+.oldie .flexnav {
+  overflow: visible;
+}
+
+/* line 175, utilities/_flexnav.scss */
+.oldie .flexnav.one-page {
+  top: 0;
+  right: auto;
+  max-width: 1080px;
+}
+
+/* line 179, utilities/_flexnav.scss */
+.oldie .flexnav li {
+  position: relative;
+  list-style: none;
+  float: left;
+  display: block;
+  background-color: #a6a6a2;
+  width: 20%;
+  min-height: 50px;
+  overflow: visible;
+}
+
+/* line 188, utilities/_flexnav.scss */
+.oldie .flexnav li:hover > ul {
+  display: block;
+  width: 100%;
+  overflow: visible;
+}
+
+/* line 192, utilities/_flexnav.scss */
+.oldie .flexnav li:hover > ul li {
+  width: 100%;
+  float: none;
+}
+
+/* line 195, utilities/_flexnav.scss */
+.oldie .flexnav li a {
+  border-left: 1px solid #acaca1;
+  border-bottom: none;
+  overflow: visible;
+}
+
+/* line 199, utilities/_flexnav.scss */
+.oldie .flexnav li > ul {
+  background: #acaca1;
+  position: absolute;
+  top: auto;
+  left: 0;
+  display: none;
+  z-index: 1;
+  overflow: visible;
+}
+
+/* line 207, utilities/_flexnav.scss */
+.oldie .flexnav li ul li ul {
+  top: 0;
+}
+
+/* line 209, utilities/_flexnav.scss */
+.oldie .flexnav li ul li a {
+  border-bottom: none;
+}
+
+/* line 211, utilities/_flexnav.scss */
+.oldie .flexnav li ul.open {
+  display: block;
+  width: 100%;
+  overflow: visible;
+}
+
+/* line 215, utilities/_flexnav.scss */
+.oldie .flexnav li ul.open li {
+  width: 100%;
+}
+
+/* line 217, utilities/_flexnav.scss */
+.oldie .flexnav li ul.open ul.open {
+  margin-left: 100%;
+  top: 0;
+  display: block;
+  width: 100%;
+  overflow: visible;
+}
+
+/* line 223, utilities/_flexnav.scss */
+.oldie .flexnav ul li:hover ul {
+  margin-left: 100%;
+  top: 0;
+}
+
+/* line 226, utilities/_flexnav.scss */
+.oldie .menu-button {
+  display: none;
+}
+
+/* line 228, utilities/_flexnav.scss */
+.oldie.ie7 .flexnav li {
+  width: 19.9%;
+}
+
 /* 
 
 Rik Kendell, UI developer & designer website and blog
