@@ -70,17 +70,34 @@ a {
 }
 
 .site-header {
+	position: relative;
 	.logo {
 		background: url("../img/logo.png") 0 0 no-repeat transparent;
+		float: left;
 		height: 62px;
-		width: 62px
+		margin: 0;
+		width: 62px;
+		a {
+			@extend .block-link;
+		}
+	}
+	.menu-button{
+		float: right;
 	}
 }
 .main-menu {
-	background: #232323;
-	.nav > li {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	z-index: 10;
+	.nav > li {		
 		display: block;
-		> a { display: block; }
+		> a { 
+			background: #232323;
+			color: #fff;
+			display: block; 
+		}
 	}
 }
 .site-footer {
@@ -105,15 +122,22 @@ a {
 	}
 	img {
 		@extend .mobile-image;
+		display: block;
+		line-height: 0;
 	}
 
+}
+
+// Blog Archive 
+.post-wrap {
+	padding: 0.5em 0;
 }
 
 .mobile-image {
 	width: 100%;
 	height: auto;
 }
-.entry-content, .bio-image {
+.entry-content, .post-image {
 	img {
 		@extend .mobile-image;
 	}
@@ -136,15 +160,24 @@ a {
 }
 
 @media screen and (min-width: $lap-start) {
+
+	.main-menu {
+		position: inherit;
+		top: auto;
+		left: auto;
+		float: right;
+		width: auto;
+	}
+
 	.project-item {
 		float: left;
 		width: 33%;
 	}
 
-	.bio-info {
+	.post-content {
 		float: left;
 	}
-	.bio-image {
+	.post-image {
 		float: right;
 	}
 
@@ -163,6 +196,13 @@ a {
 
 
 /* Non-semantic helpers */
+
+.block-link {
+	height: 100%;
+	width: 100%;
+	display: block;
+}
+
 // Hide for both screenreaders and browsers
 .hidden { display: none !important; visibility: hidden; }
 

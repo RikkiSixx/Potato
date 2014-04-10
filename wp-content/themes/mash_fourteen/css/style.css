@@ -483,56 +483,82 @@ a:hover {
   padding: 1em;
 }
 
-/* line 73, _theme.scss */
+/* line 72, _theme.scss */
+.site-header {
+  position: relative;
+}
+/* line 74, _theme.scss */
 .site-header .logo {
   background: url("../img/logo.png") 0 0 no-repeat transparent;
+  float: left;
   height: 62px;
+  margin: 0;
   width: 62px;
 }
-
-/* line 79, _theme.scss */
-.main-menu {
-  background: #232323;
+/* line 84, _theme.scss */
+.site-header .menu-button {
+  float: right;
 }
-/* line 81, _theme.scss */
+
+/* line 88, _theme.scss */
+.main-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+/* line 94, _theme.scss */
 .main-menu .nav > li {
   display: block;
 }
-/* line 83, _theme.scss */
+/* line 96, _theme.scss */
 .main-menu .nav > li > a {
+  background: #232323;
+  color: #fff;
   display: block;
 }
 
-/* line 86, _theme.scss */
+/* line 103, _theme.scss */
 .site-footer {
   background: #fff200;
 }
-/* line 88, _theme.scss */
+/* line 105, _theme.scss */
 .site-footer a, .site-footer a:visited {
   color: #333;
 }
-/* line 90, _theme.scss */
+/* line 107, _theme.scss */
 .site-footer ul {
   list-style: none;
   margin-left: 0;
 }
 
-/* line 96, _theme.scss */
+/* line 113, _theme.scss */
 .project-item {
   background: #444;
   margin-bottom: 10px;
   width: 100%;
   position: relative;
 }
-/* line 101, _theme.scss */
+/* line 118, _theme.scss */
 .project-item header {
   position: absolute;
   top: 0;
   left: 0;
 }
+/* line 123, _theme.scss */
+.project-item img {
+  display: block;
+  line-height: 0;
+}
 
-/* line 112, _theme.scss */
-.mobile-image, .project-item img, .entry-content img, .bio-image img {
+/* line 132, _theme.scss */
+.post-wrap {
+  padding: 0.5em 0;
+}
+
+/* line 136, _theme.scss */
+.mobile-image, .project-item img, .entry-content img, .post-image img {
   width: 100%;
   height: auto;
 }
@@ -541,59 +567,75 @@ a:hover {
    4. Custom layout, inc Media Queries
    ========================================================================== */
 @media screen and (max-width: 640px) {
-  /* line 129, _theme.scss */
+  /* line 153, _theme.scss */
   .site-footer .foot-item {
     display: none;
   }
-  /* line 131, _theme.scss */
+  /* line 155, _theme.scss */
   .site-footer .foot-item.foot-address {
     display: inherit;
   }
 }
 @media screen and (min-width: 640px) {
-  /* line 139, _theme.scss */
+  /* line 164, _theme.scss */
+  .main-menu {
+    position: inherit;
+    top: auto;
+    left: auto;
+    float: right;
+    width: auto;
+  }
+
+  /* line 172, _theme.scss */
   .project-item {
     float: left;
     width: 33%;
   }
 
-  /* line 144, _theme.scss */
-  .bio-info {
+  /* line 177, _theme.scss */
+  .post-content {
     float: left;
   }
 
-  /* line 147, _theme.scss */
-  .bio-image {
+  /* line 180, _theme.scss */
+  .post-image {
     float: right;
   }
 
-  /* line 151, _theme.scss */
+  /* line 184, _theme.scss */
   .studio-images-sm {
     float: left;
   }
-  /* line 153, _theme.scss */
+  /* line 186, _theme.scss */
   .studio-images-sm img:first-child {
     margin-bottom: 1.5em;
   }
 
-  /* line 155, _theme.scss */
+  /* line 188, _theme.scss */
   .studio-images-lg {
     float: right;
   }
 
-  /* line 157, _theme.scss */
+  /* line 190, _theme.scss */
   .foot-item {
     float: left;
   }
 }
 /* Non-semantic helpers */
-/* line 167, _theme.scss */
+/* line 200, _theme.scss */
+.block-link, .site-header .logo a {
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+
+/* line 207, _theme.scss */
 .hidden {
   display: none !important;
   visibility: hidden;
 }
 
-/* line 170, _theme.scss */
+/* line 210, _theme.scss */
 .visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -605,12 +647,12 @@ a:hover {
   width: 1px;
 }
 
-/* line 173, _theme.scss */
+/* line 213, _theme.scss */
 .invisible {
   visibility: hidden;
 }
 
-/* line 175, _theme.scss */
+/* line 215, _theme.scss */
 .ir {
   display: block;
   border: 0;
@@ -622,7 +664,7 @@ a:hover {
   direction: ltr;
 }
 
-/* line 176, _theme.scss */
+/* line 216, _theme.scss */
 .ir br {
   display: none;
 }

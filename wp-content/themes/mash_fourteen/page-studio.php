@@ -37,6 +37,7 @@ Template Name: Studio
 		<div class="grid__item lap-and-up-two-thirds studio-images-lg">
 			<img src="<?php echo get_template_directory_uri(); ?>/img/studio-3.jpg" title="Studio" />
 		</div>
+	</div>
 </section>
 
 
@@ -52,13 +53,13 @@ Template Name: Studio
 
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-	<article class="cf grid bio">
-		<div class="lap-two-thirds grid__item desk-one-third bio-info">
+	<article class="cf post-wrap">
+		<div class="lap-two-thirds desk-one-third post-content">
 			<h3><?php the_title_attribute(); ?></h3>
 			<?php the_excerpt(); ?>
 		</div>
 
-		<div class="lap-one-third grid__item desk-two-thirds bio-image">
+		<div class="lap-one-third desk-two-thirds post-image">
 			<?php if ( has_post_thumbnail() ) { the_post_thumbnail('project-lg'); } ?>
 		</div>
 

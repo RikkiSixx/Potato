@@ -21,11 +21,13 @@
 				</h1>
 			</header>
 
-			<?php if ( has_post_thumbnail() ) { ?>
-				<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('project-sm'); ?></a>
-			<?php } else { ?>
-				<a href="<?php the_permalink(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/placeholder-sm.jpg" width="100%" height="auto" /></a>
-			<?php } ?>
+			<a href="<?php the_permalink(); ?>">
+				<?php if ( has_post_thumbnail() ) { ?>
+					<?php the_post_thumbnail('project-sm'); ?></a>
+				<?php } else { ?>
+					<img src="<?php echo get_template_directory_uri(); ?>/img/placeholder-sm.jpg" width="100%" height="auto" />
+				<?php } ?>
+			</a>
 
 			<?php // the_content(); ?>
 		</section>

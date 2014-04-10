@@ -18,24 +18,26 @@ Template Name: Blog
 	
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-		<header class="header">
-			<h1 class="entry-title"><?php the_title(); ?></h1> <?php edit_post_link(); ?>
-		</header>
+	<article class="cf post-wrap">
 
-		<section class="entry-content">
-			<?php if ( has_post_thumbnail() ) { the_post_thumbnail(); } ?>
+		<div class="lap-two-thirds desk-one-third post-content">
+			<h3><?php the_title_attribute(); ?></h3>
 
 			<?php the_excerpt(); ?>
 
-			<div class="entry-links">
-				<?php wp_link_pages(); ?>
-			</div>
-		</section>
+			<?php edit_post_link(); ?>
+		</div>
+
+		<div class="lap-one-third desk-two-thirds post-image">
+			<?php if ( has_post_thumbnail() ) { ?>
+				<?php the_post_thumbnail('project-lg'); ?>
+			<?php } else { ?>
+				<img src="<?php echo get_template_directory_uri(); ?>/img/studio-3.jpg" title="Studio" />
+			<?php }; ?>
+		</div>
 
 	</article>
 
-	<?php if ( ! post_password_required() ) comments_template( '', true ); ?>
 	<?php endwhile; endif; ?>
 
 	<?php wp_reset_query(); ?>
