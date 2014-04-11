@@ -14,6 +14,8 @@
 		<!-- CSS -->
 		<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/style.css" />
 
+		<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/libs/modernizr-2.6.1.min.js"></script>
+	
 		<?php wp_head(); ?>
 	</head>
 
