@@ -110,6 +110,7 @@ a {
 	}
 }
 
+// Homepage - Projects
 .project-item {
 	background: #444;
 	margin-bottom: 10px;
@@ -117,8 +118,20 @@ a {
 	position: relative;
 	header {
 		position: absolute;
+		bottom: 0;
 		top: 0;
 		left: 0;
+		right: 0;
+	}
+	h1 { 
+		background: rgba(0,0,0,0.5);
+		@extend .block-link; 
+		text-shadow: 2px 2px 2px rgba(0,0,0,0.3);
+		a {
+			color: #fff;
+			@extend .block-link;
+			padding: 10px;
+		}
 	}
 	img {
 		@extend .mobile-image;
@@ -169,13 +182,9 @@ a {
 		width: auto;
 	}
 
-	.project-item {
-		float: left;
-		width: 33%;
-	}
-
 	.post-content {
 		float: left;
+		padding-right: 1em;
 	}
 	.post-image {
 		float: right;

@@ -6,49 +6,76 @@ Template Name: Projects List
 
 <?php get_header(); ?>
 
-<section id="content" role="main">
+<section role="main">
 	
 	<header class="header">
 		<h1 class="entry-title"><?php the_title(); ?></h1>
 	</header>
 
-	<?php                  
-        $args = array(
-            'post_type' => 'project',
-            'posts_per_page' => 9
-        );
-        query_posts( $args );
-    ?>
-	
-	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+	<?php 
+	//list terms in a given taxonomy using wp_list_categories (also useful as a widget if using a PHP Code plugin)
 
-	<article <?php post_class(); ?>>
-		<header class="header">
-			<h1 class="entry-title">
-				<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-			</h1> 
-		</header>
+		$taxonomy     = 'service-type';
+		$orderby      = 'name'; 
+		$show_count   = 0;      // 1 for yes, 0 for no
+		$pad_counts   = 0;      // 1 for yes, 0 for no
+		$hierarchical = 1;      // 1 for yes, 0 for no
+		$title        = '';
 
-		<section class="entry-content">
-			<?php if ( has_post_thumbnail() ) { ?>
-				<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail(); ?></a> 
-			<?php } ?>
+		$args = array(
+		  'taxonomy'     => $taxonomy,
+		  'orderby'      => $orderby,
+		  'show_count'   => $show_count,
+		  'pad_counts'   => $pad_counts,
+		  'hierarchical' => $hierarchical,
+		  'title_li'     => $title
+		);
+	?>
 
-			<?php // the_content(); ?>
+	<nav class="sub-menu">
+		<ul class="nav">
+			<?php wp_list_categories( $args ); ?>
+		</ul>
+	</nav>
 
-			<div class="entry-links">
-				<?php wp_link_pages(); ?>
-			</div>
+	<section role="main" class="project-grid cf">
 
-			<?php edit_post_link(); ?>
-		</section>
+		<?php                  
+	        $args = array(
+	            'post_type' => 'project',
+	            'posts_per_page' => 9
+	        );
+	        query_posts( $args );
+	    ?>
+		
+		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-	</article>
+		<article class="project-item desk-one-third lap-one-half">		
 
-	<?php if ( ! post_password_required() ) comments_template( '', true ); ?>
-	<?php endwhile; endif; ?>
+			<section class="entry-content">
+				<header class="header">
+					<h1 class="entry-title">
+						<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+					</h1>
+				</header>
 
-	<?php wp_reset_query(); ?>
+				<?php if ( has_post_thumbnail() ) { ?>
+					<?php the_post_thumbnail('project-sm'); ?>
+				<?php } else { ?>
+					<img src="<?php echo get_template_directory_uri(); ?>/img/placeholder-sm.jpg" width="100%" height="auto" />
+				<?php } ?>
+
+				<?php // the_content(); ?>
+			</section>
+
+		</article>
+
+		<?php if ( ! post_password_required() ) comments_template( '', true ); ?>
+		<?php endwhile; endif; ?>
+
+		<?php wp_reset_query(); ?>
+
+	</section>
 
 </section>
 

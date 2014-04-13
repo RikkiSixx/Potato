@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<section id="content" role="main" class="project-grid cf">
+<section role="main" class="project-grid cf">
 	
 	<?php
 		// Find posts in 'Projects' post type 
@@ -11,6 +11,8 @@
 		query_posts($args);
 		if ( have_posts() ) : while ( have_posts() ) : the_post();
 	?>
+
+
 
 	<article class="project-item desk-one-third lap-one-half">		
 
@@ -32,7 +34,6 @@
 
 	</article>
 
-	<?php if ( ! post_password_required() ) comments_template( '', true ); ?>
 	<?php endwhile; endif; ?>
 
 	<?php wp_reset_query(); ?>

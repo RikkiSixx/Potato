@@ -14,10 +14,15 @@ add_action( 'after_setup_theme', 'mash_fourteen_setup' );
 
 		// Support
 		add_theme_support( 'automatic-feed-links' );
-		add_theme_support( 'post-thumbnails' );		
 
-		add_image_size( 'project-sm', 393, 296, true );
-		add_image_size( 'project-lg', 776, 602, true );
+		// Thumbnail Image Support	
+		if (function_exists('add_theme_support')) {
+			add_theme_support('post-thumbnails');
+		}
+		if (function_exists('add_image_size')) {
+	     	add_image_size( 'project-lg', 776, 602, true );
+			add_image_size( 'project-sm', 393, 296, true );
+		}
 
 		global $content_width;
 		if ( ! isset( $content_width ) ) $content_width = 640;

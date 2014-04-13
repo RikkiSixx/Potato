@@ -27,6 +27,20 @@ jQuery(document).ready(function($){
     }
 
 
+
+
+    var $container = $('.project-grid').isotope({
+		itemSelector: '.project-item',
+		layoutMode: 'masonry',
+		getSortData: {		  
+			weight: function( itemElem ) {
+		    	var weight = $( itemElem ).find('.weight').text();
+		    	return parseFloat( weight.replace( /[\(\)]/g, '') );
+		  	}
+		}
+	});
+
+
 	// State Manager
 
     var stateManager = (function () {

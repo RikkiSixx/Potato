@@ -21,9 +21,11 @@ Template Name: Blog
 	<article class="cf post-wrap">
 
 		<div class="lap-two-thirds desk-one-third post-content">
-			<h3><?php the_title_attribute(); ?></h3>
+			<h3><a href="<?php the_permalink ?>" title="<?php the_title_attribute(); ?>"><?php the_title_attribute(); ?></a></h3>
 
 			<?php the_excerpt(); ?>
+
+			<p><a href="<?php the_permalink ?>" title="<?php the_title_attribute(); ?>">Continue reading</a></p>
 
 			<?php edit_post_link(); ?>
 		</div>
