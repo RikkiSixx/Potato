@@ -81,6 +81,12 @@ function mash_fourteen_filter_wp_title( $title ) {
 	return $title . esc_attr( get_bloginfo( 'name' ) );
 }
 
+// Remove 'p' tags around images
+add_filter('the_content', 'filter_ptags_on_images');
+function filter_ptags_on_images($content){
+   return preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
+}
+
 add_action( 'init', 'mash_fourteen_page_excerpts' );
 function mash_fourteen_page_excerpts() {
      add_post_type_support( 'page', 'excerpt' );
