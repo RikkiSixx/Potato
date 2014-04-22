@@ -182,12 +182,16 @@ a {
 		width: auto;
 	}
 
-	.post-content {
-		float: left;
-		padding-right: 1em;
-	}
-	.post-image {
-		float: right;
+	.post-wrap {
+		p, ul, ol, dl, blockquote {
+			float: left;
+			max-width: 33%;
+		}
+		img {
+			float: right;
+			display: block;
+			width: 66%;
+		}
 	}
 
 	.studio-images-sm { 

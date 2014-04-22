@@ -598,51 +598,52 @@ a:hover {
     width: auto;
   }
 
-  /* line 185, _theme.scss */
-  .post-content {
+  /* line 186, _theme.scss */
+  .post-wrap p, .post-wrap ul, .post-wrap ol, .post-wrap dl, .post-wrap blockquote {
     float: left;
-    padding-right: 1em;
+    max-width: 33%;
   }
-
-  /* line 189, _theme.scss */
-  .post-image {
+  /* line 190, _theme.scss */
+  .post-wrap img {
     float: right;
+    display: block;
+    width: 66%;
   }
 
-  /* line 193, _theme.scss */
+  /* line 197, _theme.scss */
   .studio-images-sm {
     float: left;
   }
-  /* line 195, _theme.scss */
+  /* line 199, _theme.scss */
   .studio-images-sm img:first-child {
     margin-bottom: 1.5em;
   }
 
-  /* line 197, _theme.scss */
+  /* line 201, _theme.scss */
   .studio-images-lg {
     float: right;
   }
 
-  /* line 199, _theme.scss */
+  /* line 203, _theme.scss */
   .foot-item {
     float: left;
   }
 }
 /* Non-semantic helpers */
-/* line 209, _theme.scss */
+/* line 213, _theme.scss */
 .block-link, .site-header .logo a, .project-item h1, .project-item h1 a {
   height: 100%;
   width: 100%;
   display: block;
 }
 
-/* line 216, _theme.scss */
+/* line 220, _theme.scss */
 .hidden {
   display: none !important;
   visibility: hidden;
 }
 
-/* line 219, _theme.scss */
+/* line 223, _theme.scss */
 .visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -654,12 +655,12 @@ a:hover {
   width: 1px;
 }
 
-/* line 222, _theme.scss */
+/* line 226, _theme.scss */
 .invisible {
   visibility: hidden;
 }
 
-/* line 224, _theme.scss */
+/* line 228, _theme.scss */
 .ir {
   display: block;
   border: 0;
@@ -671,7 +672,7 @@ a:hover {
   direction: ltr;
 }
 
-/* line 225, _theme.scss */
+/* line 229, _theme.scss */
 .ir br {
   display: none;
 }
