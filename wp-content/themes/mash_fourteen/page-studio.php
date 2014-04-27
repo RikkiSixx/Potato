@@ -53,7 +53,7 @@ Template Name: Studio
 
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-	<article class="cf post-wrap">
+	<article class="cf person">
 		<div class="lap-two-thirds desk-one-third post-content">
 			<h3><?php the_title_attribute(); ?></h3>
 			<?php the_excerpt(); ?>

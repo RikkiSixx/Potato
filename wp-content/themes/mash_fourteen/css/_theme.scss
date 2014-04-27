@@ -142,7 +142,8 @@ a {
 }
 
 // Blog Archive 
-.post-wrap {
+.post-wrap,
+.person {
 	padding: 0.5em 0;
 }
 
@@ -185,12 +186,22 @@ a {
 	.post-wrap {
 		p, ul, ol, dl, blockquote {
 			float: left;
-			max-width: 33%;
+			width: 33%;
 		}
 		img {
 			float: right;
-			display: block;
 			width: 66%;
+		}
+		
+	}
+
+	.person {
+		.post-content {
+			float: left;
+		}
+		.post-image {
+			float: right;
+			display: block;
 		}
 	}
 
@@ -215,6 +226,9 @@ a {
 	width: 100%;
 	display: block;
 }
+
+.left { float: left; }
+.right { float: right; }
 
 // Hide for both screenreaders and browsers
 .hidden { display: none !important; visibility: hidden; }
