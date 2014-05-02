@@ -564,33 +564,38 @@ a:hover {
   line-height: 0;
 }
 
-/* line 146, _theme.scss */
-.post-wrap,
-.person {
+/* line 145, _theme.scss */
+.post-wrap {
   padding: 0.5em 0;
 }
 
-/* line 150, _theme.scss */
+/* line 149, _theme.scss */
 .mobile-image, .project-item img, .entry-content img, .post-image img {
   width: 100%;
   height: auto;
+}
+
+/* line 160, _theme.scss */
+.post-wrap blockquote p {
+  padding: 5%;
+  background: #f7f7f7;
 }
 
 /* ==========================================================================
    4. Custom layout, inc Media Queries
    ========================================================================== */
 @media screen and (max-width: 640px) {
-  /* line 167, _theme.scss */
+  /* line 172, _theme.scss */
   .site-footer .foot-item {
     display: none;
   }
-  /* line 169, _theme.scss */
+  /* line 174, _theme.scss */
   .site-footer .foot-item.foot-address {
     display: inherit;
   }
 }
 @media screen and (min-width: 640px) {
-  /* line 178, _theme.scss */
+  /* line 183, _theme.scss */
   .main-menu {
     position: inherit;
     top: auto;
@@ -599,71 +604,55 @@ a:hover {
     width: auto;
   }
 
-  /* line 187, _theme.scss */
+  /* line 192, _theme.scss */
   .post-wrap p, .post-wrap ul, .post-wrap ol, .post-wrap dl, .post-wrap blockquote {
-    float: left;
-    width: 33%;
+    max-width: 33%;
   }
-  /* line 191, _theme.scss */
+  /* line 195, _theme.scss */
+  .post-wrap blockquote p {
+    max-width: 90%;
+  }
+  /* line 198, _theme.scss */
   .post-wrap img {
     float: right;
+    display: block;
     width: 66%;
   }
 
-  /* line 199, _theme.scss */
-  .person .post-content {
-    float: left;
-  }
-  /* line 202, _theme.scss */
-  .person .post-image {
-    float: right;
-    display: block;
-  }
-
-  /* line 208, _theme.scss */
+  /* line 205, _theme.scss */
   .studio-images-sm {
     float: left;
   }
-  /* line 210, _theme.scss */
+  /* line 207, _theme.scss */
   .studio-images-sm img:first-child {
     margin-bottom: 1.5em;
   }
 
-  /* line 212, _theme.scss */
+  /* line 209, _theme.scss */
   .studio-images-lg {
     float: right;
   }
 
-  /* line 214, _theme.scss */
+  /* line 211, _theme.scss */
   .foot-item {
     float: left;
   }
 }
 /* Non-semantic helpers */
-/* line 224, _theme.scss */
+/* line 221, _theme.scss */
 .block-link, .site-header .logo a, .project-item h1, .project-item h1 a {
   height: 100%;
   width: 100%;
   display: block;
 }
 
-/* line 230, _theme.scss */
-.left {
-  float: left;
-}
-
-/* line 231, _theme.scss */
-.right {
-  float: right;
-}
-
-/* line 234, _theme.scss */
+/* line 228, _theme.scss */
 .hidden {
   display: none !important;
   visibility: hidden;
 }
 
-/* line 237, _theme.scss */
+/* line 231, _theme.scss */
 .visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -675,12 +664,12 @@ a:hover {
   width: 1px;
 }
 
-/* line 240, _theme.scss */
+/* line 234, _theme.scss */
 .invisible {
   visibility: hidden;
 }
 
-/* line 242, _theme.scss */
+/* line 236, _theme.scss */
 .ir {
   display: block;
   border: 0;
@@ -692,7 +681,7 @@ a:hover {
   direction: ltr;
 }
 
-/* line 243, _theme.scss */
+/* line 237, _theme.scss */
 .ir br {
   display: none;
 }

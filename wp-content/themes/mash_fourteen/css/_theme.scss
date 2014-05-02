@@ -142,8 +142,7 @@ a {
 }
 
 // Blog Archive 
-.post-wrap,
-.person {
+.post-wrap {
 	padding: 0.5em 0;
 }
 
@@ -155,6 +154,12 @@ a {
 	img {
 		@extend .mobile-image;
 	}
+}
+
+// Post
+.post-wrap blockquote p {
+	padding: 5%;
+	background: #f7f7f7;
 }
 
 
@@ -185,23 +190,15 @@ a {
 
 	.post-wrap {
 		p, ul, ol, dl, blockquote {
-			float: left;
-			width: 33%;
+			max-width: 33%;
+		}
+		blockquote p {
+			max-width: 90%;
 		}
 		img {
 			float: right;
-			width: 66%;
-		}
-		
-	}
-
-	.person {
-		.post-content {
-			float: left;
-		}
-		.post-image {
-			float: right;
 			display: block;
+			width: 66%;
 		}
 	}
 
@@ -226,9 +223,6 @@ a {
 	width: 100%;
 	display: block;
 }
-
-.left { float: left; }
-.right { float: right; }
 
 // Hide for both screenreaders and browsers
 .hidden { display: none !important; visibility: hidden; }
