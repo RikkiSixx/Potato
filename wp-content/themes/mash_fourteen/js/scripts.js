@@ -60,27 +60,31 @@ jQuery(document).ready(function($){
 		var displayMobile = function() {
 			state = 'mobile';
 			console.log('enter mobile');
-			clearheight('.recent-posts .equal-title');
-			clearheight('.recent-posts .equal-height');
+
+			clearheight('.service-list header');
+			clearheight('.service-list .entry-content');
 		};
 
 		var displayDesktop = function() {
 			state = 'desktop';
 			console.log('enter desktop');
-			$('.recent-posts .equal-title').equalHeights();
-			$('.recent-posts .equal-height').equalHeights();
+
+			clearheight('.service-list header');
+			clearheight('.service-list .entry-content');
 		};
 
 		var resizeMobile = function() {
 			console.log('Resizing mobile');
-			clearheight('.recent-posts .equal-title');
-			clearheight('.recent-posts .equal-height');
+
+			$('.service-list header').equalHeights();
+			$('.service-list .entry-content').equalHeights();
 		};
 
 		var resizeDesktop = function() {
 			console.log('Resizing desktop');
-			$('.recent-posts .equal-title').equalHeights();
-			$('.recent-posts .equal-height').equalHeights();
+			
+			$('.service-list header').equalHeights();
+			$('.service-list .entry-content').equalHeights();
 		};
 
 		return {

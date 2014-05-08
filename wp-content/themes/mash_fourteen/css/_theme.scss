@@ -47,7 +47,12 @@ h1, h2,
 }
 h3, h4, h5, h6 {
 	font-family: $base-font-family;
-	letter-spacing: 0;
+	font-weight: normal;
+	letter-spacing: 0;	
+}
+
+h1, h2, h3, h4, h5, h6 {
+	a { color: #000; }
 }
 
 a {
@@ -202,17 +207,34 @@ a {
 		}
 	}
 
+	.service-list {
+		.service { float: left; }
+	}
+	.clients {
+		ul {
+			-webkit-columns: 2;
+			-moz-columns: 2;
+			columns: 2;
+		}
+	}
+
 	.studio-images-sm { 
 		float: left; 
 		img:first-child { margin-bottom: 1.5em; }
 	}
 	.studio-images-lg { float: right; }
 
-	.foot-item { float: left;}
+	.foot-item { float: left; }
 }
 
 @media screen and (min-width: $desk-start) {
-
+	.clients {
+		ul {
+			-webkit-columns: 3;
+			-moz-columns: 3;
+			columns: 3;
+		}
+	}
 }
 
 
@@ -223,6 +245,8 @@ a {
 	width: 100%;
 	display: block;
 }
+.left { float: left; }
+.right { float: right; }
 
 // Hide for both screenreaders and browsers
 .hidden { display: none !important; visibility: hidden; }

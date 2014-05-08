@@ -28,7 +28,7 @@ Template Name: Blog
 			<?php }; ?>	
 		</a>
 
-		<h3><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title_attribute(); ?></a></h3>
+		<h1><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title_attribute(); ?></a></h1>
 
 		<?php the_excerpt(); ?>
 

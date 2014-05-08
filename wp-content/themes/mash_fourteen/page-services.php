@@ -10,7 +10,7 @@ Template Name: Services
 
 	<?php the_excerpt(); ?>
 
-	<section class="grid service-list">
+	<section class="grid service-list cf">
 
 		<?php                  
 	        $args = array(
@@ -24,7 +24,7 @@ Template Name: Services
 		
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-		<article <?php post_class('grid__item desk-one-third'); ?>>
+		<article <?php post_class('grid__item lap-one-half desk-one-third'); ?>>
 			<header class="header">
 				<h1 class="entry-title">
 					<?php the_title(); ?>
@@ -63,21 +63,10 @@ Template Name: Services
 	
 </section>
 
-<section>
-	<h2>CLIENTS</h2>
+<section class="clients">
+	<h2>Clients</h2>
 
-	<ul>
-		<li>Client Name</li>
-		<li>Client Name</li>
-		<li>Client Name</li>
-		<li>Client Name</li>
-		<li>Client Name</li>
-		<li>Client Name</li>
-		<li>Client Name</li>
-		<li>Client Name</li>
-		<li>Client Name</li>
-		<li>Client Name</li>
-	</ul>
+	<?php the_content(); ?>
 
 	<?php                  
         $args = array(
@@ -98,6 +87,7 @@ Template Name: Services
 	<?php endwhile; endif; ?>
 
 	<?php wp_reset_query(); ?>
-</section>
+
+</section><!-- .clients -->
 
 <?php get_footer(); ?>
