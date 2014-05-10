@@ -18,9 +18,10 @@
 
 		<section class="entry-content">
 			<header class="header">
-				<h1 class="entry-title">
-					<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-				</h1>
+				<h3 class="entry-title">
+					<a href="<?php the_permalink(); ?>"><span><?php the_title(); ?></span></a>
+				</h3>
+				<?php the_category(); ?>
 			</header>
 
 			<?php if ( has_post_thumbnail() ) { ?>

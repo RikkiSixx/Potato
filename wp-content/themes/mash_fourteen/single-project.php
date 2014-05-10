@@ -31,15 +31,9 @@ Template Name: Project Detail
 				<div class="entry-links"><?php wp_link_pages(); ?></div>
 			</section>
 
-
-			<?php get_template_part( 'entry-footer' ); ?>
 		</article>
 
 	<?php endwhile; endif; ?>
-
-	<footer class="footer">
-		<?php get_template_part( 'nav', 'below-single' ); ?>
-	</footer>
 
 </section>
 

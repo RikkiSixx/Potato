@@ -8,10 +8,13 @@ Template Name: Blog
 
 <section role="main">
 
-	<?php                  
+	<?php
+		$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;             
         $args = array(
             'post_type' => 'post',
-            'posts_per_page' => 10
+            'posts_per_page' => 9,
+            'paged' => $paged
+
         );
         query_posts( $args );
     ?>
@@ -40,7 +43,13 @@ Template Name: Blog
 
 	</article><!-- .post-wrap -->
 
-	<?php endwhile; endif; ?>
+	<?php endwhile; ?>
+
+	<!-- Pagination -->
+	<?php next_posts_link(); ?>
+	<?php previous_posts_link(); ?>
+
+	<?php endif; ?>
 
 	<?php wp_reset_query(); ?>
 

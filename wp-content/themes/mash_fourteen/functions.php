@@ -141,12 +141,11 @@ function theme_post_types_init() {
 				'custom-fields',
 				'thumbnail',
 				'page-attributes',
-				'comments',
 				'trackbacks',
 				'author',
 				'revisions'
 			),
-			'taxonomies' => array( 'category' ),
+			'taxonomies' => array( 'service-type' ),
 			'rewrite' => array(			
 				'slug' => __('projects', THEME_SLUG),
 			),
@@ -183,7 +182,6 @@ function theme_post_types_init() {
 				'custom-fields',
 				'thumbnail',
 				'page-attributes',
-				'comments',
 				'trackbacks',
 				'author',
 				'revisions'
@@ -224,7 +222,6 @@ function theme_post_types_init() {
 				'custom-fields',
 				'thumbnail',
 				'page-attributes',
-				'comments',
 				'trackbacks',
 				'author',
 				'revisions'
@@ -261,7 +258,6 @@ function theme_post_types_init() {
 				'custom-fields',
 				'thumbnail',
 				'page-attributes',
-				'comments',
 				'trackbacks',
 				'author',
 				'revisions'

@@ -54,9 +54,9 @@ Template Name: Projects List
 
 			<section class="entry-content">
 				<header class="header">
-					<h1 class="entry-title">
+					<h3 class="entry-title">
 						<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-					</h1>
+					</h3>
 				</header>
 
 				<?php if ( has_post_thumbnail() ) { ?>
@@ -70,7 +70,6 @@ Template Name: Projects List
 
 		</article>
 
-		<?php if ( ! post_password_required() ) comments_template( '', true ); ?>
 		<?php endwhile; endif; ?>
 
 		<?php wp_reset_query(); ?>
