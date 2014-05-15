@@ -438,7 +438,7 @@ CONTENTS - GLOBAL.CSS
 /*$support-color: #cc0033;
 $brand-face: 'Open Sans', sans-serif;
 $support-face: 'Raleway', sans-serif; */
-/* line 31, _theme.scss */
+/* line 32, _theme.scss */
 body {
   background: #fff;
   color: #000;
@@ -448,52 +448,58 @@ body {
 /* ==========================================================================
    2. Base Typography & Links
    ========================================================================== */
-/* line 44, _theme.scss */
+/* line 45, _theme.scss */
 h1, h2,
 .alpha, .beta, .gamma, .delta, .epsilon, .zeta,
 .giga, .mega, .kilo {
   font-family: "Roboto Slab", serif;
 }
 
-/* line 47, _theme.scss */
+/* line 48, _theme.scss */
 h3, h4, h5, h6 {
   font-family: Roboto, sans-serif;
   font-weight: normal;
   letter-spacing: 0;
 }
 
-/* line 54, _theme.scss */
+/* line 55, _theme.scss */
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
-  color: #000;
+  color: black;
   border: 0;
 }
 
 /* line 60, _theme.scss */
+h3, h4 {
+  font-weight: bold;
+}
+
+/* line 64, _theme.scss */
 a {
-  color: #000;
+  color: black;
   text-decoration: none;
   border-bottom: 1px solid #fff200;
 }
-/* line 64, _theme.scss */
+/* line 68, _theme.scss */
 a:hover {
+  border-bottom: 1px solid black;
   text-decoration: none;
 }
 
 /* ==========================================================================
    3. Global layout & Typography
    ========================================================================== */
-/* line 74, _theme.scss */
+/* line 79, _theme.scss */
 .container {
   margin: auto;
   max-width: 1100px;
   padding: 1em;
 }
 
-/* line 80, _theme.scss */
+/* line 85, _theme.scss */
 .site-header {
   position: relative;
 }
-/* line 82, _theme.scss */
+/* line 87, _theme.scss */
 .site-header .logo {
   background: url("../img/logo.png") 0 0 no-repeat transparent;
   float: left;
@@ -501,12 +507,14 @@ a:hover {
   margin: 0;
   width: 62px;
 }
-/* line 92, _theme.scss */
+/* line 97, _theme.scss */
 .site-header .menu-button {
+  background: #fff;
+  border: 0;
   float: right;
 }
 
-/* line 96, _theme.scss */
+/* line 103, _theme.scss */
 .main-menu {
   position: absolute;
   top: 100%;
@@ -514,18 +522,18 @@ a:hover {
   width: 100%;
   z-index: 10;
 }
-/* line 102, _theme.scss */
+/* line 109, _theme.scss */
 .main-menu .nav > li {
   display: block;
 }
-/* line 104, _theme.scss */
+/* line 111, _theme.scss */
 .main-menu .nav > li > a {
   background: #232323;
   color: #fff;
   display: block;
 }
 @media screen and (min-width: 800px) {
-  /* line 96, _theme.scss */
+  /* line 103, _theme.scss */
   .main-menu {
     position: inherit;
     top: auto;
@@ -535,29 +543,29 @@ a:hover {
   }
 }
 
-/* line 120, _theme.scss */
+/* line 127, _theme.scss */
 .site-footer {
   background: #fff200;
 }
-/* line 122, _theme.scss */
+/* line 129, _theme.scss */
 .site-footer a, .site-footer a:visited {
   color: #333;
   border: 0;
 }
-/* line 127, _theme.scss */
+/* line 134, _theme.scss */
 .site-footer ul {
   list-style: none;
   margin-left: 0;
 }
 
-/* line 134, _theme.scss */
+/* line 141, _theme.scss */
 .project-item {
   background: #444;
   margin-bottom: 10px;
   width: 100%;
   position: relative;
 }
-/* line 139, _theme.scss */
+/* line 146, _theme.scss */
 .project-item header {
   position: absolute;
   bottom: 0;
@@ -565,34 +573,34 @@ a:hover {
   left: 0;
   right: 0;
 }
-/* line 146, _theme.scss */
+/* line 153, _theme.scss */
 .project-item h3 {
   background: rgba(0, 0, 0, 0.5);
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
 }
-/* line 150, _theme.scss */
+/* line 157, _theme.scss */
 .project-item h3 a {
   color: #fff;
   padding: 10px;
 }
-/* line 156, _theme.scss */
+/* line 163, _theme.scss */
 .project-item img {
   display: block;
   line-height: 0;
 }
 
-/* line 164, _theme.scss */
+/* line 171, _theme.scss */
 .post-wrap {
   padding: 0.5em 0;
 }
 
-/* line 168, _theme.scss */
+/* line 175, _theme.scss */
 .mobile-image, .project-item img, .entry-content img, .post-image img {
   width: 100%;
   height: auto;
 }
 
-/* line 179, _theme.scss */
+/* line 186, _theme.scss */
 .post-wrap blockquote p {
   padding: 5%;
   background: #f7f7f7;
@@ -601,89 +609,133 @@ a:hover {
 /* ==========================================================================
    4. Custom layout, inc Media Queries
    ========================================================================== */
+/* line 197, _theme.scss */
+.service-list .service {
+  margin-bottom: 1em;
+}
+/* line 199, _theme.scss */
+.service-list .service:nth-child(1) h4 {
+  background-position: 0 0;
+}
+/* line 200, _theme.scss */
+.service-list .service:nth-child(2) h4 {
+  background-position: 0 -45px;
+}
+/* line 201, _theme.scss */
+.service-list .service:nth-child(3) h4 {
+  background-position: 0 -90px;
+}
+/* line 202, _theme.scss */
+.service-list .service:nth-child(4) h4 {
+  background-position: 0 -135px;
+}
+/* line 203, _theme.scss */
+.service-list .service:nth-child(5) h4 {
+  background-position: 0 -180px;
+}
+/* line 205, _theme.scss */
+.service-list h4 {
+  background-image: url("../img/service_icons.png");
+  background-repeat: no-repeat;
+  min-height: 41px;
+  padding: 5px 0 0 50px;
+}
+
 @media screen and (max-width: 640px) {
-  /* line 192, _theme.scss */
+  /* line 217, _theme.scss */
   .site-footer .foot-item {
     display: none;
   }
-  /* line 194, _theme.scss */
+  /* line 219, _theme.scss */
   .site-footer .foot-item.foot-address {
     display: inherit;
   }
 }
 @media screen and (min-width: 640px) {
-  /* line 203, _theme.scss */
+  /* line 230, _theme.scss */
+  .main-menu .nav li a {
+    background: #fff;
+    border: 0;
+    color: black;
+    display: block;
+  }
+  /* line 235, _theme.scss */
+  .main-menu .nav li a:hover {
+    border-bottom: 3px solid #fff200;
+  }
+
+  /* line 241, _theme.scss */
   .foot-item {
     float: left;
   }
 
-  /* line 206, _theme.scss */
+  /* line 244, _theme.scss */
   .project-item header {
     opacity: 0;
     transition: all 0.5s ease;
   }
-  /* line 209, _theme.scss */
+  /* line 247, _theme.scss */
   .project-item header:hover {
     opacity: 1;
   }
 
-  /* line 216, _theme.scss */
+  /* line 254, _theme.scss */
   .post-wrap p, .post-wrap ul, .post-wrap ol, .post-wrap dl, .post-wrap blockquote {
     max-width: 33%;
   }
-  /* line 219, _theme.scss */
+  /* line 257, _theme.scss */
   .post-wrap blockquote p {
     max-width: 90%;
   }
-  /* line 222, _theme.scss */
+  /* line 260, _theme.scss */
   .post-wrap img {
     float: right;
     display: block;
     width: 66%;
   }
 
-  /* line 231, _theme.scss */
+  /* line 269, _theme.scss */
   .service-list .service {
     float: left;
   }
 
-  /* line 234, _theme.scss */
+  /* line 272, _theme.scss */
   .clients ul {
     -webkit-columns: 2;
     -moz-columns: 2;
     columns: 2;
   }
 
-  /* line 242, _theme.scss */
+  /* line 280, _theme.scss */
   .studio-images-sm {
     float: left;
   }
-  /* line 244, _theme.scss */
+  /* line 282, _theme.scss */
   .studio-images-sm img:first-child {
     margin-bottom: 1.5em;
   }
 
-  /* line 246, _theme.scss */
+  /* line 284, _theme.scss */
   .studio-images-lg {
     float: right;
   }
 
-  /* line 248, _theme.scss */
+  /* line 286, _theme.scss */
   .person .post-content {
     float: left;
   }
-  /* line 249, _theme.scss */
+  /* line 287, _theme.scss */
   .person .post-image {
     float: right;
   }
 
-  /* line 253, _theme.scss */
+  /* line 291, _theme.scss */
   .map-canvas, .address {
     float: left;
   }
 }
 @media screen and (min-width: 860px) {
-  /* line 259, _theme.scss */
+  /* line 297, _theme.scss */
   .clients ul {
     -webkit-columns: 3;
     -moz-columns: 3;
@@ -691,30 +743,30 @@ a:hover {
   }
 }
 /* Non-semantic helpers */
-/* line 270, _theme.scss */
+/* line 308, _theme.scss */
 .block-link, .site-header .logo a, .project-item h3, .project-item h3 a {
   height: 100%;
   width: 100%;
   display: block;
 }
 
-/* line 275, _theme.scss */
+/* line 313, _theme.scss */
 .left {
   float: left;
 }
 
-/* line 276, _theme.scss */
+/* line 314, _theme.scss */
 .right {
   float: right;
 }
 
-/* line 279, _theme.scss */
+/* line 317, _theme.scss */
 .hidden {
   display: none !important;
   visibility: hidden;
 }
 
-/* line 282, _theme.scss */
+/* line 320, _theme.scss */
 .visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -726,12 +778,12 @@ a:hover {
   width: 1px;
 }
 
-/* line 285, _theme.scss */
+/* line 323, _theme.scss */
 .invisible {
   visibility: hidden;
 }
 
-/* line 287, _theme.scss */
+/* line 325, _theme.scss */
 .ir {
   display: block;
   border: 0;
@@ -743,7 +795,7 @@ a:hover {
   direction: ltr;
 }
 
-/* line 288, _theme.scss */
+/* line 326, _theme.scss */
 .ir br {
   display: none;
 }

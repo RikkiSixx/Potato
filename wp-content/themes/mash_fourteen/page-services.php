@@ -26,9 +26,9 @@ Template Name: Services
 
 		<article <?php post_class('grid__item lap-one-half desk-one-third'); ?>>
 			<header class="header">
-				<h1 class="entry-title">
+				<h4 class="entry-title">
 					<?php the_title(); ?>
-				</h1>
+				</h4>
 			</header>
 
 			<section class="entry-content">

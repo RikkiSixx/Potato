@@ -24,6 +24,7 @@ CONTENTS - GLOBAL.CSS
 @import url("http://fonts.googleapis.com/css?family=Roboto:300,700|Roboto+Slab:300");
 
 $brand-color: #fff200;
+$font-color: #000;
 /*$support-color: #cc0033;
 $brand-face: 'Open Sans', sans-serif;
 $support-face: 'Raleway', sans-serif; */
@@ -52,16 +53,20 @@ h3, h4, h5, h6 {
 
 h1, h2, h3, h4, h5, h6 {
 	a { 
-		color: #000; 
+		color: $font-color; 
 		border: 0;
 	}
 }
+h3, h4 {
+	font-weight: bold;
+}
 
 a {
-	color: #000;
+	color: $font-color;
 	text-decoration: none;
 	border-bottom: 1px solid $brand-color;
 	&:hover {
+		border-bottom: 1px solid $font-color;
 		text-decoration: none;
 	}
 }
@@ -89,7 +94,9 @@ a {
 			@extend .block-link;
 		}
 	}
-	.menu-button{
+	.menu-button {
+		background: #fff;
+		border: 0;
 		float: right;
 	}
 }
@@ -186,6 +193,24 @@ a {
    4. Custom layout, inc Media Queries
    ========================================================================== */
 
+.service-list {
+	.service { 
+		margin-bottom: 1em; 
+		&:nth-child(1) h4 { background-position: 0 0; }
+		&:nth-child(2) h4 { background-position: 0 -45px; }
+		&:nth-child(3) h4 { background-position: 0 -90px; }
+		&:nth-child(4) h4 { background-position: 0 -135px; }
+		&:nth-child(5) h4 { background-position: 0 -180px; }
+	}
+	h4 {
+		background-image: url("../img/service_icons.png");
+		background-repeat: no-repeat;
+		min-height: 41px;
+		padding: 5px 0 0 50px;
+	}	
+}
+
+
 // Mobile to Laptop
 @media screen and (max-width: $lap-start) {
 
@@ -195,10 +220,23 @@ a {
 			display: inherit;
 		}
 	}
+
 }
 
 // Laptop and bigger
 @media screen and (min-width: $lap-start) {
+
+	.main-menu {
+		.nav li a { 
+			background: #fff;
+			border: 0;
+			color: $font-color;
+			display: block; 
+			&:hover {
+				border-bottom: 3px solid $brand-color;
+			}
+		}
+	}
 
 	.foot-item { float: left; }
 
