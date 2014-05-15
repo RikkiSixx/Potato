@@ -55,16 +55,27 @@ Template Name: Services
 
 </section>
 
+</div><!-- .container -->
 
-<section>
-	<h2>Our Process</h2>
+<div class="process">
 
-	<p>Mash was founded in 2002 and offers creative consultancy, great design and exacting production values for every project large or small. The service we provide is personal.</p>
-	
-</section>
+	<div class="container">
+
+		<section>
+			<h4>Our Process</h4>
+
+			<p>Mash was founded in 2002 and offers creative consultancy, great design and exacting production values for every project large or small. The service we provide is personal.</p>
+			
+		</section>
+
+	</div><!-- .container -->
+
+</div><!-- .process -->
+
+<div class="container">
 
 <section class="clients">
-	<h2>Clients</h2>
+	<h4>Clients</h4>
 
 	<?php the_content(); ?>
 
@@ -81,7 +92,7 @@ Template Name: Services
 		<aside class="testimonial">
 			<blockquote>
 				<?php the_content(); ?>
-				<?php the_title_attribute(); ?>
+				<h4><?php the_title_attribute(); ?></h4>
 			</blockquote>		
 		</aside>
 	<?php endwhile; endif; ?>

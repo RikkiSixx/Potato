@@ -435,10 +435,7 @@ CONTENTS - GLOBAL.CSS
 /* ==========================================================================
    1. Base styles
    ========================================================================== */
-/*$support-color: #cc0033;
-$brand-face: 'Open Sans', sans-serif;
-$support-face: 'Raleway', sans-serif; */
-/* line 32, _theme.scss */
+/* line 31, _theme.scss */
 body {
   background: #fff;
   color: #000;
@@ -448,38 +445,38 @@ body {
 /* ==========================================================================
    2. Base Typography & Links
    ========================================================================== */
-/* line 45, _theme.scss */
+/* line 44, _theme.scss */
 h1, h2,
 .alpha, .beta, .gamma, .delta, .epsilon, .zeta,
 .giga, .mega, .kilo {
   font-family: "Roboto Slab", serif;
 }
 
-/* line 48, _theme.scss */
+/* line 47, _theme.scss */
 h3, h4, h5, h6 {
   font-family: Roboto, sans-serif;
   font-weight: normal;
   letter-spacing: 0;
 }
 
-/* line 55, _theme.scss */
+/* line 54, _theme.scss */
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   color: black;
   border: 0;
 }
 
-/* line 60, _theme.scss */
+/* line 59, _theme.scss */
 h3, h4 {
   font-weight: bold;
 }
 
-/* line 64, _theme.scss */
+/* line 63, _theme.scss */
 a {
   color: black;
   text-decoration: none;
   border-bottom: 1px solid #fff200;
 }
-/* line 68, _theme.scss */
+/* line 67, _theme.scss */
 a:hover {
   border-bottom: 1px solid black;
   text-decoration: none;
@@ -488,18 +485,18 @@ a:hover {
 /* ==========================================================================
    3. Global layout & Typography
    ========================================================================== */
-/* line 79, _theme.scss */
+/* line 78, _theme.scss */
 .container {
   margin: auto;
   max-width: 1100px;
   padding: 1em;
 }
 
-/* line 85, _theme.scss */
+/* line 84, _theme.scss */
 .site-header {
   position: relative;
 }
-/* line 87, _theme.scss */
+/* line 86, _theme.scss */
 .site-header .logo {
   background: url("../img/logo.png") 0 0 no-repeat transparent;
   float: left;
@@ -507,14 +504,14 @@ a:hover {
   margin: 0;
   width: 62px;
 }
-/* line 97, _theme.scss */
+/* line 96, _theme.scss */
 .site-header .menu-button {
   background: #fff;
   border: 0;
   float: right;
 }
 
-/* line 103, _theme.scss */
+/* line 102, _theme.scss */
 .main-menu {
   position: absolute;
   top: 100%;
@@ -522,18 +519,18 @@ a:hover {
   width: 100%;
   z-index: 10;
 }
-/* line 109, _theme.scss */
+/* line 108, _theme.scss */
 .main-menu .nav > li {
   display: block;
 }
-/* line 111, _theme.scss */
+/* line 110, _theme.scss */
 .main-menu .nav > li > a {
   background: #232323;
   color: #fff;
   display: block;
 }
 @media screen and (min-width: 800px) {
-  /* line 103, _theme.scss */
+  /* line 102, _theme.scss */
   .main-menu {
     position: inherit;
     top: auto;
@@ -543,29 +540,29 @@ a:hover {
   }
 }
 
-/* line 127, _theme.scss */
+/* line 126, _theme.scss */
 .site-footer {
   background: #fff200;
 }
-/* line 129, _theme.scss */
+/* line 128, _theme.scss */
 .site-footer a, .site-footer a:visited {
   color: #333;
   border: 0;
 }
-/* line 134, _theme.scss */
+/* line 133, _theme.scss */
 .site-footer ul {
   list-style: none;
   margin-left: 0;
 }
 
-/* line 141, _theme.scss */
+/* line 140, _theme.scss */
 .project-item {
   background: #444;
   margin-bottom: 10px;
   width: 100%;
   position: relative;
 }
-/* line 146, _theme.scss */
+/* line 145, _theme.scss */
 .project-item header {
   position: absolute;
   bottom: 0;
@@ -573,34 +570,34 @@ a:hover {
   left: 0;
   right: 0;
 }
-/* line 153, _theme.scss */
+/* line 152, _theme.scss */
 .project-item h3 {
   background: rgba(0, 0, 0, 0.5);
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
 }
-/* line 157, _theme.scss */
+/* line 156, _theme.scss */
 .project-item h3 a {
   color: #fff;
   padding: 10px;
 }
-/* line 163, _theme.scss */
+/* line 162, _theme.scss */
 .project-item img {
   display: block;
   line-height: 0;
 }
 
-/* line 171, _theme.scss */
+/* line 170, _theme.scss */
 .post-wrap {
   padding: 0.5em 0;
 }
 
-/* line 175, _theme.scss */
+/* line 174, _theme.scss */
 .mobile-image, .project-item img, .entry-content img, .post-image img {
   width: 100%;
   height: auto;
 }
 
-/* line 186, _theme.scss */
+/* line 185, _theme.scss */
 .post-wrap blockquote p {
   padding: 5%;
   background: #f7f7f7;
@@ -641,101 +638,123 @@ a:hover {
   padding: 5px 0 0 50px;
 }
 
+/* line 213, _theme.scss */
+.process,
+.testimonial {
+  background: #f2f2f2;
+}
+
+/* line 216, _theme.scss */
+.clients ul {
+  list-style: none;
+  margin-left: 0;
+}
+
+/* line 220, _theme.scss */
+.testimonial {
+  padding: 1em 2em;
+  text-align: center;
+}
+/* line 223, _theme.scss */
+.testimonial p {
+  font-family: "Roboto Slab", serif;
+}
+
 @media screen and (max-width: 640px) {
-  /* line 217, _theme.scss */
+  /* line 233, _theme.scss */
   .site-footer .foot-item {
     display: none;
   }
-  /* line 219, _theme.scss */
+  /* line 235, _theme.scss */
   .site-footer .foot-item.foot-address {
     display: inherit;
   }
 }
 @media screen and (min-width: 640px) {
-  /* line 230, _theme.scss */
+  /* line 246, _theme.scss */
   .main-menu .nav li a {
     background: #fff;
     border: 0;
     color: black;
     display: block;
   }
-  /* line 235, _theme.scss */
+  /* line 251, _theme.scss */
   .main-menu .nav li a:hover {
     border-bottom: 3px solid #fff200;
   }
 
-  /* line 241, _theme.scss */
+  /* line 257, _theme.scss */
   .foot-item {
     float: left;
   }
 
-  /* line 244, _theme.scss */
+  /* line 260, _theme.scss */
   .project-item header {
     opacity: 0;
     transition: all 0.5s ease;
   }
-  /* line 247, _theme.scss */
+  /* line 263, _theme.scss */
   .project-item header:hover {
     opacity: 1;
   }
 
-  /* line 254, _theme.scss */
+  /* line 270, _theme.scss */
   .post-wrap p, .post-wrap ul, .post-wrap ol, .post-wrap dl, .post-wrap blockquote {
     max-width: 33%;
   }
-  /* line 257, _theme.scss */
+  /* line 273, _theme.scss */
   .post-wrap blockquote p {
     max-width: 90%;
   }
-  /* line 260, _theme.scss */
+  /* line 276, _theme.scss */
   .post-wrap img {
     float: right;
     display: block;
     width: 66%;
   }
 
-  /* line 269, _theme.scss */
+  /* line 285, _theme.scss */
   .service-list .service {
     float: left;
   }
 
-  /* line 272, _theme.scss */
+  /* line 288, _theme.scss */
   .clients ul {
     -webkit-columns: 2;
     -moz-columns: 2;
     columns: 2;
   }
 
-  /* line 280, _theme.scss */
+  /* line 296, _theme.scss */
   .studio-images-sm {
     float: left;
   }
-  /* line 282, _theme.scss */
+  /* line 298, _theme.scss */
   .studio-images-sm img:first-child {
     margin-bottom: 1.5em;
   }
 
-  /* line 284, _theme.scss */
+  /* line 300, _theme.scss */
   .studio-images-lg {
     float: right;
   }
 
-  /* line 286, _theme.scss */
+  /* line 302, _theme.scss */
   .person .post-content {
     float: left;
   }
-  /* line 287, _theme.scss */
+  /* line 303, _theme.scss */
   .person .post-image {
     float: right;
   }
 
-  /* line 291, _theme.scss */
+  /* line 307, _theme.scss */
   .map-canvas, .address {
     float: left;
   }
 }
 @media screen and (min-width: 860px) {
-  /* line 297, _theme.scss */
+  /* line 313, _theme.scss */
   .clients ul {
     -webkit-columns: 3;
     -moz-columns: 3;
@@ -743,30 +762,30 @@ a:hover {
   }
 }
 /* Non-semantic helpers */
-/* line 308, _theme.scss */
+/* line 324, _theme.scss */
 .block-link, .site-header .logo a, .project-item h3, .project-item h3 a {
   height: 100%;
   width: 100%;
   display: block;
 }
 
-/* line 313, _theme.scss */
+/* line 329, _theme.scss */
 .left {
   float: left;
 }
 
-/* line 314, _theme.scss */
+/* line 330, _theme.scss */
 .right {
   float: right;
 }
 
-/* line 317, _theme.scss */
+/* line 333, _theme.scss */
 .hidden {
   display: none !important;
   visibility: hidden;
 }
 
-/* line 320, _theme.scss */
+/* line 336, _theme.scss */
 .visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -778,12 +797,12 @@ a:hover {
   width: 1px;
 }
 
-/* line 323, _theme.scss */
+/* line 339, _theme.scss */
 .invisible {
   visibility: hidden;
 }
 
-/* line 325, _theme.scss */
+/* line 341, _theme.scss */
 .ir {
   display: block;
   border: 0;
@@ -795,7 +814,7 @@ a:hover {
   direction: ltr;
 }
 
-/* line 326, _theme.scss */
+/* line 342, _theme.scss */
 .ir br {
   display: none;
 }
@@ -3746,13 +3765,13 @@ label,
  */
 /* line 8, inuit.css/generic/_brand.scss */
 .brand {
-  font-family: "Helvetica Neue", sans-serif!important;
+  font-family: "Roboto Slab", serif!important;
   color: #fff200!important;
 }
 
 /* line 12, inuit.css/generic/_brand.scss */
 .brand-face {
-  font-family: "Helvetica Neue", sans-serif!important;
+  font-family: "Roboto Slab", serif!important;
 }
 
 /* line 16, inuit.css/generic/_brand.scss */

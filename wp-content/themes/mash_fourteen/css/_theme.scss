@@ -25,9 +25,8 @@ CONTENTS - GLOBAL.CSS
 
 $brand-color: #fff200;
 $font-color: #000;
-/*$support-color: #cc0033;
-$brand-face: 'Open Sans', sans-serif;
-$support-face: 'Raleway', sans-serif; */
+
+$brand-face: "Roboto Slab", serif;
 
 body {
 	background: #fff;
@@ -43,7 +42,7 @@ body {
 h1, h2,  
 .alpha, .beta, .gamma, .delta, .epsilon, .zeta,
 .giga, .mega, .kilo {
-	font-family: "Roboto Slab", serif;
+	font-family: $brand-face;
 }
 h3, h4, h5, h6 {
 	font-family: $base-font-family;
@@ -193,6 +192,7 @@ a {
    4. Custom layout, inc Media Queries
    ========================================================================== */
 
+// Service Page
 .service-list {
 	.service { 
 		margin-bottom: 1em; 
@@ -209,6 +209,22 @@ a {
 		padding: 5px 0 0 50px;
 	}	
 }
+.process,
+.testimonial {
+	background: #f2f2f2;
+}
+.clients ul {
+	list-style: none;
+	margin-left: 0;
+}
+.testimonial {
+	padding: 1em 2em;
+	text-align: center;
+	p {
+		font-family: $brand-face;
+	}
+}
+
 
 
 // Mobile to Laptop
