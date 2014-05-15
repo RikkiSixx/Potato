@@ -213,6 +213,16 @@ a {
 .testimonial {
 	background: #f2f2f2;
 }
+.process-stages {
+	list-style: none;
+	margin: 0; 
+	li {
+		display: inline-block;
+		float: left;
+		text-align: center;
+		width: 50%;
+	}
+}
 .clients ul {
 	list-style: none;
 	margin-left: 0;
@@ -284,6 +294,9 @@ a {
 	.service-list {
 		.service { float: left; }
 	}
+	.process-stages {
+		li { width: 33%; }
+	}
 	.clients {
 		ul {
 			-webkit-columns: 2;
@@ -315,6 +328,9 @@ a {
 			-moz-columns: 3;
 			columns: 3;
 		}
+	}
+	.process-stages {
+		li { width: 16.5%; }
 	}
 }
 

@@ -65,6 +65,33 @@ Template Name: Services
 			<h4>Our Process</h4>
 
 			<p>Mash was founded in 2002 and offers creative consultancy, great design and exacting production values for every project large or small. The service we provide is personal.</p>
+
+			<ul class="process-stages cf">
+				<li>
+					<img src="<?php echo get_template_directory_uri(); ?>/img/process-listen.png" title="" alt="" />
+					<p>Listen to your problem</p>
+				</li>
+				<li>
+					<img src="<?php echo get_template_directory_uri(); ?>/img/process-develop.png" title="" alt="" />
+					<p>Develop your brief</p>
+				</li>
+				<li>
+					<img src="<?php echo get_template_directory_uri(); ?>/img/process-ideas.png" title="" alt="" />
+					<p>Ideas &amp; Concept Generation</p>
+				</li>
+				<li>
+					<img src="<?php echo get_template_directory_uri(); ?>/img/process-present.png" title="" alt="" />
+					<p>Present &amp; Open to feedback</p>
+				</li>
+				<li>
+					<img src="<?php echo get_template_directory_uri(); ?>/img/process-production.png" title="" alt="" />
+					<p>Production &amp; Artwork Finalising</p>
+				</li>
+				<li>
+					<img src="<?php echo get_template_directory_uri(); ?>/img/process-launch.png" title="" alt="" />
+					<p>Launch &amp; deployment</p>
+				</li>
+			</ul>
 			
 		</section>
 
