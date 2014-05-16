@@ -296,9 +296,6 @@ function theme_taxonomies_init() {
 
 }
 
-
-
-
 function mash_fourteen_custom_pings( $comment ) {
 	$GLOBALS['comment'] = $comment;
 	?>
@@ -315,3 +312,15 @@ function mash_fourteen_comments_number( $count ) {
 		return $count;
 	}
 }
+
+/* gets featured projects */
+function getFeaturedProjects($limit=1) {
+	$args = array(
+		'posts_per_page' => $limit,
+		'post_type' => 'project'
+	);
+	return get_posts($args);
+}
+
+
+
