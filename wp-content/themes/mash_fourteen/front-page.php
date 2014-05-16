@@ -7,9 +7,11 @@
 	$count = 1;
 	
 	// Find posts in 'Projects' post type 
+	$page = (get_query_var('p')) ? get_query_var('p') : 1;  
 	$args = array(
-		'posts_per_page' => 6,
-		'post_type' => 'project'
+		'posts_per_page' => 3,
+		'post_type' => 'project',
+		'paged' => 1
 	);
 	query_posts($args);
 	
@@ -52,7 +54,15 @@
 		<?php $count++;
 	endwhile; endif; ?>
 	
+	<div style="position:relative; top:-33px">
+	<div class="nav-previous"><a href="/?p=2">More</a></div>
+	</div>
+	
 	<?php wp_reset_query(); ?>
+	
+	
 </section>
+
+
 
 <?php get_footer(); ?>
