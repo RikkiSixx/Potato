@@ -55,7 +55,7 @@
 	endwhile; endif; ?>
 	
 	<div style="position:relative; top:-33px">
-	<div class="nav-previous"><a href="/?p=2">More</a></div>
+		<div class="nav-previous"><a href="/?p=2">More</a></div>
 	</div>
 	
 	<?php wp_reset_query(); ?>

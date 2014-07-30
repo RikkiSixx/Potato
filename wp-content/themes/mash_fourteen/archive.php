@@ -1,21 +1,34 @@
 <?php get_header(); ?>
-<section id="content" role="main">
-	<header class="header">
-		<h1 class="entry-title"><?php 
-		if ( is_day() ) { printf( __( 'Daily Archives: %s', 'mash_fourteen' ), get_the_time( get_option( 'date_format' ) ) ); }
-		elseif ( is_month() ) { printf( __( 'Monthly Archives: %s', 'mash_fourteen' ), get_the_time( 'F Y' ) ); }
-		elseif ( is_year() ) { printf( __( 'Yearly Archives: %s', 'mash_fourteen' ), get_the_time( 'Y' ) ); }
-		else { _e( 'Archives', 'mash_fourteen' ); }
-		?></h1>
-	</header>
+
+<section role="main" class="project-grid cf">
+
+	<?php the_category(); ?>
 
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-		<?php get_template_part( 'entry' ); ?>
+
+	<article class="project-item desk-one-third lap-one-half">		
+
+		<section class="entry-content">
+			<header class="header">
+				<h3 class="entry-title">
+					<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+				</h3>
+			</header>
+
+			<?php if ( has_post_thumbnail() ) { ?>
+				<?php the_post_thumbnail('project-sm'); ?>
+			<?php } else { ?>
+				<img src="<?php echo get_template_directory_uri(); ?>/img/placeholder-sm.jpg" width="100%" height="auto" />
+			<?php } ?>
+
+			<?php // the_content(); ?>
+		</section>
+
+	</article>
+
 	<?php endwhile; endif; ?>
 
-	<?php get_template_part( 'nav', 'below' ); ?>
 </section>
 
-<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>

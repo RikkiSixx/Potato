@@ -37,7 +37,7 @@
 						<h3>Connect</h3>
 						<?php $options = get_option('mash_fourteen_theme_options'); ?>
 						<ul>
-							<li>Newsletter</li>
+							<!-- <li>Newsletter</li> -->
 							<li><a href="http://www.facebook.com/<?php echo ($options['connect_facebook']); ?>" title="Facebook">Facebook</a></li>
 							<li><a href="http://www.twitter.com/<?php echo ($options['connect_twitter']); ?>" title="Twitter">Twitter</a></li>
 							<li><a href="http://www.behance.com/<?php echo ($options['connect_behance']); ?>" title="Behance">Behance</a></li>

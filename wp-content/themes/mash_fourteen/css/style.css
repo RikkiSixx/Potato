@@ -417,11 +417,11 @@
 
 /* 
 
-Rik Kendell, UI developer & designer website and blog
+Mash
 
 Author: Rik Kendell - @Rikki_Sixx
-Version: 2.5;
-URL: http://www.rikkendell.co.uk/
+Version: 1.0;
+URL: http://www.wearemash.com/
 
 CONTENTS - GLOBAL.CSS
 -----------------------------------------
@@ -603,34 +603,50 @@ a:hover {
   background: #f7f7f7;
 }
 
+/* line 192, _theme.scss */
+.comments ul {
+  list-style: none;
+  margin: 0;
+}
+/* line 193, _theme.scss */
+.comments ul.children {
+  margin-left: 1.5em;
+}
+/* line 199, _theme.scss */
+.comments .comment-body {
+  padding: 24px;
+  background: #f7f7f7;
+  margin-bottom: 1em;
+}
+
 /* ==========================================================================
    4. Custom layout, inc Media Queries
    ========================================================================== */
-/* line 197, _theme.scss */
+/* line 213, _theme.scss */
 .service-list .service {
   margin-bottom: 1em;
 }
-/* line 199, _theme.scss */
+/* line 215, _theme.scss */
 .service-list .service:nth-child(1) h4 {
   background-position: 0 0;
 }
-/* line 200, _theme.scss */
+/* line 216, _theme.scss */
 .service-list .service:nth-child(2) h4 {
   background-position: 0 -45px;
 }
-/* line 201, _theme.scss */
+/* line 217, _theme.scss */
 .service-list .service:nth-child(3) h4 {
   background-position: 0 -90px;
 }
-/* line 202, _theme.scss */
+/* line 218, _theme.scss */
 .service-list .service:nth-child(4) h4 {
   background-position: 0 -135px;
 }
-/* line 203, _theme.scss */
+/* line 219, _theme.scss */
 .service-list .service:nth-child(5) h4 {
   background-position: 0 -180px;
 }
-/* line 205, _theme.scss */
+/* line 221, _theme.scss */
 .service-list h4 {
   background-image: url("../img/service_icons.png");
   background-repeat: no-repeat;
@@ -638,18 +654,18 @@ a:hover {
   padding: 5px 0 0 50px;
 }
 
-/* line 213, _theme.scss */
+/* line 229, _theme.scss */
 .process,
 .testimonial {
   background: #f2f2f2;
 }
 
-/* line 216, _theme.scss */
+/* line 232, _theme.scss */
 .process-stages {
   list-style: none;
   margin: 0;
 }
-/* line 219, _theme.scss */
+/* line 235, _theme.scss */
 .process-stages li {
   display: inline-block;
   float: left;
@@ -657,158 +673,158 @@ a:hover {
   width: 50%;
 }
 
-/* line 226, _theme.scss */
+/* line 242, _theme.scss */
 .clients ul {
   list-style: none;
   margin-left: 0;
 }
 
-/* line 230, _theme.scss */
+/* line 246, _theme.scss */
 .testimonial {
   padding: 1em 2em;
   text-align: center;
 }
-/* line 233, _theme.scss */
+/* line 249, _theme.scss */
 .testimonial p {
   font-family: "Roboto Slab", serif;
 }
 
 @media screen and (max-width: 640px) {
-  /* line 243, _theme.scss */
+  /* line 258, _theme.scss */
   .site-footer .foot-item {
     display: none;
   }
-  /* line 245, _theme.scss */
+  /* line 260, _theme.scss */
   .site-footer .foot-item.foot-address {
     display: inherit;
   }
 }
 @media screen and (min-width: 640px) {
-  /* line 256, _theme.scss */
+  /* line 271, _theme.scss */
   .main-menu .nav li a {
     background: #fff;
     border: 0;
     color: black;
     display: block;
   }
-  /* line 261, _theme.scss */
+  /* line 276, _theme.scss */
   .main-menu .nav li a:hover {
     border-bottom: 3px solid #fff200;
   }
 
-  /* line 267, _theme.scss */
+  /* line 282, _theme.scss */
   .foot-item {
     float: left;
   }
 
-  /* line 270, _theme.scss */
+  /* line 285, _theme.scss */
   .project-item header {
     opacity: 0;
     transition: all 0.5s ease;
   }
-  /* line 273, _theme.scss */
+  /* line 288, _theme.scss */
   .project-item header:hover {
     opacity: 1;
   }
 
-  /* line 280, _theme.scss */
+  /* line 295, _theme.scss */
   .post-wrap p, .post-wrap ul, .post-wrap ol, .post-wrap dl, .post-wrap blockquote {
     max-width: 33%;
   }
-  /* line 283, _theme.scss */
+  /* line 298, _theme.scss */
   .post-wrap blockquote p {
     max-width: 90%;
   }
-  /* line 286, _theme.scss */
+  /* line 301, _theme.scss */
   .post-wrap img {
     float: right;
     display: block;
     width: 66%;
   }
 
-  /* line 295, _theme.scss */
+  /* line 310, _theme.scss */
   .service-list .service {
     float: left;
   }
 
-  /* line 298, _theme.scss */
+  /* line 313, _theme.scss */
   .process-stages li {
     width: 33%;
   }
 
-  /* line 301, _theme.scss */
+  /* line 316, _theme.scss */
   .clients ul {
     -webkit-columns: 2;
     -moz-columns: 2;
     columns: 2;
   }
 
-  /* line 309, _theme.scss */
+  /* line 324, _theme.scss */
   .studio-images-sm {
     float: left;
   }
-  /* line 311, _theme.scss */
+  /* line 326, _theme.scss */
   .studio-images-sm img:first-child {
     margin-bottom: 1.5em;
   }
 
-  /* line 313, _theme.scss */
+  /* line 328, _theme.scss */
   .studio-images-lg {
     float: right;
   }
 
-  /* line 315, _theme.scss */
+  /* line 330, _theme.scss */
   .person .post-content {
     float: left;
   }
-  /* line 316, _theme.scss */
+  /* line 331, _theme.scss */
   .person .post-image {
     float: right;
   }
 
-  /* line 320, _theme.scss */
+  /* line 335, _theme.scss */
   .map-canvas, .address {
     float: left;
   }
 }
 @media screen and (min-width: 860px) {
-  /* line 326, _theme.scss */
+  /* line 341, _theme.scss */
   .clients ul {
     -webkit-columns: 3;
     -moz-columns: 3;
     columns: 3;
   }
 
-  /* line 333, _theme.scss */
+  /* line 348, _theme.scss */
   .process-stages li {
     width: 16.5%;
   }
 }
 /* Non-semantic helpers */
-/* line 340, _theme.scss */
+/* line 355, _theme.scss */
 .block-link, .site-header .logo a, .project-item h3, .project-item h3 a {
   height: 100%;
   width: 100%;
   display: block;
 }
 
-/* line 345, _theme.scss */
+/* line 360, _theme.scss */
 .left {
   float: left;
 }
 
-/* line 346, _theme.scss */
+/* line 361, _theme.scss */
 .right {
   float: right;
 }
 
-/* line 349, _theme.scss */
+/* line 364, _theme.scss */
 .hidden {
   display: none !important;
   visibility: hidden;
 }
 
-/* line 352, _theme.scss */
+/* line 367, _theme.scss */
 .visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -820,12 +836,12 @@ a:hover {
   width: 1px;
 }
 
-/* line 355, _theme.scss */
+/* line 370, _theme.scss */
 .invisible {
   visibility: hidden;
 }
 
-/* line 357, _theme.scss */
+/* line 372, _theme.scss */
 .ir {
   display: block;
   border: 0;
@@ -837,7 +853,7 @@ a:hover {
   direction: ltr;
 }
 
-/* line 358, _theme.scss */
+/* line 373, _theme.scss */
 .ir br {
   display: none;
 }

@@ -1,10 +1,10 @@
 /* 
 
-Rik Kendell, UI developer & designer website and blog
+Mash
 
 Author: Rik Kendell - @Rikki_Sixx
-Version: 2.5;
-URL: http://www.rikkendell.co.uk/
+Version: 1.0;
+URL: http://www.wearemash.com/
 
 CONTENTS - GLOBAL.CSS
 -----------------------------------------
@@ -187,6 +187,22 @@ a {
 	background: #f7f7f7;
 }
 
+//Comments 
+.comments {
+	ul {
+		&.children {
+			margin-left: 1.5em;
+		}
+		list-style: none;
+		margin: 0;
+	}
+	.comment-body {
+		padding: 24px;
+		background: #f7f7f7;
+		margin-bottom: 1em;
+	}
+}
+
 
 /* ==========================================================================
    4. Custom layout, inc Media Queries
@@ -234,7 +250,6 @@ a {
 		font-family: $brand-face;
 	}
 }
-
 
 
 // Mobile to Laptop
