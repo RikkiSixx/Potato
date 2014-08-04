@@ -33,8 +33,8 @@
 				<header class="header">
 					<h3 class="entry-title">
 						<a href="<?php the_permalink(); ?>"><span><?php the_title(); ?></span></a>
-					</h3>
-					<?php the_category(); ?>
+					</h3>	
+					<p class="service-performed"><?php echo get_the_term_list( $post->ID, 'service-type', 'Services: ', ', ' ); ?></p>				
 				</header>
 				<?php // Featured project
 				if(count($arr_featured) && $size == 'lg'):

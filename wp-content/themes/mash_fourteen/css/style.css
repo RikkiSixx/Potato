@@ -178,10 +178,12 @@ header .entry-title, .strap { font-family: "Roboto Slab", serif; font-weight: 30
 .project-item { width: 100%; position: relative; }
 .project-item .entry-content { background: #444; margin: 5px; }
 .project-item header { position: absolute; bottom: 5px; top: 5px; left: 5px; right: 5px; }
-.project-item h3 { background: rgba(0, 0, 0, 0.5); opacity: background 0.5s ease; text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3); }
-.project-item h3 a { color: #fff; padding: 10px; }
+.project-item h3 { background: rgba(0, 0, 0, 0.5); opacity: background 0.5s ease; text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3); padding: 10px; }
+.project-item h3 a { color: #fff; }
 .project-item h3 a:hover { border: 0; }
 @media screen and (min-width: 640px) { .project-item h3 a span { opacity: 0; transition: opacity 0.5s ease; } }
+.project-item .service-performed { text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3); color: #fff; padding: 10px 10px 0; position: absolute; bottom: 0; }
+.project-item .service-performed a { color: #fff; }
 .project-item img { display: block; line-height: 0; }
 @media screen and (min-width: 640px) { .project-item:hover h3 a span { opacity: 1; } }
 
@@ -229,7 +231,9 @@ header .entry-title, .strap { font-family: "Roboto Slab", serif; font-weight: 30
   .post-wrap .post-img-wrap a { border: 0; }
   .post-wrap .post-img-wrap img { margin-bottom: 1em; }
   .project-item h3 { background: transparent; transition: background 0.5s ease; }
-  .project-item:hover h3 { background: rgba(0, 0, 0, 0.5); }
+  .project-item .service-performed { opacity: 0; transition: opacity 0.5s ease; }
+  .project-item:hover h3 { background: rgba(0, 0, 0, 0.75); }
+  .project-item:hover .service-performed { opacity: 1; }
   .service-list .service { float: left; }
   .process-stages li { width: 33%; }
   .clients ul { -webkit-columns: 2; -moz-columns: 2; columns: 2; }
