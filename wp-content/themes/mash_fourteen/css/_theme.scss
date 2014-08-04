@@ -1,9 +1,9 @@
 /* 
 
-Mash
+MASH
 
-Author: Rik Kendell - @Rikki_Sixx
-Version: 1.0;
+Author: Rik Kendell - @Rikki_Sixx - http://www.rikkendell.co.uk/
+Version: 2
 URL: http://www.wearemash.com/
 
 CONTENTS - GLOBAL.CSS
@@ -34,6 +34,9 @@ body {
 	letter-spacing: -0.05px; 
 }
 
+img[width], img[height] {
+	max-width: 100% !important;
+}
 
 /* ==========================================================================
    2. Base Typography & Links
@@ -70,6 +73,11 @@ a {
 	}
 }
 
+a.img-link {
+	text-decoration: none;
+	border: 0;
+}
+
 
 /* ==========================================================================
    3. Global layout & Typography
@@ -85,18 +93,25 @@ a {
 	position: relative;
 	.logo {
 		background: url("../img/logo.png") 0 0 no-repeat transparent;
+		background-size: cover;
 		float: left;
 		height: 62px;
 		margin: 0;
 		width: 62px;
 		a {
 			@extend .block-link;
+			border: 0;
+		}
+		@media screen and (min-width: $lap-start) {
+			height: 78px;
+			width: 78px;
 		}
 	}
 	.menu-button {
 		background: #fff;
 		border: 0;
 		float: right;
+		padding-right: 3em;
 	}
 }
 .main-menu {
@@ -125,38 +140,67 @@ a {
 
 .site-footer {
 	background: $brand-color;
+	font-family: $brand-face;
+	padding: 75px 0; 
+	h3 {
+		font-family: $brand-face;
+	}
 	a, a:visited { 
 		color: #333;
 		border: 0; 
 	}
-
 	ul {
 		list-style: none;
 		margin-left: 0;
 	}
 }
 
-// Homepage - Projects
+header .entry-title,
+.strap {
+	font-family: $brand-face;
+	font-weight: 300;
+}
+
+
+
+/* ==========================================================================
+   4. Custom layout, inc Media Queries
+   ========================================================================== */
+
+// Homepage 
+.strap {
+	max-width: 660px;
+}
+
 .project-item {
-	background: #444;
-	margin-bottom: 10px;
 	width: 100%;
 	position: relative;
+	.entry-content { 
+		background: #444; 
+		margin: 5px; }
 	header {
-		position: absolute;
-		bottom: 0;
-		top: 0;
-		left: 0;
-		right: 0;
+		position: absolute;		
+		bottom: 5px;
+		top: 5px;
+		left: 5px;
+		right: 5px;
 	}
 	h3 { 
 		background: rgba(0,0,0,0.5);
-		@extend .block-link; 
+		opacity: background 0.5s ease;
 		text-shadow: 2px 2px 2px rgba(0,0,0,0.3);
+		@extend .block-link; 
 		a {
 			color: #fff;
+			padding: 10px;					
 			@extend .block-link;
-			padding: 10px;
+			&:hover { border: 0; }
+			@media screen and (min-width: $lap-start) {
+				span { 
+					opacity: 0; 
+					transition: opacity 0.5s ease;
+				}
+			}
 		}
 	}
 	img {
@@ -164,11 +208,34 @@ a {
 		display: block;
 		line-height: 0;
 	}
+	@media screen and (min-width: $lap-start) {
+		&:hover h3 a span {
+			opacity: 1;
+		}
+	}
 }// .project-item
+
+
+// Work Page
+.sub-menu {
+	.cat-item:before {
+		content: ' / ';
+	}
+	.cat-item:first-child:before {
+		content: none;
+	}
+}
 
 // Blog Archive 
 .post-wrap {
 	padding: 0.5em 0;
+	.post-img-wrap {
+		img { 
+			margin-bottom: 1em;
+			max-width: 100%;
+			height: auto;
+		}
+	}
 }
 
 .mobile-image {
@@ -187,26 +254,6 @@ a {
 	background: #f7f7f7;
 }
 
-//Comments 
-.comments {
-	ul {
-		&.children {
-			margin-left: 1.5em;
-		}
-		list-style: none;
-		margin: 0;
-	}
-	.comment-body {
-		padding: 24px;
-		background: #f7f7f7;
-		margin-bottom: 1em;
-	}
-}
-
-
-/* ==========================================================================
-   4. Custom layout, inc Media Queries
-   ========================================================================== */
 
 // Service Page
 .service-list {
@@ -252,6 +299,14 @@ a {
 }
 
 
+// Studio Page 
+.studio-images-sm,
+.studio-images-lg {
+	img { width: 100%; height: auto; }
+}
+.staff { margin-top: 2em; }
+
+
 // Mobile to Laptop
 @media screen and (max-width: $lap-start) {
 
@@ -268,41 +323,45 @@ a {
 @media screen and (min-width: $lap-start) {
 
 	.main-menu {
+		top: 60px;
 		.nav li a { 
 			background: #fff;
-			border: 0;
+			border: 0;			
 			color: $font-color;
 			display: block; 
+			padding: 0 0.96em;
 			&:hover {
-				border-bottom: 3px solid $brand-color;
+				color: #666;
 			}
 		}
 	}
 
 	.foot-item { float: left; }
 
-	.project-item {
-		header {
-			opacity: 0;
-			transition: all 0.5s ease;
-			&:hover {
-				opacity: 1;
-			}
-		}
-	}
-
 	.post-wrap {
-		p, ul, ol, dl, blockquote {
-			max-width: 33%;
-		}
 		blockquote p {
 			max-width: 90%;
 		}
-		img {
-			float: right;
-			display: block;
-			width: 66%;
+
+		.post-content-wrap {
+			float: left;
+			width: 33%;
 		}
+		.post-img-wrap {
+			float: right;
+			width: 66%;
+			a { border: 0; }
+			img { margin-bottom: 1em; }
+		}
+	}
+
+	// Homepage
+	.project-item {
+		h3 { 
+			background: transparent;
+			transition: background 0.5s ease;
+		}
+		&:hover h3 { background: rgba(0,0,0,0.5); }
 	}
 
 	// Services

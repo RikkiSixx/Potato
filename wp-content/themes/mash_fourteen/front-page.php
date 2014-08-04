@@ -1,5 +1,7 @@
 <?php get_header(); ?>
 
+<h2 class="strap">Mash is a full service creative design agency based in Shoreditch, London.</h2>
+
 <section role="main" class="project-grid cf">
 	
 	<?php
@@ -9,7 +11,7 @@
 	// Find posts in 'Projects' post type 
 	$page = (get_query_var('p')) ? get_query_var('p') : 1;  
 	$args = array(
-		'posts_per_page' => 3,
+		'posts_per_page' => 6,
 		'post_type' => 'project',
 		'paged' => 1
 	);
@@ -54,15 +56,12 @@
 		<?php $count++;
 	endwhile; endif; ?>
 	
-	<div style="position:relative; top:-33px">
+	<!-- <div style="position:relative; top:-33px">
 		<div class="nav-previous"><a href="/?p=2">More</a></div>
-	</div>
+	</div> -->
 	
 	<?php wp_reset_query(); ?>
 	
-	
 </section>
-
-
 
 <?php get_footer(); ?>

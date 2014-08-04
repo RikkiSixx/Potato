@@ -24,9 +24,15 @@ Template Name: Project Detail
 
 			<section class="entry-content post-wrap cf">
 
-				<?php if ( has_post_thumbnail() ) { the_post_thumbnail('project-lg'); } ?>
+				<?php // if ( has_post_thumbnail() ) { the_post_thumbnail('project-lg'); } ?>
 
-				<?php the_content(); ?>
+				<div class="post-content-wrap">
+					<?php the_content(); ?>
+				</div>
+
+				<div class="post-img-wrap">
+					<?php the_secondary_content('Project Images' ) ?>
+				</div>
 
 				<div class="entry-links"><?php wp_link_pages(); ?></div>
 			</section>
