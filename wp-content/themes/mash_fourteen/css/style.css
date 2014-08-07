@@ -164,11 +164,17 @@ a.img-link { text-decoration: none; border: 0; }
 .main-menu .nav > li { display: block; }
 .main-menu .nav > li > a { background: #232323; color: #fff; display: block; }
 @media screen and (min-width: 800px) { .main-menu { position: inherit; top: auto; left: auto; float: right; width: auto; } }
+@media screen and (min-width: 640px) { .main-menu { top: 60px; }
+  .main-menu .nav li a { background: #fff; border: 0; color: black; display: block; padding: 0 0.96em; }
+  .main-menu .nav li a:hover { color: #666; } }
 
 .site-footer { background: #fff200; font-family: "Roboto Slab", serif; padding: 75px 0; }
 .site-footer h3 { font-family: "Roboto Slab", serif; }
 .site-footer a, .site-footer a:visited { color: #333; border: 0; }
 .site-footer ul { list-style: none; margin-left: 0; }
+@media screen and (max-width: 640px) { .site-footer .foot-item { display: none; }
+  .site-footer .foot-item.foot-address { display: inherit; } }
+@media screen and (min-width: 640px) { .site-footer .foot-item { float: left; } }
 
 header .entry-title, .strap { font-family: "Roboto Slab", serif; font-weight: 300; }
 
@@ -181,17 +187,26 @@ header .entry-title, .strap { font-family: "Roboto Slab", serif; font-weight: 30
 .project-item h3 { background: rgba(0, 0, 0, 0.5); opacity: background 0.5s ease; text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3); padding: 10px; }
 .project-item h3 a { color: #fff; }
 .project-item h3 a:hover { border: 0; }
-@media screen and (min-width: 640px) { .project-item h3 a span { opacity: 0; transition: opacity 0.5s ease; } }
+.project-item h3 a span { opacity: 0; transition: opacity 0.5s ease; }
 .project-item .service-performed { text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3); color: #fff; padding: 10px 10px 0; position: absolute; bottom: 0; }
 .project-item .service-performed a { color: #fff; }
 .project-item img { display: block; line-height: 0; }
-@media screen and (min-width: 640px) { .project-item:hover h3 a span { opacity: 1; } }
+.project-item h3 { background: transparent; transition: background 0.5s ease; }
+.project-item .service-performed { opacity: 0; transition: opacity 0.5s ease; }
+.project-item:hover h3 { background: rgba(0, 0, 0, 0.75); }
+.project-item:hover .service-performed { opacity: 1; }
+.project-item:hover h3 a span { opacity: 1; }
 
 .sub-menu .cat-item:before { content: ' / '; }
 .sub-menu .cat-item:first-child:before { content: none; }
 
 .post-wrap { padding: 0.5em 0; }
 .post-wrap .post-img-wrap img { margin-bottom: 1em; max-width: 100%; height: auto; }
+@media screen and (min-width: 640px) { .post-wrap blockquote p { max-width: 90%; }
+  .post-wrap .post-content-wrap { float: left; width: 33%; }
+  .post-wrap .post-img-wrap { float: right; width: 66%; }
+  .post-wrap .post-img-wrap a { border: 0; }
+  .post-wrap .post-img-wrap img { margin-bottom: 1em; } }
 
 .mobile-image, .project-item img, .entry-content img, .post-image img { width: 100%; height: auto; }
 
@@ -203,48 +218,37 @@ header .entry-title, .strap { font-family: "Roboto Slab", serif; font-weight: 30
 .service-list .service:nth-child(3) h4 { background-position: 0 -90px; }
 .service-list .service:nth-child(4) h4 { background-position: 0 -135px; }
 .service-list .service:nth-child(5) h4 { background-position: 0 -180px; }
+@media screen and (min-width: 640px) { .service-list .service { float: left; } }
 .service-list h4 { background-image: url("../img/service_icons.png"); background-repeat: no-repeat; min-height: 41px; padding: 5px 0 0 50px; }
 
 .process, .testimonial { background: #f2f2f2; }
 
 .process-stages { list-style: none; margin: 0; }
 .process-stages li { display: inline-block; float: left; text-align: center; width: 50%; }
+@media screen and (min-width: 640px) { .process-stages li { width: 33%; } }
+@media screen and (min-width: 860px) { .process-stages li { width: 16.5%; } }
 
 .clients ul { list-style: none; margin-left: 0; }
+@media screen and (min-width: 640px) { .clients ul { -webkit-columns: 2; -moz-columns: 2; columns: 2; } }
+@media screen and (min-width: 860px) { .clients ul { -webkit-columns: 3; -moz-columns: 3; columns: 3; } }
 
 .testimonial { padding: 1em 2em; text-align: center; }
 .testimonial p { font-family: "Roboto Slab", serif; }
 
 .studio-images-sm img, .studio-images-lg img { width: 100%; height: auto; }
 
+@media screen and (min-width: 640px) { .studio-images-sm { float: left; }
+  .studio-images-sm img:first-child { margin-bottom: 1.5em; } }
+
+@media screen and (min-width: 640px) { .studio-images-lg { float: right; } }
+
 .staff { margin-top: 2em; }
 
-@media screen and (max-width: 640px) { .site-footer .foot-item { display: none; }
-  .site-footer .foot-item.foot-address { display: inherit; } }
-@media screen and (min-width: 640px) { .main-menu { top: 60px; }
-  .main-menu .nav li a { background: #fff; border: 0; color: black; display: block; padding: 0 0.96em; }
-  .main-menu .nav li a:hover { color: #666; }
-  .foot-item { float: left; }
-  .post-wrap blockquote p { max-width: 90%; }
-  .post-wrap .post-content-wrap { float: left; width: 33%; }
-  .post-wrap .post-img-wrap { float: right; width: 66%; }
-  .post-wrap .post-img-wrap a { border: 0; }
-  .post-wrap .post-img-wrap img { margin-bottom: 1em; }
-  .project-item h3 { background: transparent; transition: background 0.5s ease; }
-  .project-item .service-performed { opacity: 0; transition: opacity 0.5s ease; }
-  .project-item:hover h3 { background: rgba(0, 0, 0, 0.75); }
-  .project-item:hover .service-performed { opacity: 1; }
-  .service-list .service { float: left; }
-  .process-stages li { width: 33%; }
-  .clients ul { -webkit-columns: 2; -moz-columns: 2; columns: 2; }
-  .studio-images-sm { float: left; }
-  .studio-images-sm img:first-child { margin-bottom: 1.5em; }
-  .studio-images-lg { float: right; }
-  .person .post-content { float: left; }
-  .person .post-image { float: right; }
-  .map-canvas, .address { float: left; } }
-@media screen and (min-width: 860px) { .clients ul { -webkit-columns: 3; -moz-columns: 3; columns: 3; }
-  .process-stages li { width: 16.5%; } }
+@media screen and (min-width: 640px) { .person .post-content { float: left; }
+  .person .post-image { float: right; } }
+
+@media screen and (min-width: 640px) { .map-canvas, .address { float: left; } }
+
 /* Non-semantic helpers */
 .block-link, .site-header .logo a, .project-item h3, .project-item h3 a { height: 100%; width: 100%; display: block; }
 

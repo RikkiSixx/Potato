@@ -136,6 +136,21 @@ a.img-link {
 		float: right;
 		width: auto;
 	}
+
+	@media screen and (min-width: $lap-start) {	
+		top: 60px;
+		.nav li a { 
+			background: #fff;
+			border: 0;			
+			color: $font-color;
+			display: block; 
+			padding: 0 0.96em;
+			&:hover {
+				color: #666;
+			}
+		}
+	}
+
 } // .main-menu 
 
 .site-footer {
@@ -152,6 +167,18 @@ a.img-link {
 	ul {
 		list-style: none;
 		margin-left: 0;
+	}
+
+	.foot-item {
+		@media screen and (max-width: $lap-start) {
+			display: none;
+			&.foot-address {
+				display: inherit;
+			}
+		}
+		@media screen and (min-width: $lap-start) {
+			 float: left;
+		}
 	}
 }
 
@@ -195,11 +222,9 @@ header .entry-title,
 			color: #fff;				
 			@extend .block-link;
 			&:hover { border: 0; }
-			@media screen and (min-width: $lap-start) {
-				span { 
-					opacity: 0; 
-					transition: opacity 0.5s ease;
-				}
+			span { 
+				opacity: 0; 
+				transition: opacity 0.5s ease;
 			}
 		}
 	}
@@ -216,11 +241,22 @@ header .entry-title,
 		display: block;
 		line-height: 0;
 	}
-	@media screen and (min-width: $lap-start) {
-		&:hover h3 a span {
+	h3 { 
+		background: transparent;
+		transition: background 0.5s ease;
+	}		
+	.service-performed {
+		opacity: 0;
+		transition: opacity 0.5s ease;
+	}
+	&:hover {
+		h3 { background: rgba(0,0,0,0.75); }
+		.service-performed { opacity: 1; }
+		h3 a span {
 			opacity: 1;
 		}
 	}
+
 }// .project-item
 
 
@@ -242,6 +278,23 @@ header .entry-title,
 			margin-bottom: 1em;
 			max-width: 100%;
 			height: auto;
+		}
+	}
+
+	@media screen and (min-width: $lap-start) {
+		blockquote p {
+			max-width: 90%;
+		}
+
+		.post-content-wrap {
+			float: left;
+			width: 33%;
+		}
+		.post-img-wrap {
+			float: right;
+			width: 66%;
+			a { border: 0; }
+			img { margin-bottom: 1em; }
 		}
 	}
 }
@@ -272,6 +325,9 @@ header .entry-title,
 		&:nth-child(3) h4 { background-position: 0 -90px; }
 		&:nth-child(4) h4 { background-position: 0 -135px; }
 		&:nth-child(5) h4 { background-position: 0 -180px; }
+		@media screen and (min-width: $lap-start) {
+			float: left;
+		}
 	}
 	h4 {
 		background-image: url("../img/service_icons.png");
@@ -292,11 +348,28 @@ header .entry-title,
 		float: left;
 		text-align: center;
 		width: 50%;
+		@media screen and (min-width: $lap-start) {
+			width: 33%;
+		}
+		@media screen and (min-width: $desk-start) {
+			width: 16.5%;
+		}
 	}
 }
+
 .clients ul {
 	list-style: none;
 	margin-left: 0;
+	@media screen and (min-width: $lap-start) {
+		-webkit-columns: 2;
+		-moz-columns: 2;
+		columns: 2;
+	}
+	@media screen and (min-width: $desk-start) {
+		-webkit-columns: 3;
+		-moz-columns: 3;
+		columns: 3;
+	}
 }
 .testimonial {
 	padding: 1em 2em;
@@ -312,114 +385,31 @@ header .entry-title,
 .studio-images-lg {
 	img { width: 100%; height: auto; }
 }
-.staff { margin-top: 2em; }
 
-
-// Mobile to Laptop
-@media screen and (max-width: $lap-start) {
-
-	.site-footer .foot-item {
-		display: none;
-		&.foot-address {
-			display: inherit;
-		}
+.studio-images-sm {
+	@media screen and (min-width: $lap-start) {	 	
+			float: left; 
+			img:first-child { margin-bottom: 1.5em; }
 	}
-
+}
+.studio-images-lg { 
+	@media screen and (min-width: $lap-start) {	
+		float: right; 
+	}
 }
 
-// Laptop and bigger
-@media screen and (min-width: $lap-start) {
-
-	.main-menu {
-		top: 60px;
-		.nav li a { 
-			background: #fff;
-			border: 0;			
-			color: $font-color;
-			display: block; 
-			padding: 0 0.96em;
-			&:hover {
-				color: #666;
-			}
-		}
-	}
-
-	.foot-item { float: left; }
-
-	.post-wrap {
-		blockquote p {
-			max-width: 90%;
-		}
-
-		.post-content-wrap {
-			float: left;
-			width: 33%;
-		}
-		.post-img-wrap {
-			float: right;
-			width: 66%;
-			a { border: 0; }
-			img { margin-bottom: 1em; }
-		}
-	}
-
-	// Homepage
-	.project-item {
-		h3 { 
-			background: transparent;
-			transition: background 0.5s ease;
-		}		
-		.service-performed {
-			opacity: 0;
-			transition: opacity 0.5s ease;
-		}
-		&:hover {
-			h3 { background: rgba(0,0,0,0.75); }
-			.service-performed { opacity: 1; }
-		}
-	}
-
-	// Services
-	.service-list {
-		.service { float: left; }
-	}
-	.process-stages {
-		li { width: 33%; }
-	}
-	.clients {
-		ul {
-			-webkit-columns: 2;
-			-moz-columns: 2;
-			columns: 2;
-		}
-	}
-
-	// Studio
-	.studio-images-sm { 
-		float: left; 
-		img:first-child { margin-bottom: 1.5em; }
-	}
-	.studio-images-lg { float: right; }
-	.person {
+.staff { margin-top: 2em; }
+.person {
+	@media screen and (min-width: $lap-start) {	
 		.post-content { float: left; }
 		.post-image { float: right; }
 	}
-
-	// Contact 
-	.map-canvas, .address { float: left; }
 }
 
-// Desktop and bigger
-@media screen and (min-width: $desk-start) {
-	.clients {
-		ul {
-			-webkit-columns: 3;
-			-moz-columns: 3;
-			columns: 3;
-		}
-	}
-	.process-stages {
-		li { width: 16.5%; }
+// Contact 
+.map-canvas, .address { 
+	@media screen and (min-width: $lap-start) {	
+		float: left; 
 	}
 }
 
