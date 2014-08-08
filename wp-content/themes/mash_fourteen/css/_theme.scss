@@ -46,6 +46,7 @@ h1, h2,
 .alpha, .beta, .gamma, .delta, .epsilon, .zeta,
 .giga, .mega, .kilo {
 	font-family: $brand-face;
+	font-weight: 300;
 }
 h3, h4, h5, h6 {
 	font-family: $base-font-family;
@@ -156,9 +157,13 @@ a.img-link {
 .site-footer {
 	background: $brand-color;
 	font-family: $brand-face;
-	padding: 75px 0; 
+	padding: 75px 0 0; 
 	h3 {
 		font-family: $brand-face;
+		font-weight: 600;
+		@media screen and (min-width: $lap-start) {
+			font-size: 20px;
+		}
 	}
 	a, a:visited { 
 		color: #333;
@@ -168,8 +173,12 @@ a.img-link {
 		list-style: none;
 		margin-left: 0;
 	}
+	.copyright {
+		margin: 100px 0 0;
+	}
 
 	.foot-item {
+		width: 100%;
 		@media screen and (max-width: $lap-start) {
 			display: none;
 			&.foot-address {
@@ -177,7 +186,16 @@ a.img-link {
 			}
 		}
 		@media screen and (min-width: $lap-start) {
-			 float: left;
+			width: 50%;
+			float: left;
+		}
+		@media screen and (min-width: $desk-start) {
+			width: 20%;
+			&.foot-address,
+			&.foot-recent {
+				width: 30%;
+			}
+			
 		}
 	}
 }
@@ -262,17 +280,26 @@ header .entry-title,
 
 // Work Page
 .sub-menu {
-	.cat-item:before {
-		content: ' / ';
+	font-family: $brand-face;
+	@media screen and (min-width: $lap-start) {
+		font-size: 20px;
 	}
-	.cat-item:first-child:before {
-		content: none;
+	.cat-item {
+		padding-right: 5px;
+	}
+	@media screen and (min-width: $lap-start) {
+		.cat-item:before {
+			content: ' / ';
+			padding-right: 5px;
+		}
+		.cat-item:first-child:before {
+			content: none;
+		}
 	}
 }
 
 // Blog Archive 
 .post-wrap {
-	padding: 0.5em 0;
 	.post-img-wrap {
 		img { 
 			margin-bottom: 1em;
@@ -407,9 +434,18 @@ header .entry-title,
 }
 
 // Contact 
-.map-canvas, .address { 
+.intro, 
+.address,
+.contact-imgs { 
 	@media screen and (min-width: $lap-start) {	
 		float: left; 
+	}
+}
+.map-canvas {
+	margin-bottom: 1em;
+	@media screen and (min-width: $lap-start) {	
+		margin: 0;
+		float: right;
 	}
 }
 

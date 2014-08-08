@@ -10,9 +10,7 @@
 				
 				<h1 class="entry-title"><?php the_title(); ?></h1>
 
-				<?php edit_post_link(); ?>
-
-				<?php get_template_part( 'entry-meta' ); ?>
+				<?php // get_template_part( 'entry-meta' ); ?>
 			</header>
 
 

@@ -138,7 +138,7 @@ body { background: #fff; color: #000; letter-spacing: -0.05px; }
 img[width], img[height] { max-width: 100% !important; }
 
 /* ========================================================================== 2. Base Typography & Links ========================================================================== */
-h1, h2, .alpha, .beta, .gamma, .delta, .epsilon, .zeta, .giga, .mega, .kilo { font-family: "Roboto Slab", serif; }
+h1, h2, .alpha, .beta, .gamma, .delta, .epsilon, .zeta, .giga, .mega, .kilo { font-family: "Roboto Slab", serif; font-weight: 300; }
 
 h3, h4, h5, h6 { font-family: Roboto, sans-serif; font-weight: normal; letter-spacing: 0; }
 
@@ -168,13 +168,18 @@ a.img-link { text-decoration: none; border: 0; }
   .main-menu .nav li a { background: #fff; border: 0; color: black; display: block; padding: 0 0.96em; }
   .main-menu .nav li a:hover { color: #666; } }
 
-.site-footer { background: #fff200; font-family: "Roboto Slab", serif; padding: 75px 0; }
-.site-footer h3 { font-family: "Roboto Slab", serif; }
+.site-footer { background: #fff200; font-family: "Roboto Slab", serif; padding: 75px 0 0; }
+.site-footer h3 { font-family: "Roboto Slab", serif; font-weight: 600; }
+@media screen and (min-width: 640px) { .site-footer h3 { font-size: 20px; } }
 .site-footer a, .site-footer a:visited { color: #333; border: 0; }
 .site-footer ul { list-style: none; margin-left: 0; }
+.site-footer .copyright { margin: 100px 0 0; }
+.site-footer .foot-item { width: 100%; }
 @media screen and (max-width: 640px) { .site-footer .foot-item { display: none; }
   .site-footer .foot-item.foot-address { display: inherit; } }
-@media screen and (min-width: 640px) { .site-footer .foot-item { float: left; } }
+@media screen and (min-width: 640px) { .site-footer .foot-item { width: 50%; float: left; } }
+@media screen and (min-width: 860px) { .site-footer .foot-item { width: 20%; }
+  .site-footer .foot-item.foot-address, .site-footer .foot-item.foot-recent { width: 30%; } }
 
 header .entry-title, .strap { font-family: "Roboto Slab", serif; font-weight: 300; }
 
@@ -197,10 +202,12 @@ header .entry-title, .strap { font-family: "Roboto Slab", serif; font-weight: 30
 .project-item:hover .service-performed { opacity: 1; }
 .project-item:hover h3 a span { opacity: 1; }
 
-.sub-menu .cat-item:before { content: ' / '; }
-.sub-menu .cat-item:first-child:before { content: none; }
+.sub-menu { font-family: "Roboto Slab", serif; }
+@media screen and (min-width: 640px) { .sub-menu { font-size: 20px; } }
+.sub-menu .cat-item { padding-right: 5px; }
+@media screen and (min-width: 640px) { .sub-menu .cat-item:before { content: ' / '; padding-right: 5px; }
+  .sub-menu .cat-item:first-child:before { content: none; } }
 
-.post-wrap { padding: 0.5em 0; }
 .post-wrap .post-img-wrap img { margin-bottom: 1em; max-width: 100%; height: auto; }
 @media screen and (min-width: 640px) { .post-wrap blockquote p { max-width: 90%; }
   .post-wrap .post-content-wrap { float: left; width: 33%; }
@@ -247,7 +254,10 @@ header .entry-title, .strap { font-family: "Roboto Slab", serif; font-weight: 30
 @media screen and (min-width: 640px) { .person .post-content { float: left; }
   .person .post-image { float: right; } }
 
-@media screen and (min-width: 640px) { .map-canvas, .address { float: left; } }
+@media screen and (min-width: 640px) { .intro, .address, .contact-imgs { float: left; } }
+
+.map-canvas { margin-bottom: 1em; }
+@media screen and (min-width: 640px) { .map-canvas { margin: 0; float: right; } }
 
 /* Non-semantic helpers */
 .block-link, .site-header .logo a, .project-item h3, .project-item h3 a { height: 100%; width: 100%; display: block; }
