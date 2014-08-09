@@ -118,10 +118,17 @@ a.img-link {
 		}
 	}
 	.menu-button {
-		background: #fff;
 		border: 0;
-		float: right;
 		padding-right: 3em;
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		transition: color 0.5s ease;
+		transition-delay: 0.25s;
+		z-index: 155;
+		&.active {
+			color: #fff;
+		}
 		@media screen and (min-width: $lap-start) {
 			display: none;
 		}
@@ -139,6 +146,7 @@ a.img-link {
 		z-index: 150;
 	}
 	@media screen and (min-width: $lap-start) {
+		display: inherit !important;
 		float: right;
 		text-align: center;
 		width: 85%;

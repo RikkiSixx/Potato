@@ -3,6 +3,7 @@ jQuery(document).ready(function($){
     //$(".flexnav").flexNav();
 
     $('.menu-button').on('click', function(e) {
+    	($(this)).toggleClass('active');
     	if ( $('.main-menu').hasClass('active') ) {
 			$('.main-menu').removeClass('active').slideUp(500);
     	} else {

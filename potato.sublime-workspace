@@ -1,0 +1,786 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"transition",
+				"transition-delay"
+			],
+			[
+				"la",
+				"lap-start"
+			],
+			[
+				"fe",
+				"featured"
+			],
+			[
+				"imp",
+				"important"
+			],
+			[
+				"st",
+				"studio-images-lg"
+			],
+			[
+				"text",
+				"text-align"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "wp-content/themes/mash_fourteen/css/_theme.scss",
+			"settings":
+			{
+				"buffer_size": 10217,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "wp-content/themes/mash_fourteen/js/scripts.js",
+			"settings":
+			{
+				"buffer_size": 2356,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "wp-content/themes/mash_fourteen/page-projects.php",
+			"settings":
+			{
+				"buffer_size": 2785,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "wp-content/themes/mash_fourteen/front-page.php",
+			"settings":
+			{
+				"buffer_size": 1937,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "wp-content/themes/mash_fourteen/header.php",
+			"settings":
+			{
+				"buffer_size": 1490,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 380.0,
+		"selected_items":
+		[
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"brow",
+				"Preferences: Browse Packages"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"pa",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 464.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/wamp/www/Potato/wp-content/themes/mash_fourteen/css/_vars.scss",
+		"/C/wamp/www/Potato/wp-config.php",
+		"/C/Users/Rik/Desktop/wp-config.php",
+		"/C/wamp/www/Potato/wp-content/themes/mash_fourteen/js/scripts.js",
+		"/C/wamp/www/Potato/wp-content/themes/mash_fourteen/footer.php",
+		"/C/wamp/www/Potato/wp-content/themes/mash_fourteen/page-contact.php",
+		"/C/wamp/www/Potato/wp-content/themes/mash_fourteen/single.php",
+		"/C/wamp/www/Potato/wp-content/themes/mash_fourteen/page-blog.php",
+		"/C/wamp/www/Potato/wp-content/themes/mash_fourteen/page-studio.php",
+		"/C/wamp/www/Potato/wp-content/themes/mash_fourteen/entry.php",
+		"/C/wamp/www/Potato/wp-content/themes/mash_fourteen/single-blog.php",
+		"/C/wamp/www/Potato/wp-content/themes/mash_fourteen/entry-content.php",
+		"/C/wamp/www/Potato/wp-content/themes/mash_fourteen/content.php",
+		"/C/wamp/www/Potato/wp-content/themes/mash_fourteen/functions.php",
+		"/C/wamp/www/Potato/wp-content/themes/mash_fourteen/page-services.php",
+		"/C/wamp/www/Potato/wp-content/themes/mash_fourteen/front-page.php",
+		"/C/wamp/www/Potato/wp-content/themes/mash_fourteen/css/_theme.scss",
+		"/C/wamp/www/Potato/wp-content/themes/mash_fourteen/css/utilities/_flexnav.scss",
+		"/C/wamp/www/Potato/wp-content/themes/mash_fourteen/page.php",
+		"/C/wamp/www/Potato/wp-content/themes/mash_fourteen/category.php",
+		"/C/wamp/www/IceCream/css/style.scss",
+		"/C/wamp/www/Potato/wp-content/themes/mash_fourteen/page-projects.php",
+		"/C/wamp/www/Potato/wp-content/themes/mash_fourteen/single-service.php",
+		"/C/wamp/www/Potato/wp-content/themes/mash_fourteen/single-project.php",
+		"/C/wamp/www/Potato/wp-content/themes/mash_fourteen/entry-footer.php",
+		"/C/wamp/www/Potato/wp-content/themes/mash_fourteen/header.php",
+		"/C/wamp/www/Potato/wp-content/themes/mash_fourteen/css/style.scss",
+		"/C/wamp/www/Chocolate-V2/wp-content/themes/chocolate_two/css/_theme.scss",
+		"/C/wamp/www/Chocolate-V2/wp-content/themes/chocolate_two/functions.php",
+		"/C/wamp/www/Potato/wp-content/themes/mash_fourteen/js/isotope.pkgd.min.js",
+		"/C/wamp/www/Potato/wp-content/themes/mash_fourteen/css/inuit.css/objects/_columns.scss",
+		"/C/wamp/www/Potato/.htaccess",
+		"/C/wamp/www/.htaccess",
+		"/C/wamp/www/Potato/index.php",
+		"/C/wamp/www/Potato/license.txt",
+		"/C/wamp/www/Potato/readme.html",
+		"/C/wamp/www/Potato/wp-activate.php",
+		"/C/wamp/www/Potato/wp-blog-header.php",
+		"/C/wamp/www/Potato/wp-comments-post.php",
+		"/C/wamp/www/Potato/wp-config-sample.php",
+		"/C/wamp/www/Potato/wp-cron.php",
+		"/C/wamp/www/Potato/wp-links-opml.php",
+		"/C/wamp/www/Potato/wp-load.php",
+		"/C/wamp/www/Potato/wp-login.php",
+		"/C/wamp/www/Potato/wp-mail.php",
+		"/C/wamp/www/Potato/wp-settings.php",
+		"/C/wamp/www/Potato/wp-signup.php",
+		"/C/wamp/www/Potato/wp-trackback.php",
+		"/C/wamp/www/Potato/xmlrpc.php",
+		"/C/Users/Rik/Desktop/merisiel",
+		"/C/Users/Rik/Desktop/Merisiel-01",
+		"/C/Users/Rik/Desktop/mrsl2",
+		"/C/Users/Rik/Desktop/arien",
+		"/E/Work/LightbulbDesign/George Hotel/wp-content/themes/thegeorge/header.php",
+		"/E/Work/LightbulbDesign/George Hotel/wp-content/themes/thegeorge/sidebar-home.php",
+		"/E/Work/LightbulbDesign/George Hotel/wp-content/themes/thegeorge/style.css",
+		"/C/Users/Rik/Documents/My Dropbox/Work/Lightbulb/George Hotel/wp-content/themes/thegeorge/header.php",
+		"/C/Users/Rik/Documents/My Dropbox/Work/Lightbulb/George Hotel/wp-content/themes/thegeorge/sidebar-home.php",
+		"/E/Work/LightbulbDesign/Cavendish Hotel/wp-content/themes/cavendish/form-code.htm",
+		"/E/Work/LightbulbDesign/Cavendish Hotel/wp-content/themes/cavendish/header.php",
+		"/C/Users/Rik/Documents/My Dropbox/Work/Lightbulb/Cavendish Hotel/wp-content/themes/cavendish/style.css",
+		"/C/Users/Rik/Documents/My Dropbox/Work/Lightbulb/Cavendish Hotel/wp-content/themes/cavendish/test-page.htm",
+		"/E/Work/LightbulbDesign/Cavendish Hotel/wp-content/themes/cavendish/style.css",
+		"/E/Work/_Interviews/Orange Tech Test/build/assets/css/layout.css",
+		"/E/Work/_Interviews/Orange Tech Test/build/assets/css/global.css",
+		"/E/Work/_Interviews/Orange Tech Test/build/assets/js/scripts.js",
+		"/E/Work/_Interviews/Orange Tech Test/build/index.htm",
+		"/E/Work/_Interviews/Orange Tech Test/build/assets/scss/global.scss",
+		"/E/Work/_Interviews/Orange Tech Test/build/assets/scss/layout.scss",
+		"/C/Users/Rik/Desktop/header.php",
+		"/E/Work/LightbulbDesign/WortleyHall/wp-content/themes/wortley/style.css",
+		"/E/Work/LightbulbDesign/WortleyHall/test/wp-content/themes/twentyten/page.php",
+		"/E/Work/LightbulbDesign/WortleyHall/wortley/page.php",
+		"/E/Work/LightbulbDesign/Wortley Hall/wp-admin/includes/class-pclzip.php",
+		"/E/Work/LightbulbDesign/WhitelyHall/css/main.css",
+		"/C/Users/Rik/Downloads/fruitypot/prize-draw.htm",
+		"/C/Users/Rik/Downloads/fruitypot/win/prize-draw.htm",
+		"/C/Users/Rik/Desktop/SW-PPV.txt",
+		"/C/Users/Rik/Downloads/fruitypot/cta-Prizes.cfm",
+		"/E/Work/LightbulbDesign/WhitelyHall/JS/snow.js",
+		"/C/Users/Rik/Documents/GitHub/Banoffee/css/layout.css",
+		"/C/Users/Rik/Documents/GitHub/Banoffee/css/global.css",
+		"/C/Users/Rik/Documents/GitHub/Banoffee/index.html",
+		"/C/Users/Rik/Documents/GitHub/Banoffe/trunk/css/layout.css",
+		"/C/Users/Rik/Documents/GitHub/Banoffe/trunk/css/global.css",
+		"/C/Users/Rik/Documents/GitHub/Banoffe/trunk/index.html",
+		"/C/Users/Rik/Documents/GitHub/Banoffee/README.md",
+		"/C/Users/Rik/Documents/GitHub/Banoffee/scripts/libs/modernizr-2.0.6.min.js"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"",
+			"index.htm",
+			"E:\\Work\\LightbulbDesign\\WortleyHall",
+			"E:\\Work\\LightbulbDesign\\Wortley Hall",
+			"E:\\Work\\LightbulbDesign\\Wortley Hall\\wp-content\\themes",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"main-men",
+			"serv",
+			"project-item",
+			"entry-title",
+			"300",
+			".post-wrap",
+			"blockq",
+			"main-",
+			"studio",
+			"studio-im",
+			"main-me",
+			"robot",
+			"border-bo",
+			"service-lis",
+			"640",
+			"640#",
+			"img {",
+			"max-w",
+			"img",
+			"proj",
+			"brand",
+			"project",
+			"service-",
+			"thum",
+			"project-",
+			"project",
+			"taxo",
+			"big g",
+			"figh",
+			"-ui",
+			"virtual",
+			"tour",
+			"class=\"\" ",
+			"home-page-",
+			"pages",
+			"AVAILABILITY",
+			"availability",
+			"check",
+			"check availability",
+			"Find our best rates and make your reservation at Wortley Hall. Experience a historial building with the all important mod cons",
+			"form",
+			"[b]AAA Man:[/b]",
+			"[b]Jerry:[/b]",
+			"[b]Stanley:[/b]",
+			"[/color]",
+			"[color=#fb8a00]",
+			"AAA Man:",
+			"Jerry:",
+			"Stanley:",
+			"[/b]",
+			"[b]",
+			"#fe0]",
+			"fe0"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"",
+			"[color=#fb8a00][b]AAA Man:[/b][/color]",
+			"[color=#fb8a00][b]Jerry:[/b][/color]",
+			"[color=#fb8a00][b]Stanley:[/b][/color]",
+			"",
+			"[b]AAA Man:[/b]",
+			"[b]Jerry:[/b]",
+			"[b]Stanley:[/b]",
+			"",
+			"#fb8a00]",
+			"fb8a00"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "wp-content/themes/mash_fourteen/css/_theme.scss",
+					"settings":
+					{
+						"buffer_size": 10217,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2968,
+								2968
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1969.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "wp-content/themes/mash_fourteen/js/scripts.js",
+					"settings":
+					{
+						"buffer_size": 2356,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								154,
+								154
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 2,
+					"file": "wp-content/themes/mash_fourteen/page-projects.php",
+					"settings":
+					{
+						"buffer_size": 2785,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2593,
+								2593
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"is_xml": false,
+							"syntax": "Packages/HTML5/Syntaxes/HTML 5.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1425.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "wp-content/themes/mash_fourteen/front-page.php",
+					"settings":
+					{
+						"buffer_size": 1937,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1498,
+								1498
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"is_xml": false,
+							"syntax": "Packages/HTML5/Syntaxes/HTML 5.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "wp-content/themes/mash_fourteen/header.php",
+					"settings":
+					{
+						"buffer_size": 1490,
+						"regions":
+						{
+							"TagLint":
+							{
+								"flags": 52,
+								"icon": "dot",
+								"regions":
+								[
+									[
+										1473,
+										1490
+									]
+								],
+								"scope": "variable.parameter"
+							}
+						},
+						"selection":
+						[
+							[
+								1205,
+								1216
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"is_xml": false,
+							"syntax": "Packages/HTML5/Syntaxes/HTML 5.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 311.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				0,
+				1,
+				1,
+				2
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			0.5,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"ind",
+				"index.html"
+			],
+			[
+				"glob",
+				"trunk/css/global.css"
+			],
+			[
+				"globa",
+				"css/global.css"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 187.0,
+	"status_bar_visible": true
+}

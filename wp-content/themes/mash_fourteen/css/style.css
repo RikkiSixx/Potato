@@ -75,12 +75,13 @@ a.img-link { text-decoration: none; border: 0; }
 .site-header .logo { background: url("../img/logo.png") 0 0 no-repeat transparent; background-size: cover; float: left; height: 62px; margin: 0; width: 62px; }
 .site-header .logo a { border: 0; }
 @media screen and (min-width: 640px) { .site-header .logo { height: 78px; width: 78px; } }
-.site-header .menu-button { background: #fff; border: 0; float: right; padding-right: 3em; }
+.site-header .menu-button { border: 0; padding-right: 3em; position: absolute; top: 20px; right: 20px; transition: color 0.5s ease; transition-delay: 0.25s; z-index: 155; }
+.site-header .menu-button.active { color: #fff; }
 @media screen and (min-width: 640px) { .site-header .menu-button { display: none; } }
 
 .main-menu { top: 0; left: 0; width: 100%; }
 @media screen and (max-width: 640px) { .main-menu { display: none; background: #232323; position: absolute; text-align: left; z-index: 150; } }
-@media screen and (min-width: 640px) { .main-menu { float: right; text-align: center; width: 85%; } }
+@media screen and (min-width: 640px) { .main-menu { display: inherit !important; float: right; text-align: center; width: 85%; } }
 @media screen and (max-width: 640px) { .main-menu .nav:before { content: 'Menu'; padding: 15px 22px; color: #fff; display: block; font-size: 20px; font-family: "Roboto Slab", serif; } }
 @media screen and (min-width: 640px) { .main-menu .nav { float: right; margin: 55px 0 0 0; max-width: 500px; width: 100%; } }
 .main-menu .nav li { display: block; }
