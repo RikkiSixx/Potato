@@ -1,20 +1,3 @@
-$(window).load(function(){
-
-	// Isotope.js
-	var $container = $('.project-grid').isotope({
-		itemSelector: '.project-item',
-		layoutMode: 'masonry',
-		getSortData: {		  
-			weight: function( itemElem ) {
-		    	var weight = $( itemElem ).find('.weight').text();
-		    	return parseFloat( weight.replace( /[\(\)]/g, '') );
-		  	}
-		}
-	});
-
-});
-
-
 jQuery(document).ready(function($){
 
     $(".flexnav").flexNav();
@@ -42,6 +25,20 @@ jQuery(document).ready(function($){
 			$($el).height('auto')
 		});
     }
+
+
+
+
+    var $container = $('.project-grid').isotope({
+		itemSelector: '.project-item',
+		layoutMode: 'masonry',
+		getSortData: {		  
+			weight: function( itemElem ) {
+		    	var weight = $( itemElem ).find('.weight').text();
+		    	return parseFloat( weight.replace( /[\(\)]/g, '') );
+		  	}
+		}
+	});
 
 
 	// State Manager

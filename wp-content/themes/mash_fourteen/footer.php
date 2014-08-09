@@ -6,13 +6,13 @@
 			<div class="container">
 				<div class="cf grid">
 
-					<div class="grid__item foot-item foot-recent">
+					<div class="grid__item desk-one-quarter lap-one-half foot-item">
 						<h3>Recent Projects</h3>
 						<ul>
 							<?php                  
 						        $args = array(
 						            'post_type' => 'project',
-						            'posts_per_page' => 4
+						            'posts_per_page' => 5
 						        );
 						        query_posts( $args );
 						    ?>
@@ -23,7 +23,7 @@
 						</ul>
 					</div>
 
-					<div class="grid__item foot-item">
+					<div class="grid__item desk-one-quarter lap-one-half foot-item">
 						<h3>Navigate</h3>
 						
 						<?php wp_nav_menu( array( 
@@ -33,7 +33,7 @@
 						) ); ?>
 					</div>
 
-					<div class="grid__item foot-item">
+					<div class="grid__item desk-one-quarter lap-one-half foot-item foot-address">
 						<h3>Connect</h3>
 						<?php $options = get_option('mash_fourteen_theme_options'); ?>
 						<ul>
@@ -44,7 +44,7 @@
 						</ul>
 					</div>
 
-					<div class="grid__item foot-item foot-address">						
+					<div class="grid__item desk-one-quarter lap-one-half foot-item">						
 						<?php 
 							echo '<p>'.($options["address_line_1"]).'<br />'.($options["address_line_2"]).'<br />'.($options["address_line_3"]).'</p>';
 							echo '<p>Telephone: '.($options["phone_number"]).'<br />';
@@ -55,7 +55,7 @@
 				</div>
 
 				
-				<p class="copyright"><?php echo sprintf( __( '%1$s %2$s %3$s. All Rights Reserved.', 'mash_fourteen' ), '&copy;', date( 'Y' ), esc_html( get_bloginfo( 'name' ) ) ); ?> <?php echo sprintf( __( ' Theme developed by %1$s.', 'mash_fourteen' ), '<a href="http://www.rikkendell.co.uk/">Rik Kendell</a>' ); ?></p>
+				<p><?php echo sprintf( __( '%1$s %2$s %3$s. All Rights Reserved.', 'mash_fourteen' ), '&copy;', date( 'Y' ), esc_html( get_bloginfo( 'name' ) ) ); ?> <?php echo sprintf( __( ' Theme developed by %1$s.', 'mash_fourteen' ), '<a href="http://www.rikkendell.co.uk/">Rik Kendell</a>' ); ?></p>
 				
 
 			</div><!-- .container -->
