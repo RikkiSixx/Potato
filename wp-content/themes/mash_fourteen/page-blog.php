@@ -8,6 +8,10 @@ Template Name: Blog
 
 <section role="main">
 
+	<h1 class="entry-title">
+		<?php the_title(); ?>
+	</h1>	
+
 	<?php
 		$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;             
         $args = array(
@@ -23,23 +27,24 @@ Template Name: Blog
 
 	<article class="cf post-wrap">
 
-		<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-			<?php the_permalink ?><?php if ( has_post_thumbnail() ) { ?>
-				<?php the_post_thumbnail('project-lg'); ?>
-			<?php } else { ?>
-				<img src="<?php echo get_template_directory_uri(); ?>/img/studio-3.jpg" title="Studio" />
-			<?php }; ?>	
-		</a>
+		<div class="post-content-wrap">
+			<h1><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title_attribute(); ?></a></h1>
 
-		<h1><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title_attribute(); ?></a></h1>
+			<?php the_excerpt(); ?>
 
-		<?php the_excerpt(); ?>
+			<p><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">Continue reading</a></p>
 
-		<p><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">Continue reading</a></p>
+		</div>
 
-		<?php edit_post_link(); ?>
-	
-			
+		<div class="post-img-wrap">
+			<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" class="img-link">
+				<?php the_permalink ?><?php if ( has_post_thumbnail() ) { ?>
+					<?php the_post_thumbnail('project-lg'); ?>
+				<?php } else { ?>
+					<img src="<?php echo get_template_directory_uri(); ?>/img/placeholder-sm.jpg" width="100%" height="auto" />
+				<?php }; ?>	
+			</a>
+		</div>			
 
 	</article><!-- .post-wrap -->
 

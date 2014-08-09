@@ -1,6 +1,14 @@
 <?php get_header(); ?>
 
 <section id="content" role="main">
+
+	<?php
+		// Restrict search to posts 
+		global $wp_query;
+		$args = array_merge( $wp_query->query, array( 'post_type' => 'post', 'showposts' => 10000 ) );
+		query_posts( $args ); 
+	?>
+
 	<?php if ( have_posts() ) : ?>
 		<header class="header">
 			<h1 class="entry-title"><?php printf( __( 'Search Results for: %s', 'mash_fourteen' ), get_search_query() ); ?></h1>

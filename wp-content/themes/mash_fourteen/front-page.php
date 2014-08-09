@@ -9,37 +9,41 @@
 	// Find posts in 'Projects' post type 
 	$page = (get_query_var('p')) ? get_query_var('p') : 1;  
 	$args = array(
-		'posts_per_page' => 3,
+		'posts_per_page' => 6,
 		'post_type' => 'project',
 		'paged' => 1
 	);
 	query_posts($args);
 	
 	// Get latest featured post
-	$arr_featured = getFeaturedProjects(1);	
-		
+	$arr_featured = getFeaturedProjects(2);
+	
+	// Grid position of featured items [current item index => featured arr pos]
+	$featured_pos = array(
+		2 => 0,
+		7 => 1
+	);
+			
 	if ( have_posts() ) : while ( have_posts() ) : the_post(); 
-		$size = ($count == 2 && count($arr_featured)) ? 'lg' : 'sm';
+		$size = (in_array($count, array_keys($featured_pos)) && isset($arr_featured[$featured_pos[$count]])) ? 'lg' : 'sm';
 		if($size == 'lg') {
-			$class = 'desk-two-thirds';
+			$class = 'desk-two-thirds featured';
 		} else {
 			$class = 'desk-one-third';
 		}
 		?>
-		<article class="project-item <?php echo $class; ?> lap-one-half">		
+		<article class="project-item <?php echo $class; ?>">		
 			<section class="entry-content">
 				<header class="header">
 					<h3 class="entry-title">
 						<a href="<?php the_permalink(); ?>"><span><?php the_title(); ?></span></a>
 					</h3>
-					<?php the_category(); ?>
+					<p class="service-performed"><?php echo get_the_term_list( $post->ID, 'service-type', '', ', ' ); ?></p>	
 				</header>
 				<?php // Featured project
-				if(count($arr_featured) && $size == 'lg'):
-					foreach($arr_featured as $i) {
-						setup_postdata($i);
-						the_post_thumbnail('project-lg');
-					}
+				if($size == 'lg'):
+					setup_postdata($arr_featured[$featured_pos[$count]]);
+					the_post_thumbnail('project-lg');
 					wp_reset_postdata();
 				else:
 					// Standard projects

@@ -1,8 +1,10 @@
 <?php get_header(); ?>
 
-<section role="main" class="project-grid cf">
+<header class="header">
+		<!-- <h1 class="entry-title"><?php the_title(); ?></h1> -->
+	</header>
 
-	<?php the_category(); ?>
+<section role="main" class="project-grid cf">
 
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
@@ -11,8 +13,9 @@
 		<section class="entry-content">
 			<header class="header">
 				<h3 class="entry-title">
-					<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-				</h3>
+					<a href="<?php the_permalink(); ?>"><span><?php the_title(); ?></span></a>
+				</h3>	
+				<p class="service-performed"><?php echo get_the_term_list( $post->ID, 'service-type', 'Services: ', ', ' ); ?></p>				
 			</header>
 
 			<?php if ( has_post_thumbnail() ) { ?>

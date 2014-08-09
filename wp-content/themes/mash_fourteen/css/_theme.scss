@@ -1,9 +1,9 @@
 /* 
 
-Mash
+MASH
 
-Author: Rik Kendell - @Rikki_Sixx
-Version: 1.0;
+Author: Rik Kendell - @Rikki_Sixx - http://www.rikkendell.co.uk/
+Version: 2
 URL: http://www.wearemash.com/
 
 CONTENTS - GLOBAL.CSS
@@ -34,6 +34,15 @@ body {
 	letter-spacing: -0.05px; 
 }
 
+img[width], img[height] {
+	max-width: 100% !important;
+}
+
+* {
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+}
 
 /* ==========================================================================
    2. Base Typography & Links
@@ -43,6 +52,7 @@ h1, h2,
 .alpha, .beta, .gamma, .delta, .epsilon, .zeta,
 .giga, .mega, .kilo {
 	font-family: $brand-face;
+	font-weight: 300;
 }
 h3, h4, h5, h6 {
 	font-family: $base-font-family;
@@ -70,6 +80,11 @@ a {
 	}
 }
 
+a.img-link {
+	text-decoration: none;
+	border: 0;
+}
+
 
 /* ==========================================================================
    3. Global layout & Typography
@@ -78,25 +93,35 @@ a {
 .container {
 	margin: auto;
 	max-width: 1100px;
-	padding: 1em;
+	padding: 22px;
+	@media screen and (min-width: $lap-start) {
+		padding: 22px 40px;
+	}
 }
 
 .site-header {
 	position: relative;
 	.logo {
 		background: url("../img/logo.png") 0 0 no-repeat transparent;
+		background-size: cover;
 		float: left;
 		height: 62px;
 		margin: 0;
 		width: 62px;
 		a {
 			@extend .block-link;
+			border: 0;
+		}
+		@media screen and (min-width: $lap-start) {
+			height: 78px;
+			width: 78px;
 		}
 	}
 	.menu-button {
 		background: #fff;
 		border: 0;
 		float: right;
+		padding-right: 3em;
 	}
 }
 .main-menu {
@@ -121,54 +146,220 @@ a {
 		float: right;
 		width: auto;
 	}
+
+	@media screen and (min-width: $lap-start) {	
+		top: 60px;
+		.nav li a { 
+			background: #fff;
+			border: 0;			
+			color: $font-color;
+			display: block; 
+			padding: 0 0.96em;
+			&:hover {
+				color: #666;
+			}
+		}
+	}
+
 } // .main-menu 
 
 .site-footer {
 	background: $brand-color;
+	font-family: $brand-face;
+	padding: 75px 0 0; 
+	h3 {
+		font-family: $brand-face;
+		font-weight: 600;
+		@media screen and (min-width: $lap-start) {
+			font-size: 20px;
+		}
+	}
 	a, a:visited { 
 		color: #333;
 		border: 0; 
 	}
-
 	ul {
 		list-style: none;
 		margin-left: 0;
 	}
+	.copyright {
+		margin: 100px 0 0;
+	}
+
+	.foot-item {
+		width: 100%;
+		@media screen and (max-width: $lap-start) {
+			display: none;
+			&.foot-address {
+				display: inherit;
+			}
+		}
+		@media screen and (min-width: $lap-start) {
+			width: 50%;
+			float: left;
+		}
+		@media screen and (min-width: $desk-start) {
+			width: 20%;
+			&.foot-address,
+			&.foot-recent {
+				width: 30%;
+			}
+			
+		}
+	}
 }
 
-// Homepage - Projects
+header .entry-title,
+.strap {
+	font-family: $brand-face;
+	font-weight: 300;
+}
+
+
+
+/* ==========================================================================
+   4. Custom layout, inc Media Queries
+   ========================================================================== */
+
+// Homepage 
+.strap {
+	max-width: 660px;
+}
+
 .project-item {
-	background: #444;
-	margin-bottom: 10px;
 	width: 100%;
 	position: relative;
+	margin-bottom: 22px; 
+	@media screen and (min-width: $lap-start) {
+		margin-bottom: 10px;
+		width: 49%;
+		&:nth-child(odd) {
+			margin-right: 1%;
+		}
+		&:nth-child(even) {
+			margin-left: 1%;
+		}
+	}
+	@media screen and (min-width: $desk-start) {	
+		margin: 0 0 10px !important;	
+		padding: 0 1% 0 0;
+		overflow: hidden;
+
+		&.featured {
+			width: 65.66%;
+			padding: 0 !important;
+		}
+	}
+	.entry-content {
+		background: #000;
+	}
+	
 	header {
 		position: absolute;
-		bottom: 0;
 		top: 0;
+		bottom: 0;
 		left: 0;
 		right: 0;
-	}
-	h3 { 
-		background: rgba(0,0,0,0.5);
-		@extend .block-link; 
-		text-shadow: 2px 2px 2px rgba(0,0,0,0.3);
-		a {
-			color: #fff;
-			@extend .block-link;
-			padding: 10px;
-		}
+		z-index: 100;		
 	}
 	img {
 		@extend .mobile-image;
 		display: block;
 		line-height: 0;
+		transition: all 0.5s ease;
+		opacity: 1;
+		transition: all 0.5s ease;
 	}
+	&:hover {
+		img {
+			opacity: 0.6;
+		}		
+		.service-performed { opacity: 1; }
+		h3 a span {
+			opacity: 1;
+		}	
+	}
+	
+	h3 { 
+		text-shadow: 2px 2px 2px rgba(0,0,0,0.3);
+		padding: 20px;	
+		@extend .block-link; 
+		a {
+			position: absolute;
+			top: 0;
+			right: 0;
+			left: 0;
+			bottom: 0;
+			padding: 20px;
+			color: #fff;			
+			&:hover { border: 0; }
+			span { 
+				opacity: 0; 
+				transition: opacity 0.5s ease;
+			}
+		}
+	}
+	.service-performed {
+		text-shadow: 2px 2px 2px rgba(0,0,0,0.3);
+		color: #fff;
+		padding: 10px 20px 0;
+		opacity: 0;
+		transition: opacity 0.5s ease;
+		position: absolute;
+		top: 60px;
+		a { color: #fff; }
+	}
+
+
 }// .project-item
+
+
+// Work Page
+.sub-menu {
+	font-family: $brand-face;
+	@media screen and (min-width: $lap-start) {
+		font-size: 20px;
+	}
+	.cat-item {
+		padding-right: 5px;
+	}
+	@media screen and (min-width: $lap-start) {
+		.cat-item:before {
+			content: ' / ';
+			padding-right: 5px;
+		}
+		.cat-item:first-child:before {
+			content: none;
+		}
+	}
+}
 
 // Blog Archive 
 .post-wrap {
-	padding: 0.5em 0;
+	.post-img-wrap {
+		img { 
+			margin-bottom: 1em;
+			max-width: 100%;
+			height: auto;
+		}
+	}
+
+	@media screen and (min-width: $lap-start) {
+		blockquote p {
+			max-width: 90%;
+		}
+
+		.post-content-wrap {
+			float: left;
+			width: 33%;
+		}
+		.post-img-wrap {
+			float: right;
+			width: 66%;
+			a { border: 0; }
+			img { margin-bottom: 1em; }
+		}
+	}
 }
 
 .mobile-image {
@@ -187,26 +378,6 @@ a {
 	background: #f7f7f7;
 }
 
-//Comments 
-.comments {
-	ul {
-		&.children {
-			margin-left: 1.5em;
-		}
-		list-style: none;
-		margin: 0;
-	}
-	.comment-body {
-		padding: 24px;
-		background: #f7f7f7;
-		margin-bottom: 1em;
-	}
-}
-
-
-/* ==========================================================================
-   4. Custom layout, inc Media Queries
-   ========================================================================== */
 
 // Service Page
 .service-list {
@@ -217,6 +388,9 @@ a {
 		&:nth-child(3) h4 { background-position: 0 -90px; }
 		&:nth-child(4) h4 { background-position: 0 -135px; }
 		&:nth-child(5) h4 { background-position: 0 -180px; }
+		@media screen and (min-width: $lap-start) {
+			float: left;
+		}
 	}
 	h4 {
 		background-image: url("../img/service_icons.png");
@@ -237,11 +411,28 @@ a {
 		float: left;
 		text-align: center;
 		width: 50%;
+		@media screen and (min-width: $lap-start) {
+			width: 33%;
+		}
+		@media screen and (min-width: $desk-start) {
+			width: 16.5%;
+		}
 	}
 }
+
 .clients ul {
 	list-style: none;
 	margin-left: 0;
+	@media screen and (min-width: $lap-start) {
+		-webkit-columns: 2;
+		-moz-columns: 2;
+		columns: 2;
+	}
+	@media screen and (min-width: $desk-start) {
+		-webkit-columns: 3;
+		-moz-columns: 3;
+		columns: 3;
+	}
 }
 .testimonial {
 	padding: 1em 2em;
@@ -252,100 +443,45 @@ a {
 }
 
 
-// Mobile to Laptop
-@media screen and (max-width: $lap-start) {
-
-	.site-footer .foot-item {
-		display: none;
-		&.foot-address {
-			display: inherit;
-		}
-	}
-
+// Studio Page 
+.studio-images-sm,
+.studio-images-lg {
+	img { width: 100%; height: auto; }
 }
 
-// Laptop and bigger
-@media screen and (min-width: $lap-start) {
+.studio-images-sm {
+	@media screen and (min-width: $lap-start) {	 	
+			float: left; 
+			img:first-child { margin-bottom: 1.5em; }
+	}
+}
+.studio-images-lg { 
+	@media screen and (min-width: $lap-start) {	
+		float: right; 
+	}
+}
 
-	.main-menu {
-		.nav li a { 
-			background: #fff;
-			border: 0;
-			color: $font-color;
-			display: block; 
-			&:hover {
-				border-bottom: 3px solid $brand-color;
-			}
-		}
-	}
-
-	.foot-item { float: left; }
-
-	.project-item {
-		header {
-			opacity: 0;
-			transition: all 0.5s ease;
-			&:hover {
-				opacity: 1;
-			}
-		}
-	}
-
-	.post-wrap {
-		p, ul, ol, dl, blockquote {
-			max-width: 33%;
-		}
-		blockquote p {
-			max-width: 90%;
-		}
-		img {
-			float: right;
-			display: block;
-			width: 66%;
-		}
-	}
-
-	// Services
-	.service-list {
-		.service { float: left; }
-	}
-	.process-stages {
-		li { width: 33%; }
-	}
-	.clients {
-		ul {
-			-webkit-columns: 2;
-			-moz-columns: 2;
-			columns: 2;
-		}
-	}
-
-	// Studio
-	.studio-images-sm { 
-		float: left; 
-		img:first-child { margin-bottom: 1.5em; }
-	}
-	.studio-images-lg { float: right; }
-	.person {
+.staff { margin-top: 2em; }
+.person {
+	@media screen and (min-width: $lap-start) {	
 		.post-content { float: left; }
 		.post-image { float: right; }
 	}
-
-	// Contact 
-	.map-canvas, .address { float: left; }
 }
 
-// Desktop and bigger
-@media screen and (min-width: $desk-start) {
-	.clients {
-		ul {
-			-webkit-columns: 3;
-			-moz-columns: 3;
-			columns: 3;
-		}
+// Contact 
+.intro, 
+.address,
+.contact-imgs { 
+	@media screen and (min-width: $lap-start) {	
+		float: left; 
 	}
-	.process-stages {
-		li { width: 16.5%; }
+}
+.map-canvas {
+	margin-bottom: 1em;
+	@media screen and (min-width: $lap-start) {	
+		margin: 0;
+		float: right;
 	}
 }
 
