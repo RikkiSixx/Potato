@@ -122,41 +122,84 @@ a.img-link {
 		border: 0;
 		float: right;
 		padding-right: 3em;
-	}
-}
-.main-menu {
-	position: absolute;
-	top: 100%;
-	left: 0;
-	width: 100%;
-	z-index: 10;
-	.nav > li {		
-		display: block;
-		> a { 
-			background: #232323;
-			color: #fff;
-			display: block; 
+		@media screen and (min-width: $lap-start) {
+			display: none;
 		}
 	}
-	// Seperate media-query for Flexnav breakpoint
-	@media screen and (min-width: 800px) {
-		position: inherit;
-		top: auto;
-		left: auto;
-		float: right;
-		width: auto;
+}
+.main-menu {	
+	top: 0;
+	left: 0;
+	width: 100%;
+	@media screen and (max-width: $lap-start) {
+		display: none;
+		background: #232323;
+		position: absolute;
+		text-align: left;
+		z-index: 150;
 	}
-
-	@media screen and (min-width: $lap-start) {	
-		top: 60px;
-		.nav li a { 
-			background: #fff;
-			border: 0;			
-			color: $font-color;
+	@media screen and (min-width: $lap-start) {
+		float: right;
+		text-align: center;
+		width: 85%;
+	}
+	
+	.nav {
+		@media screen and (max-width: $lap-start) {
+			&:before {
+				content: 'Menu';
+				padding: 15px 22px;
+				color: #fff;
+				display: block;
+				font-size: 20px;
+				font-family: "Roboto Slab", serif;
+			}
+		}
+		@media screen and (min-width: $lap-start) {
+			float: right;
+			margin: 55px 0 0 0;
+			max-width: 500px;
+			width: 100%;
+		}
+		li {		
+			display: block;
+			@media screen and (max-width: $lap-start) {
+				&:nth-child(odd) a {
+					background: #191919;
+					&:hover {
+						background: #343434;
+					}
+				}
+			}
+			@media screen and (min-width: $lap-start) {
+				display: inline-block;
+				width: 20%;
+				float: left;				
+			}
+		}
+		a { 		
+			border: 0;
 			display: block; 
-			padding: 0 0.96em;
-			&:hover {
-				color: #666;
+			font-size: 16px;
+			@media screen and (max-width: $lap-start) {
+				color: #fff;
+				background: #232323;
+				padding: 10px 22px;				
+			}
+			@media screen and (min-width: $lap-start) {
+				background: #fff;
+				font-family: $brand-face;
+				font-size: 20px;
+				padding: 0;
+				color: $font-color;
+			}
+			&:hover {							
+				@media screen and (max-width: $lap-start) {
+					background: #343434;
+				}
+				@media screen and (min-width: $lap-start) {	
+					color: #666;
+				}
 			}
 		}
 	}

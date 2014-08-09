@@ -1,7 +1,15 @@
 jQuery(document).ready(function($){
 
-    $(".flexnav").flexNav();
+    //$(".flexnav").flexNav();
 
+    $('.menu-button').on('click', function(e) {
+    	if ( $('.main-menu').hasClass('active') ) {
+			$('.main-menu').removeClass('active').slideUp(500);
+    	} else {
+    		$('.main-menu').slideDown(500).addClass('active');
+    	}
+    	e.preventDefault();
+    });
 
 
     $.fn.equalHeights = function() {

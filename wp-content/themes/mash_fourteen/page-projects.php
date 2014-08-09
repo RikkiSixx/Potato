@@ -40,14 +40,14 @@ Template Name: Projects List
 
 	<section role="main" class="project-grid cf">
 
-		<?php
+	<?php
 	// The third image should be a large featured image
 	$count = 1;
 	
 	// Find posts in 'Projects' post type 
 	$page = (get_query_var('p')) ? get_query_var('p') : 1;  
 	$args = array(
-		'posts_per_page' => 12,
+		'posts_per_page' => 6,
 		'post_type' => 'project',
 		'paged' => 1
 	);
@@ -65,18 +65,18 @@ Template Name: Projects List
 	if ( have_posts() ) : while ( have_posts() ) : the_post(); 
 		$size = (in_array($count, array_keys($featured_pos)) && isset($arr_featured[$featured_pos[$count]])) ? 'lg' : 'sm';
 		if($size == 'lg') {
-			$class = 'desk-two-thirds';
+			$class = 'desk-two-thirds featured';
 		} else {
 			$class = 'desk-one-third';
 		}
 		?>
-		<article class="project-item <?php echo $class; ?> lap-one-half">		
+		<article class="project-item <?php echo $class; ?>">		
 			<section class="entry-content">
 				<header class="header">
 					<h3 class="entry-title">
 						<a href="<?php the_permalink(); ?>"><span><?php the_title(); ?></span></a>
 					</h3>
-					<?php the_category(); ?>
+					<p class="service-performed"><?php echo get_the_term_list( $post->ID, 'service-type', '', ', ' ); ?></p>	
 				</header>
 				<?php // Featured project
 				if($size == 'lg'):
@@ -96,9 +96,9 @@ Template Name: Projects List
 		<?php $count++;
 	endwhile; endif; ?>
 	
-	<div style="position:relative; top:-33px">
+	<!-- <div style="position:relative; top:-33px">
 		<div class="nav-previous"><a href="/?p=2">More</a></div>
-	</div>
+	</div> -->
 	
 	<?php wp_reset_query(); ?>
 
