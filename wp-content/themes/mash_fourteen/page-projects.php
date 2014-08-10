@@ -47,7 +47,7 @@ Template Name: Projects List
 	// Find posts in 'Projects' post type 
 	$page = (get_query_var('p')) ? get_query_var('p') : 1;  
 	$args = array(
-		'posts_per_page' => 6,
+		'posts_per_page' => 9,
 		'post_type' => 'project',
 		'paged' => 1
 	);
