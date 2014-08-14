@@ -1132,3 +1132,8 @@ label, .label { display: block; }
 @media only screen and (min-width: 1024px) { .accessibility--desk-wide, .visuallyhidden--desk-wide { border: 0!important; clip: rect(0 0 0 0) !important; height: 1px!important; margin: -1px !important; overflow: hidden!important; padding: 0!important; position: absolute!important; width: 1px!important; } }
 /* endif */
 /** She’s all yours, cap’n... Begin importing your stuff here. */
+
+
+
+/* put this somewhere better */
+.project-item.featured img {max-height:506px}

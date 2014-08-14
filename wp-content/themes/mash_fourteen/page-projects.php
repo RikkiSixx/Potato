@@ -47,21 +47,30 @@ Template Name: Projects List
 	// Find posts in 'Projects' post type 
 	$page = (get_query_var('p')) ? get_query_var('p') : 1;  
 	$args = array(
-		'posts_per_page' => 9,
+		'posts_per_page' => -1,
 		'post_type' => 'project',
 		'paged' => 1
 	);
 	query_posts($args);
 	
 	// Get latest featured post
-	$arr_featured = getFeaturedProjects(2);
+	$arr_featured = getFeaturedProjects(-1);
 	
 	// Grid position of featured items [current item index => featured arr pos]
 	$featured_pos = array(
 		2 => 0,
-		7 => 1
+		7 => 1,
+		14 => 2,
+		19 => 3,
+		26 => 4,
+		31 => 5,
+		38 => 6,
+		43 => 7,
+		50 => 8,
+		55 => 9,
+		62=> 10,
 	);
-			
+		
 	if ( have_posts() ) : while ( have_posts() ) : the_post(); 
 		$size = (in_array($count, array_keys($featured_pos)) && isset($arr_featured[$featured_pos[$count]])) ? 'lg' : 'sm';
 		if($size == 'lg') {
