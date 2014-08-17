@@ -117,7 +117,8 @@ header .entry-title, .strap { font-family: "Roboto Slab", serif; font-weight: 30
   .project-item:nth-child(odd) { margin-right: 1%; }
   .project-item:nth-child(even) { margin-left: 1%; } }
 @media screen and (min-width: 860px) { .project-item { margin: 0 0 10px !important; padding: 0 1% 0 0; overflow: hidden; }
-  .project-item.featured { width: 65.66%; padding: 0 !important; } }
+  .project-item.featured { width: 65.66%; padding: 0 !important; }
+  .project-item.featured img { max-height: 506px; } }
 .project-item .entry-content { background: #000; }
 .project-item header { position: absolute; top: 0; bottom: 0; left: 0; right: 0; z-index: 100; }
 .project-item img { display: block; line-height: 0; transition: all 0.5s ease; opacity: 1; transition: all 0.5s ease; }
@@ -1132,8 +1133,3 @@ label, .label { display: block; }
 @media only screen and (min-width: 1024px) { .accessibility--desk-wide, .visuallyhidden--desk-wide { border: 0!important; clip: rect(0 0 0 0) !important; height: 1px!important; margin: -1px !important; overflow: hidden!important; padding: 0!important; position: absolute!important; width: 1px!important; } }
 /* endif */
 /** She’s all yours, cap’n... Begin importing your stuff here. */
-
-
-
-/* put this somewhere better */
-.project-item.featured img {max-height:506px}
