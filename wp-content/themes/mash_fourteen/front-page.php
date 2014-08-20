@@ -64,8 +64,9 @@
 	
 	<?php wp_reset_query(); ?>
 	
-	
 </section>
+
+<a href="<?php echo home_url(); ?>/work/" class="btn">View more</a>
 
 
 

@@ -36,6 +36,7 @@ body {
 
 img[width], img[height] {
 	max-width: 100% !important;
+	height: auto;
 }
 
 * {
@@ -118,7 +119,10 @@ a.img-link {
 		}
 	}
 	.menu-button {
+		background: url("../img/menu-button.svg") no-repeat center right;
 		border: 0;
+		cursor: pointer;
+		display: block;
 		padding-right: 3em;
 		position: absolute;
 		top: 20px;
@@ -126,8 +130,15 @@ a.img-link {
 		transition: color 0.5s ease;
 		transition-delay: 0.25s;
 		z-index: 155;
+		&:hover {
+			fill: #666;
+		}
 		&.active {
-			color: #fff;
+			fill: #fff;
+			&:after {
+				content: 'close';
+				color: #fff;
+			}
 		}
 		@media screen and (min-width: $lap-start) {
 			display: none;
@@ -220,10 +231,8 @@ a.img-link {
 	padding: 75px 0 0; 
 	h3 {
 		font-family: $brand-face;
+		font-size: 20px;
 		font-weight: 600;
-		@media screen and (min-width: $lap-start) {
-			font-size: 20px;
-		}
 	}
 	a, a:visited { 
 		color: #333;
@@ -260,6 +269,15 @@ a.img-link {
 	}
 }
 
+header h1.entry-title {
+	font-size: 20px;
+	@media screen and (min-width: $lap-start) {
+		font-size: 38px;
+	}
+	@media screen and (min-width: $desk-start) {
+		font-size: 42px;
+	}
+}
 header .entry-title,
 .strap {
 	font-family: $brand-face;
@@ -398,7 +416,7 @@ header .entry-title,
 		}
 	}
 
-	@media screen and (min-width: $lap-start) {
+	@media screen and (min-width: $desk-start) {
 		blockquote p {
 			max-width: 90%;
 		}

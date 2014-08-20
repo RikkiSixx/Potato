@@ -27,7 +27,7 @@
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php esc_attr_e( get_bloginfo( 'name' ), 'mash_fourteen' ); ?>" rel="home"><?php echo esc_html( get_bloginfo( 'name' ) ); ?></a>
 				</h1>
 
-				<a class="menu-button">Menu</a>
+				<a class="menu-button ir">Menu</a>
 
 				<nav class="main-menu" role="navigation">
 

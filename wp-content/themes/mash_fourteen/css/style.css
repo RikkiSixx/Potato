@@ -49,7 +49,7 @@ CONTENTS - GLOBAL.CSS
 /* ========================================================================== 1. Base styles ========================================================================== */
 body { background: #fff; color: #000; letter-spacing: -0.05px; }
 
-img[width], img[height] { max-width: 100% !important; }
+img[width], img[height] { max-width: 100% !important; height: auto; }
 
 * { -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */ -moz-box-sizing: border-box; /* Firefox, other Gecko */ box-sizing: border-box; /* Opera/IE 8+ */ }
 
@@ -75,8 +75,10 @@ a.img-link { text-decoration: none; border: 0; }
 .site-header .logo { background: url("../img/logo.png") 0 0 no-repeat transparent; background-size: cover; float: left; height: 62px; margin: 0; width: 62px; }
 .site-header .logo a { border: 0; }
 @media screen and (min-width: 640px) { .site-header .logo { height: 78px; width: 78px; } }
-.site-header .menu-button { border: 0; padding-right: 3em; position: absolute; top: 20px; right: 20px; transition: color 0.5s ease; transition-delay: 0.25s; z-index: 155; }
-.site-header .menu-button.active { color: #fff; }
+.site-header .menu-button { background: url("../img/menu-button.svg") no-repeat center right; border: 0; cursor: pointer; display: block; padding-right: 3em; position: absolute; top: 20px; right: 20px; transition: color 0.5s ease; transition-delay: 0.25s; z-index: 155; }
+.site-header .menu-button:hover { fill: #666; }
+.site-header .menu-button.active { fill: #fff; }
+.site-header .menu-button.active:after { content: 'close'; color: #fff; }
 @media screen and (min-width: 640px) { .site-header .menu-button { display: none; } }
 
 .main-menu { top: 0; left: 0; width: 100%; }
@@ -95,8 +97,7 @@ a.img-link { text-decoration: none; border: 0; }
 @media screen and (min-width: 640px) { .main-menu .nav a:hover { color: #666; } }
 
 .site-footer { background: #fff200; font-family: "Roboto Slab", serif; padding: 75px 0 0; }
-.site-footer h3 { font-family: "Roboto Slab", serif; font-weight: 600; }
-@media screen and (min-width: 640px) { .site-footer h3 { font-size: 20px; } }
+.site-footer h3 { font-family: "Roboto Slab", serif; font-size: 20px; font-weight: 600; }
 .site-footer a, .site-footer a:visited { color: #333; border: 0; }
 .site-footer ul { list-style: none; margin-left: 0; }
 .site-footer .copyright { margin: 100px 0 0; }
@@ -106,6 +107,10 @@ a.img-link { text-decoration: none; border: 0; }
 @media screen and (min-width: 640px) { .site-footer .foot-item { width: 50%; float: left; } }
 @media screen and (min-width: 860px) { .site-footer .foot-item { width: 20%; }
   .site-footer .foot-item.foot-address, .site-footer .foot-item.foot-recent { width: 30%; } }
+
+header h1.entry-title { font-size: 20px; }
+@media screen and (min-width: 640px) { header h1.entry-title { font-size: 38px; } }
+@media screen and (min-width: 860px) { header h1.entry-title { font-size: 42px; } }
 
 header .entry-title, .strap { font-family: "Roboto Slab", serif; font-weight: 300; }
 
@@ -139,7 +144,7 @@ header .entry-title, .strap { font-family: "Roboto Slab", serif; font-weight: 30
   .sub-menu .cat-item:first-child:before { content: none; } }
 
 .post-wrap .post-img-wrap img { margin-bottom: 1em; max-width: 100%; height: auto; }
-@media screen and (min-width: 640px) { .post-wrap blockquote p { max-width: 90%; }
+@media screen and (min-width: 860px) { .post-wrap blockquote p { max-width: 90%; }
   .post-wrap .post-content-wrap { float: left; width: 33%; }
   .post-wrap .post-img-wrap { float: right; width: 66%; }
   .post-wrap .post-img-wrap a { border: 0; }
