@@ -62,6 +62,8 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { color: black; border: 0; }
 
 h3, h4 { font-weight: bold; }
 
+h4 { font-size: 18px; }
+
 a { color: black; text-decoration: none; border-bottom: 1px solid #fff200; }
 a:hover { border-bottom: 1px solid black; text-decoration: none; }
 
@@ -159,15 +161,18 @@ header h1.entry-title, .strap { font-family: "Roboto Slab", serif; font-weight: 
 .post-wrap blockquote p { padding: 5%; background: #f7f7f7; }
 
 .service-list .service { margin-bottom: 1em; }
-.service-list .service:nth-child(1) h4 { background-position: 0 0; }
-.service-list .service:nth-child(2) h4 { background-position: 0 -45px; }
-.service-list .service:nth-child(3) h4 { background-position: 0 -90px; }
-.service-list .service:nth-child(4) h4 { background-position: 0 -135px; }
-.service-list .service:nth-child(5) h4 { background-position: 0 -180px; }
+.service-list .service:nth-child(1) h4 { background-position: -15px -19px; }
+.service-list .service:nth-child(2) h4 { background-position: -409px -19px; }
+.service-list .service:nth-child(3) h4 { background-position: -800px -19px; }
+.service-list .service:nth-child(4) h4 { background-position: -15px -218px; }
+.service-list .service:nth-child(5) h4 { background-position: -409px -218px; }
+.service-list .service:nth-child(6) h4 { background-position: -800px -218px; }
 @media screen and (min-width: 640px) { .service-list .service { float: left; } }
 .service-list h4 { background-image: url("../img/service_icons.png"); background-repeat: no-repeat; min-height: 41px; padding: 5px 0 0 50px; }
 
 .process, .testimonial { background: #f2f2f2; }
+
+.process p { max-width: 680px; }
 
 .process-stages { list-style: none; margin: 0; }
 .process-stages li { display: inline-block; float: left; text-align: center; width: 50%; }
@@ -178,8 +183,10 @@ header h1.entry-title, .strap { font-family: "Roboto Slab", serif; font-weight: 
 @media screen and (min-width: 640px) { .clients ul { -webkit-columns: 2; -moz-columns: 2; columns: 2; } }
 @media screen and (min-width: 860px) { .clients ul { -webkit-columns: 3; -moz-columns: 3; columns: 3; } }
 
-.testimonial { padding: 1em 2em; text-align: center; }
-.testimonial p { font-family: "Roboto Slab", serif; }
+.testimonial { padding: 1em 2em; text-align: center; margin: 70px auto; }
+.testimonial blockquote { margin-bottom: 0; }
+.testimonial p { font-family: "Roboto Slab", serif; font-size: 20px; margin-bottom: 1.5rem !important; }
+.testimonial h4 { margin-bottom: 0; }
 
 .studio-images-sm img, .studio-images-lg img { width: 100%; height: auto; }
 

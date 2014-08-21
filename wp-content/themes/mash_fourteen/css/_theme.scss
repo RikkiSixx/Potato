@@ -71,6 +71,10 @@ h3, h4 {
 	font-weight: bold;
 }
 
+h4 {
+	font-size: 18px; 
+}
+
 a {
 	color: $font-color;
 	text-decoration: none;
@@ -479,11 +483,12 @@ header h1.entry-title,
 .service-list {
 	.service { 
 		margin-bottom: 1em; 
-		&:nth-child(1) h4 { background-position: 0 0; }
-		&:nth-child(2) h4 { background-position: 0 -45px; }
-		&:nth-child(3) h4 { background-position: 0 -90px; }
-		&:nth-child(4) h4 { background-position: 0 -135px; }
-		&:nth-child(5) h4 { background-position: 0 -180px; }
+		&:nth-child(1) h4 { background-position: -15px -19px; }
+		&:nth-child(2) h4 { background-position: -409px -19px; }
+		&:nth-child(3) h4 { background-position: -800px -19px; }
+		&:nth-child(4) h4 { background-position: -15px -218px; }
+		&:nth-child(5) h4 { background-position: -409px -218px; }
+		&:nth-child(6) h4 { background-position: -800px -218px; }
 		@media screen and (min-width: $lap-start) {
 			float: left;
 		}
@@ -498,6 +503,9 @@ header h1.entry-title,
 .process,
 .testimonial {
 	background: #f2f2f2;
+}
+.process {
+	p { max-width: 680px; }
 }
 .process-stages {
 	list-style: none;
@@ -533,8 +541,15 @@ header h1.entry-title,
 .testimonial {
 	padding: 1em 2em;
 	text-align: center;
+	margin: 70px auto;
+	blockquote { margin-bottom: 0; }
 	p {
 		font-family: $brand-face;
+		font-size: 20px;
+		margin-bottom: 1.5rem !important;
+	}
+	h4 { 
+		margin-bottom: 0;
 	}
 }
 
