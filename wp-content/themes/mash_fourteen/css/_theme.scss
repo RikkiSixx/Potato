@@ -34,7 +34,7 @@ body {
 	font-size: 16px;
 	line-height: 24px;
 	letter-spacing: -0.5px; 
-	@media screen and (min-width: $lap-start) {
+	@media screen and (min-width: $desk-start) {
 		font-size: 18px;
 		line-height: 28px;
 	}
@@ -55,30 +55,35 @@ img[width], img[height] {
    2. Base Typography & Links
    ========================================================================== */
 
-h1, h2,  
+html {
+	h1, h2,  
 .alpha, .beta, .gamma, .delta, .epsilon, .zeta,
-.giga, .mega, .kilo {
-	font-family: $brand-face;
-	font-weight: 300;
-}
-h3, h4, h5, h6 {
-	font-family: $base-font-family;
-	font-weight: normal;
-	letter-spacing: 0;	
-}
-
-h1, h2, h3, h4, h5, h6 {
-	a { 
-		color: $font-color; 
-		border: 0;
+	.giga, .mega, .kilo {
+		font-family: $brand-face;
+		font-weight: 300;
 	}
-}
-h3, h4 {
-	font-weight: bold;
-}
+	h3, h4, h5, h6 {
+		font-family: $base-font-family;
+		font-weight: normal;
+		letter-spacing: 0;	
+	}
 
-h4 {
-	font-size: 18px; 
+	h1, h2, h3, h4, h5, h6 {
+		a { 
+			color: $font-color; 
+			border: 0;
+		}
+	}
+	h3, h4 {
+		font-weight: bold;
+	}
+
+	h4 {
+		font-size: 16px; 
+		@media screen and (min-width: $desk-start) {
+			font-size: 18px;
+		}
+	}
 }
 
 a {
@@ -261,11 +266,11 @@ a.img-link {
 .site-footer {
 	background: $brand-color;
 	font-family: $brand-face;
-	font-size: 20px;
-	padding: 75px 0 0; 
-	h3 {
+	@media screen and (min-width: $desk-start) {
+		padding: 75px 0 0; 
+	}
+	h4 {
 		font-family: $brand-face;
-		font-size: 20px;
 		font-weight: 600;
 	}
 	a, a:visited { 
@@ -507,6 +512,7 @@ header h1.entry-title,
 .service-list {
 	.service { 
 		margin-bottom: 25px; 
+		h4 { max-width: 390px; }
 		&:nth-child(1) h4 { background-position: -15px -19px; }
 		&:nth-child(2) h4 { background-position: -409px -19px; }
 		&:nth-child(3) h4 { background-position: -800px -19px; }
@@ -541,7 +547,16 @@ header h1.entry-title,
 	background: #f2f2f2;
 }
 .process {
-	padding-top: 50px;
+	@media screen and (min-width: $lap-start) {
+		padding-top: 15px;
+	}
+	@media screen and (min-width: $desk-start) {
+		padding-top: 50px;
+	}
+	h4 {
+		font-size: 16px;
+		margin-bottom: 5px;
+	}
 	p { max-width: 678px; }
 }
 .process-stages {
@@ -550,6 +565,7 @@ header h1.entry-title,
 	li {
 		display: inline-block;
 		float: left;
+		padding: 0 5px;
 		text-align: center;
 		width: 50%;
 		@media screen and (min-width: $lap-start) {
@@ -582,8 +598,7 @@ header h1.entry-title,
 	blockquote { margin-bottom: 0; }
 	p {
 		font-family: $brand-face;
-		font-size: 20px;
-		margin-bottom: 1.5rem !important;
+		margin-bottom: 1rem !important;
 	}
 	h4 { 
 		margin-bottom: 0;
@@ -624,6 +639,7 @@ header h1.entry-title,
 	margin: 0 0 45px;
 	&:last-child { margin: 0; }
 	@media screen and (min-width: $lap-start) {	
+		img { padding-left: 15px; }
 		.post-content { float: left; }
 		.post-image { float: right; }
 	}
