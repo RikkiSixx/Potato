@@ -8,6 +8,10 @@ Template Name: Blog
 
 <section role="main">
 
+	<header class="header">
+		<h1 class="entry-title"><?php the_title(); ?></h1>
+	</header>
+
 	<?php
 		$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;             
         $args = array(
@@ -23,11 +27,11 @@ Template Name: Blog
 
 	<article class="cf post-wrap">
 		<div class="post-content-wrap">
-			<h1><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title_attribute(); ?></a></h1>
+			<h3><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title_attribute(); ?></a></h3>
 			
 			<?php the_excerpt(); ?>
 
-			<p><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">Continue reading</a></p>
+			<p class="read-more"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">Read more</a></p>
 		</div><!-- .post-content-wrap -->
 
 		<div class="post-img-wrap">

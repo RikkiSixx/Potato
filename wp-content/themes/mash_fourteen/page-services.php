@@ -8,7 +8,13 @@ Template Name: Services
 
 <section role="main">
 
-	<?php the_excerpt(); ?>
+	<header class="header">
+		<h1 class="entry-title"><?php the_title(); ?></h1>
+	</header>
+
+	<div class="intro">		
+		<?php the_excerpt(); ?>
+	</div>
 
 	<section class="grid service-list cf">
 
@@ -42,7 +48,6 @@ Template Name: Services
 					<?php wp_link_pages(); ?>
 				</div>
 
-				<?php edit_post_link(); ?>
 			</section>
 
 		</article>

@@ -47,7 +47,8 @@ CONTENTS - GLOBAL.CSS
 
 */
 /* ========================================================================== 1. Base styles ========================================================================== */
-body { background: #fff; color: #000; letter-spacing: -0.05px; }
+body { background: #fff; color: #000; font-size: 16px; line-height: 24px; letter-spacing: -0.5px; }
+@media screen and (min-width: 640px) { body { font-size: 18px; line-height: 28px; } }
 
 img[width], img[height] { max-width: 100% !important; height: auto; }
 
@@ -104,7 +105,7 @@ a.img-link { text-decoration: none; border: 0; }
 @media screen and (max-width: 640px) { .main-menu .nav a:hover { background: #343434; } }
 @media screen and (min-width: 640px) { .main-menu .nav a:hover { color: #666; } }
 
-.site-footer { background: #fff200; font-family: "Roboto Slab", serif; padding: 75px 0 0; }
+.site-footer { background: #fff200; font-family: "Roboto Slab", serif; font-size: 20px; padding: 75px 0 0; }
 .site-footer h3 { font-family: "Roboto Slab", serif; font-size: 20px; font-weight: 600; }
 .site-footer a, .site-footer a:visited { color: #333; border: 0; }
 .site-footer ul { list-style: none; margin-left: 0; }
@@ -116,13 +117,15 @@ a.img-link { text-decoration: none; border: 0; }
 @media screen and (min-width: 860px) { .site-footer .foot-item { width: 20%; }
   .site-footer .foot-item.foot-address, .site-footer .foot-item.foot-recent { width: 30%; } }
 
-header h1.entry-title, .strap { font-family: "Roboto Slab", serif; font-weight: 300; font-size: 20px; }
+header h1.entry-title, .strap { font-family: "Roboto Slab", serif; font-weight: 300; font-size: 20px; letter-spacing: -1px; }
 @media screen and (min-width: 640px) { header h1.entry-title, .strap { font-size: 38px; } }
 @media screen and (min-width: 860px) { header h1.entry-title, .strap { font-size: 42px; } }
 
 @media screen and (min-width: 640px) { .strap { line-height: 1.2; max-width: 740px; } }
 
 /* ========================================================================== 4. Custom layout, inc Media Queries ========================================================================== */
+.view-more { font-size: 20px; }
+
 .project-item { width: 100%; position: relative; margin-bottom: 22px; }
 @media screen and (min-width: 640px) { .project-item { margin-bottom: 10px; width: 49%; }
   .project-item:nth-child(odd) { margin-right: 1%; }
@@ -133,14 +136,14 @@ header h1.entry-title, .strap { font-family: "Roboto Slab", serif; font-weight: 
 .project-item .entry-content { background: #000; }
 .project-item header { position: absolute; top: 0; bottom: 0; left: 0; right: 0; z-index: 100; }
 .project-item img { display: block; line-height: 0; transition: all 0.5s ease; opacity: 1; transition: all 0.5s ease; }
-.project-item:hover img { opacity: 0.6; }
+.project-item:hover img { opacity: 0.4; }
 .project-item:hover .service-performed { opacity: 1; }
 .project-item:hover h3 a span { opacity: 1; }
-.project-item h3 { text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3); padding: 20px; }
+.project-item h3 { font-family: "Roboto Slab", serif; font-size: 20px; text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3); padding: 20px; }
 .project-item h3 a { position: absolute; top: 0; right: 0; left: 0; bottom: 0; padding: 20px; color: #fff; }
 .project-item h3 a:hover { border: 0; }
 .project-item h3 a span { opacity: 0; transition: opacity 0.5s ease; }
-.project-item .service-performed { text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3); color: #fff; padding: 10px 20px 0; opacity: 0; transition: opacity 0.5s ease; position: absolute; top: 60px; }
+.project-item .service-performed { text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3); color: #fff; font-family: "Roboto Slab", serif; font-size: 20px; padding: 10px 20px 0; opacity: 0; transition: opacity 0.5s ease; position: absolute; top: 60px; }
 .project-item .service-performed a { color: #fff; }
 
 .sub-menu { font-family: "Roboto Slab", serif; }
@@ -149,7 +152,9 @@ header h1.entry-title, .strap { font-family: "Roboto Slab", serif; font-weight: 
 @media screen and (min-width: 640px) { .sub-menu .cat-item:before { content: ' / '; padding-right: 5px; }
   .sub-menu .cat-item:first-child:before { content: none; } }
 
+.post-wrap h3 { font-size: 18px; margin-bottom: 10px; }
 .post-wrap .post-img-wrap img { margin-bottom: 1em; max-width: 100%; height: auto; }
+.post-wrap .post-content-wrap .read-more { font-weight: bold; }
 @media screen and (min-width: 860px) { .post-wrap blockquote p { max-width: 90%; }
   .post-wrap .post-content-wrap { float: left; width: 33%; }
   .post-wrap .post-img-wrap { float: right; width: 66%; }
@@ -160,19 +165,23 @@ header h1.entry-title, .strap { font-family: "Roboto Slab", serif; font-weight: 
 
 .post-wrap blockquote p { padding: 5%; background: #f7f7f7; }
 
-.service-list .service { margin-bottom: 1em; }
+.service-list .service { margin-bottom: 25px; }
 .service-list .service:nth-child(1) h4 { background-position: -15px -19px; }
 .service-list .service:nth-child(2) h4 { background-position: -409px -19px; }
 .service-list .service:nth-child(3) h4 { background-position: -800px -19px; }
 .service-list .service:nth-child(4) h4 { background-position: -15px -218px; }
 .service-list .service:nth-child(5) h4 { background-position: -409px -218px; }
 .service-list .service:nth-child(6) h4 { background-position: -800px -218px; }
-@media screen and (min-width: 640px) { .service-list .service { float: left; } }
+@media screen and (min-width: 640px) { .service-list .service { margin-top: 20px; float: left; padding-left: 45px; }
+  .service-list .service:nth-child(odd) { padding-left: 24px; } }
+@media screen and (min-width: 860px) { .service-list .service:nth-child(odd) { padding-left: 45px; }
+  .service-list .service:nth-child(1), .service-list .service:nth-child(4) { padding-left: 24px; } }
 .service-list h4 { background-image: url("../img/service_icons.png"); background-repeat: no-repeat; min-height: 41px; padding: 5px 0 0 50px; }
 
 .process, .testimonial { background: #f2f2f2; }
 
-.process p { max-width: 680px; }
+.process { padding-top: 50px; }
+.process p { max-width: 678px; }
 
 .process-stages { list-style: none; margin: 0; }
 .process-stages li { display: inline-block; float: left; text-align: center; width: 50%; }
@@ -188,6 +197,8 @@ header h1.entry-title, .strap { font-family: "Roboto Slab", serif; font-weight: 
 .testimonial p { font-family: "Roboto Slab", serif; font-size: 20px; margin-bottom: 1.5rem !important; }
 .testimonial h4 { margin-bottom: 0; }
 
+.intro p { max-width: 678px; }
+
 .studio-images-sm img, .studio-images-lg img { width: 100%; height: auto; }
 
 @media screen and (min-width: 640px) { .studio-images-sm { float: left; }
@@ -195,10 +206,13 @@ header h1.entry-title, .strap { font-family: "Roboto Slab", serif; font-weight: 
 
 @media screen and (min-width: 640px) { .studio-images-lg { float: right; } }
 
-.staff { margin-top: 2em; }
+.staff-wrap { background: #f2f2f2; margin-top: 52px; padding-top: 58px; padding-bottom: 58px; }
 
+.person { margin: 0 0 45px; }
+.person:last-child { margin: 0; }
 @media screen and (min-width: 640px) { .person .post-content { float: left; }
   .person .post-image { float: right; } }
+.person h4 { font-size: 16px; margin-bottom: 8px; }
 
 @media screen and (min-width: 640px) { .intro, .address, .contact-imgs { float: left; } }
 

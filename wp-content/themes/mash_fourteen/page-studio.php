@@ -6,67 +6,80 @@ Template Name: Studio
 
 <?php get_header(); ?>
 
-<section role="main">
-	
-	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+	<section role="main">
+		
+		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-	<article <?php post_class(); ?>>
-		<header class="header">
-			<h1 class="entry-title"><?php the_title(); ?></h1> <?php edit_post_link(); ?>
-		</header>
+		<article>
+			<header class="header">
+				<h1 class="entry-title"><?php the_title(); ?></h1> <?php edit_post_link(); ?>
+			</header>
 
-		<section class="entry-content">
-			<?php if ( has_post_thumbnail() ) { the_post_thumbnail('project-lg'); } ?>
+			<div class="entry-content grid">
+				<div class="row cf">
+					<div class="intro lap-and-up-two-thirds grid__item">	
+						<?php the_content(); ?>			
+					</div>
 
-			<?php the_content(); ?>
+					<aside class="address lap-and-up-one-third grid__item">
+						<?php $options = get_option('mash_fourteen_theme_options'); ?>
 
-			<div class="entry-links">
-				<?php wp_link_pages(); ?>
+						<?php 
+							echo '<p>'.($options["address_line_1"]).'<br />'.($options["address_line_2"]).'<br />'.($options["address_line_3"]).'</p>';
+							echo '<p>'.($options["phone_number"]).'</p>';
+							echo '<p><a href='.($options["contact_email"]).'>'.($options["contact_email"]).'</a></p>'; 
+						?>			
+					</aside>
+				</div>
+			</div><!-- .entry-content -->
+
+		</article>
+
+		<?php endwhile; endif; ?>
+
+		<div class="grid cf">
+			<div class="grid__item lap-and-up-one-third studio-images-sm">
+				<img src="<?php echo get_template_directory_uri(); ?>/img/studio-1.jpg" title="Studio" />
+				<img src="<?php echo get_template_directory_uri(); ?>/img/studio-1.jpg" title="Studio" />
 			</div>
-		</section>
-
-	</article>
-
-	<?php endwhile; endif; ?>
-
-	<div class="grid cf">
-		<div class="grid__item lap-and-up-one-third studio-images-sm">
-			<img src="<?php echo get_template_directory_uri(); ?>/img/studio-1.jpg" title="Studio" />
-			<img src="<?php echo get_template_directory_uri(); ?>/img/studio-1.jpg" title="Studio" />
+			<div class="grid__item lap-and-up-two-thirds studio-images-lg">
+				<img src="<?php echo get_template_directory_uri(); ?>/img/studio-3.jpg" title="Studio" />
+			</div>
 		</div>
-		<div class="grid__item lap-and-up-two-thirds studio-images-lg">
-			<img src="<?php echo get_template_directory_uri(); ?>/img/studio-3.jpg" title="Studio" />
-		</div>
+	</section>
+
+</div><!-- ..container -->
+
+
+<div class="staff-wrap">
+	<div class="container">
+
+		<?php                  
+	        $args = array(
+	            'post_type' => 'person',
+	            'posts_per_page' => 5
+	        );
+	        query_posts( $args );
+	    ?>
+
+	    <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+
+		<article class="cf person">
+			<div class="lap-two-thirds desk-one-third post-content">
+				<h4><?php the_title_attribute(); ?></h4>
+				<?php the_excerpt(); ?>
+			</div>
+
+			<div class="lap-one-third desk-two-thirds post-image">
+				<?php if ( has_post_thumbnail() ) { the_post_thumbnail('project-lg'); } ?>
+			</div>
+
+		</article>
+		<?php endwhile; endif; ?>
+
+		<?php wp_reset_query(); ?>
+
 	</div>
-</section>
 
-
-
-<section>
-	<?php                  
-        $args = array(
-            'post_type' => 'person',
-            'posts_per_page' => 5
-        );
-        query_posts( $args );
-    ?>
-
-    <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-
-	<article class="cf person">
-		<div class="lap-two-thirds desk-one-third post-content">
-			<h3><?php the_title_attribute(); ?></h3>
-			<?php the_excerpt(); ?>
-		</div>
-
-		<div class="lap-one-third desk-two-thirds post-image">
-			<?php if ( has_post_thumbnail() ) { the_post_thumbnail('project-lg'); } ?>
-		</div>
-
-	</article>
-	<?php endwhile; endif; ?>
-
-	<?php wp_reset_query(); ?>
-</section>
 
 <?php get_footer(); ?>

@@ -70,7 +70,7 @@
 	
 </section>
 
-<a href="<?php echo home_url(); ?>/work/" class="btn view-more">View more</a>
+<a href="<?php echo home_url(); ?>/work/" class="btn view-more">View all work</a>
 
 
 

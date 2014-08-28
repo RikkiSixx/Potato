@@ -1,12 +1,17 @@
 <?php get_header(); ?>
 
 <section role="main">
+
+	<header class="header">
+		<h1 class="entry-title">Blog</h1>
+	</header>
+
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		
 		<article <?php post_class(); ?>>
 
 			<header>			
-				<h1 class="entry-title"><?php the_title(); ?></h1>
+				<h4 class="entry-title"><?php the_title(); ?></h4>
 				<?php // get_template_part( 'entry-meta' ); ?>
 			</header>
 
