@@ -7,7 +7,7 @@
 				<div class="cf grid">
 
 					<div class="grid__item foot-item foot-recent">
-						<h3>Recent Projects</h3>
+						<h4>Recent Projects</h4>
 						<ul>
 							<?php                  
 						        $args = array(
@@ -24,7 +24,7 @@
 					</div>
 
 					<div class="grid__item foot-item">
-						<h3>Navigate</h3>
+						<h4>Navigate</h4>
 						
 						<?php wp_nav_menu( array( 
 							'theme_location' => 'main-menu', 
@@ -34,7 +34,7 @@
 					</div>
 
 					<div class="grid__item foot-item">
-						<h3>Connect</h3>
+						<h4>Connect</h4>
 						<?php $options = get_option('mash_fourteen_theme_options'); ?>
 						<ul>
 							<!-- <li>Newsletter</li> -->
