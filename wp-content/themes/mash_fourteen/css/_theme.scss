@@ -170,7 +170,7 @@ a.img-link {
 		&.active {
 			fill: #232323;
 			&:before {
-				content: 'close';
+				content: 'Close';
 				color: #fff;
 				position: absolute;
 				bottom: 7px;
@@ -702,6 +702,47 @@ header h1.entry-title,
 .contact-imgs { 
 	@media screen and (min-width: $lap-start) {	
 		float: left; 
+	}
+}
+.page-contact {
+	.intro,
+	.map-canvas {			
+		width: 100%;
+		@media screen and (min-width: $desk-start) {
+			float: left;
+			width: 66%;
+		}
+		p {
+			max-width: 678px;
+		}
+	}
+	.map-canvas {
+		@media screen and (min-width: $desk-start) {
+			float: right;
+		}
+	}
+	.address,
+	.contact-imgs {			
+		width: 100%;
+		@media screen and (min-width: $desk-start) {
+			float: right;
+			width: 33%;
+		}
+	}
+	.contact-imgs {
+		@media screen and (min-width: $desk-start) {
+			float: left;
+		}
+	}
+}
+.contact-imgs { 
+	img {
+		margin-top: 22px;
+		@media screen and (min-width: $desk-start) {
+			&:first-child {
+				margin-top: 0;
+			}
+		}
 	}
 }
 .map-canvas {

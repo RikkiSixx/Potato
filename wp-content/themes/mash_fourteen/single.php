@@ -32,6 +32,8 @@
 		</article>
 
 	<?php endwhile; endif; ?>
+
+	<a href="<?php echo home_url(); ?>/blog/" class="btn view-more">Back to Blog</a>
 </section>
 
 <?php get_footer(); ?>

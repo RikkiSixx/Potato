@@ -36,6 +36,8 @@ Template Name: Project Detail
 
 	<?php endwhile; endif; ?>
 
+	<a href="<?php echo home_url(); ?>/work/" class="btn view-more">View all work</a>
+
 </section>
 
 <?php get_footer(); ?>
