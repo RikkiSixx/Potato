@@ -27,7 +27,13 @@
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php esc_attr_e( get_bloginfo( 'name' ), 'mash_fourteen' ); ?>" rel="home"><?php echo esc_html( get_bloginfo( 'name' ) ); ?></a>
 				</h1>
 
-				<a class="menu-button ir">Menu</a>
+				<a class="menu-button">
+					<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="29px" height="21px" viewBox="0 0 29 21" enable-background="new 0 0 29 21" xml:space="preserve">
+						<rect width="29" height="3"/>
+						<rect y="9" width="29" height="3"/>
+						<rect y="18" width="29" height="3"/>
+					</svg>
+				</a>
 
 				<nav class="main-menu" role="navigation">
 

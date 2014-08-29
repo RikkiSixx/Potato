@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 	
 	<header class="header">
-		<h1 class="entry-title">Projects</h1>
+		<h1 class="entry-title"><?php single_cat_title(); ?></h1>
 	</header>
 
 	<?php 
@@ -62,5 +62,6 @@
 
 </section>
 
+<a href="<?php echo home_url(); ?>/work/" class="btn view-more">View all work</a>
 
 <?php get_footer(); ?>

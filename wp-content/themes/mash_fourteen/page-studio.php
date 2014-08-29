@@ -6,7 +6,7 @@ Template Name: Studio
 
 <?php get_header(); ?>
 
-	<section role="main">
+	<section role="main" class="page-studio">
 		
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
@@ -17,11 +17,11 @@ Template Name: Studio
 
 			<div class="entry-content grid">
 				<div class="row cf">
-					<div class="intro lap-and-up-two-thirds grid__item">	
+					<div class="intro grid__item">	
 						<?php the_content(); ?>			
 					</div>
 
-					<aside class="address lap-and-up-one-third grid__item">
+					<aside class="address grid__item">
 						<?php $options = get_option('mash_fourteen_theme_options'); ?>
 
 						<?php 
@@ -37,13 +37,13 @@ Template Name: Studio
 
 		<?php endwhile; endif; ?>
 
-		<div class="grid cf">
-			<div class="grid__item lap-and-up-one-third studio-images-sm">
-				<img src="<?php echo get_template_directory_uri(); ?>/img/studio-1.jpg" title="Studio" />
-				<img src="<?php echo get_template_directory_uri(); ?>/img/studio-1.jpg" title="Studio" />
-			</div>
-			<div class="grid__item lap-and-up-two-thirds studio-images-lg">
+		<div class="grid cf">			
+			<div class="grid__item studio-images-lg">
 				<img src="<?php echo get_template_directory_uri(); ?>/img/studio-3.jpg" title="Studio" />
+			</div>
+			<div class="grid__item studio-images-sm">
+				<img src="<?php echo get_template_directory_uri(); ?>/img/studio-1.jpg" title="Studio" />
+				<img src="<?php echo get_template_directory_uri(); ?>/img/studio-1.jpg" title="Studio" />
 			</div>
 		</div>
 	</section>
