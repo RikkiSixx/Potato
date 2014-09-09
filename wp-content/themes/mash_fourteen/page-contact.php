@@ -38,8 +38,8 @@ Template Name: Contact
 				</div>
 
 				<div class="contact-imgs lap-and-up-one-third grid__item">
-					<img src="<?php echo get_template_directory_uri(); ?>/img/studio-1.jpg" title="Studio" />
-					<img src="<?php echo get_template_directory_uri(); ?>/img/studio-1.jpg" title="Studio" />
+					<img src="<?php echo get_template_directory_uri(); ?>/img/contact-1.jpg" title="Curtain Road" />
+					<img src="<?php echo get_template_directory_uri(); ?>/img/contact-2.jpg" title="The Entrance" />
 				</div>
 			</div><!-- .row -->
 			

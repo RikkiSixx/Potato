@@ -105,7 +105,7 @@ a.img-link {
 	border: 0;
 	display: block;
 	font-family: $brand-face;
-	margin: 22px auto 0;
+	margin: 22px auto;
 	padding: 10px;
 	text-align: center;
 	width: 100%;
@@ -114,11 +114,11 @@ a.img-link {
 		border: 0; 
 	}
 	@media screen and (min-width: $lap-start) {
-		margin: 40px auto 0;
+		margin: 40px auto 30px;
 		width: 33.33%;
 	}
 	@media screen and (min-width: $desk-start) {
-		margin: 80px auto 20px;
+		margin: 60px auto 50px;
 	}
 }
 
@@ -128,7 +128,7 @@ a.img-link {
 
 .container {
 	margin: auto;
-	max-width: 1100px;
+	max-width: 1248px;
 	padding: 22px;
 	@media screen and (min-width: $lap-start) {
 		padding: 22px 40px;
@@ -186,7 +186,7 @@ a.img-link {
 	top: 0;
 	left: 0;
 	width: 100%;
-	@media screen and (max-width: $lap-start) {
+	@media screen and (max-width: 639px) {
 		display: none;
 		background: #232323;
 		position: absolute;
@@ -214,7 +214,7 @@ a.img-link {
 		@media screen and (min-width: $lap-start) {
 			float: right;
 			margin: 55px 0 0 0;
-			max-width: 500px;
+			max-width: 465px;
 			width: 100%;
 		}
 		li {		
@@ -228,9 +228,9 @@ a.img-link {
 				}
 			}
 			@media screen and (min-width: $lap-start) {
-				display: inline-block;
-				width: 20%;
-				float: left;				
+				display: inline-block;				
+				float: left;	
+				margin-left: 34px;			
 			}
 		}
 		a { 		
@@ -266,6 +266,8 @@ a.img-link {
 	background: $brand-color;
 	font-family: $brand-face;
 	@media screen and (min-width: $desk-start) {
+		font-size: 20px;
+		line-height: 26px;
 		padding: 75px 0 0; 
 	}
 	h4 {
@@ -324,6 +326,7 @@ header h1.entry-title,
 	@media screen and (min-width: $lap-start) {
 		line-height: 1.2;
 		max-width: 740px;
+		margin-bottom: 2rem;
 	}
 }
 
@@ -508,15 +511,12 @@ header h1.entry-title,
 
 // Service Page
 .service-list {
+	width: 100%;
+	clear: both;
 	.service { 
 		margin-bottom: 25px; 
 		h4 { max-width: 390px; }
-		&:nth-child(1) h4 { background-position: -15px -19px; }
-		&:nth-child(2) h4 { background-position: -409px -19px; }
-		&:nth-child(3) h4 { background-position: -800px -19px; }
-		&:nth-child(4) h4 { background-position: -15px -218px; }
-		&:nth-child(5) h4 { background-position: -409px -218px; }
-		&:nth-child(6) h4 { background-position: -800px -218px; }
+
 		@media screen and (min-width: $lap-start) {
 			margin-top: 20px;
 			float: left;
@@ -532,12 +532,6 @@ header h1.entry-title,
 				padding-left: 24px;
 			}
 		}
-	}
-	h4 {
-		background-image: url("../img/service_icons.png");
-		background-repeat: no-repeat;
-		min-height: 41px;
-		padding: 5px 0 0 50px;
 	}	
 }
 .process,
@@ -583,24 +577,35 @@ header h1.entry-title,
 			}
 		}
 	}
+	p {
+		line-height: 24px;
+		@media screen and (min-width: $desk-start) {
+			margin-bottom: 90px;
+		}
+	}
 }
 
-.clients ul {
-	list-style: none;
-	margin-left: 0;
-	@media screen and (min-width: $lap-start) {
-		-webkit-columns: 2;
-		-moz-columns: 2;
-		columns: 2;
-	}
+.clients {
 	@media screen and (min-width: $desk-start) {
-		-webkit-columns: 3;
-		-moz-columns: 3;
-		columns: 3;
+		padding: 66px 0 0;
+	}
+	ul {
+		list-style: none;
+		margin-left: 0;
+		@media screen and (min-width: $lap-start) {
+			-webkit-columns: 2;
+			-moz-columns: 2;
+			columns: 2;
+		}
+		@media screen and (min-width: $desk-start) {
+			-webkit-columns: 3;
+			-moz-columns: 3;
+			columns: 3;
+		}
 	}
 }
 .testimonial {
-	padding: 1em 2em;
+	padding: 45px;
 	text-align: center;
 	margin: 70px auto;
 	blockquote { margin-bottom: 0; }
@@ -653,18 +658,21 @@ header h1.entry-title,
 	}
 	@media screen and (min-width: $desk-start) {	 	
 		float: left; 
-		width: 33% !important;
+		width: 33.33% !important;
 		img {
 			margin: 0;
 			width: 100%;
-			&:first-child { margin-bottom: 32px; }	
+			&:first-child { margin-bottom: 22px; }	
 		}	
 	}
 }
 .studio-images-lg { 
-	@media screen and (min-width: $desk-start) {	
-		width: 66% !important;
+	@media screen and (min-width: $desk-start) {
+		width: 66.66% !important;
 		float: right; 
+		&.grid__item {
+			padding-left: 10px;
+		}
 	}
 }
 .staff-wrap {
@@ -692,7 +700,7 @@ header h1.entry-title,
 	}	
 	h4 {
 		font-size: 16px; 
-		margin-bottom: 8px;
+		margin-bottom: 0;
 	}
 }
 
@@ -704,6 +712,7 @@ header h1.entry-title,
 		float: left; 
 	}
 }
+.intro { max-width: 678px; }
 .page-contact {
 	.intro,
 	.map-canvas {			
