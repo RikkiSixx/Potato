@@ -27,7 +27,7 @@ Template Name: Blog
 
 	<article class="cf post-wrap">
 		<div class="post-content-wrap">
-			<h3><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title_attribute(); ?></a></h3>
+			<h4><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title_attribute(); ?></a></h4>
 			
 			<?php the_excerpt(); ?>
 

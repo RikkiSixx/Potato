@@ -26,8 +26,8 @@ Template Name: Contact
 
 					<?php 
 						echo '<p>'.($options["address_line_1"]).'<br />'.($options["address_line_2"]).'<br />'.($options["address_line_3"]).'</p>';
-						echo '<p>'.($options["phone_number"]).'</p>';
-						echo '<p><a href='.($options["contact_email"]).'>'.($options["contact_email"]).'</a></p>'; 
+						echo '<p>'.($options["phone_number"]).'<br />';
+						echo '<a href='.($options["contact_email"]).'>'.($options["contact_email"]).'</a></p>'; 
 					?>			
 				</aside>
 			</div><!-- .row -->

@@ -6,7 +6,7 @@ Template Name: Services
 
 <?php get_header(); ?>
 
-<section role="main">
+<section role="main" class="page-services">
 
 	<header class="header">
 		<h1 class="entry-title"><?php the_title(); ?></h1>
@@ -73,28 +73,28 @@ Template Name: Services
 
 			<ul class="process-stages cf">
 				<li>
-					<img src="<?php echo get_template_directory_uri(); ?>/img/process-listen.png" title="" alt="" />
-					<p>Listen to your problem</p>
+					<img src="<?php echo get_template_directory_uri(); ?>/img/1-define-brief.png" title="Define brief" alt="Define brief" />
+					<p>Define brief</p>
 				</li>
 				<li>
-					<img src="<?php echo get_template_directory_uri(); ?>/img/process-develop.png" title="" alt="" />
-					<p>Develop your brief</p>
+					<img src="<?php echo get_template_directory_uri(); ?>/img/2-explore-and-create.png" title="Explore & create" alt="Explore & create" />
+					<p>Explore & create</p>
 				</li>
 				<li>
-					<img src="<?php echo get_template_directory_uri(); ?>/img/process-ideas.png" title="" alt="" />
-					<p>Ideas &amp; Concept Generation</p>
+					<img src="<?php echo get_template_directory_uri(); ?>/img/3-present-and-invite-feedback.png" title="Present & invite feedback" alt="Present & invite feedback" />
+					<p>Present & invite feedback</p>
 				</li>
 				<li>
-					<img src="<?php echo get_template_directory_uri(); ?>/img/process-present.png" title="" alt="" />
-					<p>Present &amp; Open to feedback</p>
+					<img src="<?php echo get_template_directory_uri(); ?>/img/4-production.png" title="Production" alt="Production" />
+					<p>Production</p>
 				</li>
 				<li>
-					<img src="<?php echo get_template_directory_uri(); ?>/img/process-production.png" title="" alt="" />
-					<p>Production &amp; Artwork Finalising</p>
+					<img src="<?php echo get_template_directory_uri(); ?>/img/5-deliver.png" title="Deliver" alt="Deliver" />
+					<p>Deliver</p>
 				</li>
 				<li>
-					<img src="<?php echo get_template_directory_uri(); ?>/img/process-launch.png" title="" alt="" />
-					<p>Launch &amp; deployment</p>
+					<img src="<?php echo get_template_directory_uri(); ?>/img/6-ongoing-care.png" title="Ongoing care" alt="Ongoing care" />
+					<p>Ongoing care</p>
 				</li>
 			</ul>
 			

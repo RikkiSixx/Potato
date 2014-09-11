@@ -80,6 +80,7 @@ html {
 
 	h4 {
 		font-size: 16px; 
+		margin-bottom: 0;
 		@media screen and (min-width: $desk-start) {
 			font-size: 18px;
 		}
@@ -273,6 +274,10 @@ a.img-link {
 	h4 {
 		font-family: $brand-face;
 		font-weight: 600;
+		@media screen and (min-width: $desk-start) {
+			font-size: 20px;
+			line-height: 26px;
+		}
 	}
 	a, a:visited { 
 		color: #333;
@@ -290,7 +295,7 @@ a.img-link {
 		width: 100%;
 		@media screen and (max-width: $lap-start) {
 			display: none;
-			&.foot-address {
+			&.foot-address {				
 				display: inherit;
 			}
 		}
@@ -300,6 +305,10 @@ a.img-link {
 		}
 		@media screen and (min-width: $desk-start) {
 			width: 20%;
+			&.foot-address {
+				max-width: 300px;
+				float: right;
+			}
 			&.foot-address,
 			&.foot-recent {
 				width: 30%;
@@ -510,15 +519,22 @@ header h1.entry-title,
 
 
 // Service Page
+.page-services {
+	.intro { 
+		@media screen and (min-width: $desk-start) {
+			margin-bottom: 45px; 
+		}
+	}
+}
 .service-list {
 	width: 100%;
 	clear: both;
 	.service { 
-		margin-bottom: 25px; 
+		margin: 25px 0 20px; 
 		h4 { max-width: 390px; }
 
 		@media screen and (min-width: $lap-start) {
-			margin-top: 20px;
+			margin: 45px 0 0;
 			float: left;
 			padding-left: 45px;
 			&:nth-child(odd) {
@@ -625,7 +641,7 @@ header h1.entry-title,
 		width: 100%;
 		@media screen and (min-width: $desk-start) {
 			float: left;
-			width: 66%;
+			width: 66.66%;
 		}
 		p {
 			max-width: 678px;
@@ -635,7 +651,8 @@ header h1.entry-title,
 		width: 100%;
 		@media screen and (min-width: $desk-start) {
 			float: right;
-			width: 33%;
+			max-width: 260px;
+			width: 33.33%;
 		}
 	}
 }
@@ -698,10 +715,6 @@ header h1.entry-title,
 		.post-content { float: left; }
 		.post-image { float: right; }
 	}	
-	h4 {
-		font-size: 16px; 
-		margin-bottom: 0;
-	}
 }
 
 // Contact 
@@ -719,15 +732,28 @@ header h1.entry-title,
 		width: 100%;
 		@media screen and (min-width: $desk-start) {
 			float: left;
-			width: 66%;
+			width: 66.66%;
 		}
 		p {
 			max-width: 678px;
 		}
 	}
+	.intro h2 {
+		margin-bottom: 0;
+	}
+	.map-canvas, 
+	.contact-imgs {
+		margin-bottom: 68px;
+	}
 	.map-canvas {
 		@media screen and (min-width: $desk-start) {
 			float: right;
+			padding-left: 10px;
+		}
+	}
+	.address {
+		@media screen and (min-width: $desk-start) {
+			max-width: 280px;
 		}
 	}
 	.address,
@@ -735,10 +761,11 @@ header h1.entry-title,
 		width: 100%;
 		@media screen and (min-width: $desk-start) {
 			float: right;
-			width: 33%;
+			width: 33.33%;
 		}
 	}
 	.contact-imgs {
+		line-height: 0;
 		@media screen and (min-width: $desk-start) {
 			float: left;
 		}
@@ -746,7 +773,7 @@ header h1.entry-title,
 }
 .contact-imgs { 
 	img {
-		margin-top: 22px;
+		margin-top: 10px;
 		@media screen and (min-width: $desk-start) {
 			&:first-child {
 				margin-top: 0;

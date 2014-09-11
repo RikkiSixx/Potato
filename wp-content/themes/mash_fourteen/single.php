@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<section role="main">
+<section role="main" class="page-blog">
 
 	<header class="header">
 		<h1 class="entry-title">Blog</h1>
@@ -12,7 +12,6 @@
 
 			<header>			
 				<h4 class="entry-title"><?php the_title(); ?></h4>
-				<?php // get_template_part( 'entry-meta' ); ?>
 			</header>
 
 			<section class="entry-content post-wrap cf">

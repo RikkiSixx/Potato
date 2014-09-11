@@ -88,7 +88,6 @@ jQuery(document).ready(function($){
 
 			clearheight('.service-list header');
 			clearheight('.service-list .entry-content');
-			$('.process li p').equalHeights();
 		};
 
 		var displayDesktop = function() {
@@ -97,7 +96,6 @@ jQuery(document).ready(function($){
 
 			clearheight('.service-list header');
 			clearheight('.service-list .entry-content');
-			clearheight('.process li p');
 		};
 
 		var resizeMobile = function() {
@@ -105,7 +103,7 @@ jQuery(document).ready(function($){
 
 			$('.service-list header').equalHeights();
 			$('.service-list .entry-content').equalHeights();
-			$('.process li p').equalHeights();
+			$('.process-stages li').equalHeights();
 		};
 
 		var resizeDesktop = function() {
@@ -113,6 +111,7 @@ jQuery(document).ready(function($){
 			
 			$('.service-list header').equalHeights();
 			$('.service-list .entry-content').equalHeights();
+			$('.process-stages li').equalHeights();
 		};
 
 		return {
