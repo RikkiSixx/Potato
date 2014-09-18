@@ -34,7 +34,7 @@ Template Name: Contact
 
 			<div class="row cf">
 				<div class=" map-canvas grid__item">
-					<iframe width="100%" height="515" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=London%20EC2A3AR%2C%20United%20Kingdom&key=AIzaSyDawMmrxNHx29kIGQTzZKElj-uE_8Jq02A"></iframe>
+					<iframe width="100%" height="590" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=London%20EC2A3AR%2C%20United%20Kingdom&key=AIzaSyDawMmrxNHx29kIGQTzZKElj-uE_8Jq02A"></iframe>
 				</div>
 
 				<div class="contact-imgs lap-and-up-one-third grid__item">
