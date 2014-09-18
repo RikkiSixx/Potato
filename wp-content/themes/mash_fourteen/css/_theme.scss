@@ -20,18 +20,11 @@ CONTENTS - GLOBAL.CSS
    1. Base styles
    ========================================================================== */
 
-
-@import url("http://fonts.googleapis.com/css?family=Roboto:300,700|Roboto+Slab:300");
-
-$brand-color: #fff200;
-$font-color: #000;
-
-$brand-face: "Roboto Slab", serif;
-
 body {
 	background: #fff;
 	color: #000;
 	font-size: 16px;
+	font-weight: 300;
 	line-height: 24px;
 	letter-spacing: -0.5px; 
 	@media screen and (min-width: $desk-start) {
@@ -90,9 +83,8 @@ html {
 a {
 	color: $font-color;
 	text-decoration: none;
-	border-bottom: 1px solid $brand-color;
+	border-bottom: 3px solid $brand-color;
 	&:hover {
-		border-bottom: 1px solid $font-color;
 		text-decoration: none;
 	}
 }
@@ -133,6 +125,13 @@ a.img-link {
 	padding: 22px;
 	@media screen and (min-width: $lap-start) {
 		padding: 22px 40px;
+	}
+}
+
+.grid { margin-bottom: 45px; }
+.grid__item { 
+	@media screen and (min-width: $desk-start) {
+		margin-bottom: 90px; 
 	}
 }
 
@@ -220,14 +219,7 @@ a.img-link {
 		}
 		li {		
 			display: block;
-			@media screen and (max-width: $lap-start) {
-				&:nth-child(odd) a {
-					background: #191919;
-					&:hover {
-						background: #343434;
-					}
-				}
-			}
+			
 			@media screen and (min-width: $lap-start) {
 				display: inline-block;				
 				float: left;	
@@ -247,15 +239,17 @@ a.img-link {
 				background: #fff;
 				font-family: $brand-face;
 				font-size: 20px;
+				font-weight: 300px;
 				padding: 0;
 				color: $font-color;
 			}
 			&:hover {							
 				@media screen and (max-width: $lap-start) {
-					background: #343434;
+					background: $brand-color;
+					color: $font-color;
 				}
 				@media screen and (min-width: $lap-start) {	
-					color: #666;
+					border-bottom:3px solid $brand-color;
 				}
 			}
 		}
@@ -269,14 +263,16 @@ a.img-link {
 	@media screen and (min-width: $desk-start) {
 		font-size: 20px;
 		line-height: 26px;
-		padding: 75px 0 0; 
+		padding: 45px 0 0; 
 	}
 	h4 {
 		font-family: $brand-face;
 		font-weight: 600;
 		@media screen and (min-width: $desk-start) {
-			font-size: 20px;
-			line-height: 26px;
+			font-size: 20px; 
+			line-height: 26px; 
+			margin-bottom:24px; 
+			letter-spacing: -0.5px; 
 		}
 	}
 	a, a:visited { 
@@ -288,7 +284,7 @@ a.img-link {
 		margin-left: 0;
 	}
 	.copyright {
-		margin: 100px 0 0;
+		margin: 45px 0 0;
 	}
 
 	.foot-item {
@@ -372,7 +368,7 @@ header h1.entry-title,
 			width: 65.66%;
 			padding: 0 !important;
 			img {
-				max-height:506px;
+				// max-height:506px;
 			}
 		}
 	}
@@ -476,10 +472,9 @@ header h1.entry-title,
 			height: auto;
 		}
 	}
-	.post-content-wrap {
-			
+	.post-content-wrap {			
 		.read-more {
-			font-weight: bold;
+			font-weight: normal;
 		}
 	}
 
@@ -491,6 +486,7 @@ header h1.entry-title,
 		.post-content-wrap {
 			float: left;
 			width: 33%;
+			padding-right:25px;
 		}
 		.post-img-wrap {
 			float: right;
@@ -522,7 +518,7 @@ header h1.entry-title,
 .page-services {
 	.intro { 
 		@media screen and (min-width: $desk-start) {
-			margin-bottom: 45px; 
+			margin-bottom: 0; 
 		}
 	}
 }
@@ -560,9 +556,10 @@ header h1.entry-title,
 	}
 	@media screen and (min-width: $desk-start) {
 		padding-top: 50px;
+		padding-bottom: 50px;
 	}
 	h4 {
-		font-size: 16px;
+		font-size: 18px;
 		margin-bottom: 5px;
 	}
 	p { max-width: 678px; }
@@ -570,6 +567,7 @@ header h1.entry-title,
 .process-stages {
 	list-style: none;
 	margin: 0; 
+	padding-bottom:20px;
 	li {
 		display: inline-block;
 		float: left;
@@ -596,7 +594,7 @@ header h1.entry-title,
 	p {
 		line-height: 24px;
 		@media screen and (min-width: $desk-start) {
-			margin-bottom: 90px;
+			margin-bottom: 0px;
 		}
 	}
 }
@@ -695,7 +693,6 @@ header h1.entry-title,
 .staff-wrap {
 	background: #f2f2f2;
 	@media screen and (min-width: $desk-start) {	
-		margin-top: 52px;
 		padding-top: 58px;
 		padding-bottom: 58px;
 	}

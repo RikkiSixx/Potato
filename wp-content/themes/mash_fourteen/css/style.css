@@ -47,7 +47,7 @@ CONTENTS - GLOBAL.CSS
 
 */
 /* ========================================================================== 1. Base styles ========================================================================== */
-body { background: #fff; color: #000; font-size: 16px; line-height: 24px; letter-spacing: -0.5px; }
+body { background: #fff; color: #000; font-size: 16px; font-weight: 300; line-height: 24px; letter-spacing: -0.5px; }
 @media screen and (min-width: 860px) { body { font-size: 18px; line-height: 28px; } }
 
 img[width], img[height] { max-width: 100% !important; height: auto; }
@@ -62,8 +62,8 @@ html h3, html h4 { font-weight: bold; }
 html h4 { font-size: 16px; margin-bottom: 0; }
 @media screen and (min-width: 860px) { html h4 { font-size: 18px; } }
 
-a { color: black; text-decoration: none; border-bottom: 1px solid #fff200; }
-a:hover { border-bottom: 1px solid black; text-decoration: none; }
+a { color: black; text-decoration: none; border-bottom: 3px solid #fff200; }
+a:hover { text-decoration: none; }
 
 a.img-link { text-decoration: none; border: 0; }
 
@@ -75,6 +75,10 @@ a.img-link { text-decoration: none; border: 0; }
 /* ========================================================================== 3. Global layout & Typography ========================================================================== */
 .container { margin: auto; max-width: 1248px; padding: 22px; }
 @media screen and (min-width: 640px) { .container { padding: 22px 40px; } }
+
+.grid { margin-bottom: 45px; }
+
+@media screen and (min-width: 860px) { .grid__item { margin-bottom: 90px; } }
 
 .site-header { position: relative; }
 .site-header .logo { background: url("../img/logo.png") 0 0 no-repeat transparent; background-size: cover; float: left; height: 62px; margin: 0; width: 62px; }
@@ -93,22 +97,20 @@ a.img-link { text-decoration: none; border: 0; }
 @media screen and (max-width: 640px) { .main-menu .nav:before { content: 'Menu'; padding: 15px 22px; color: #fff; display: block; font-size: 20px; font-family: "Roboto Slab", serif; } }
 @media screen and (min-width: 640px) { .main-menu .nav { float: right; margin: 55px 0 0 0; max-width: 465px; width: 100%; } }
 .main-menu .nav li { display: block; }
-@media screen and (max-width: 640px) { .main-menu .nav li:nth-child(odd) a { background: #191919; }
-  .main-menu .nav li:nth-child(odd) a:hover { background: #343434; } }
 @media screen and (min-width: 640px) { .main-menu .nav li { display: inline-block; float: left; margin-left: 34px; } }
 .main-menu .nav a { border: 0; display: block; font-size: 16px; }
 @media screen and (max-width: 640px) { .main-menu .nav a { color: #fff; background: #232323; padding: 10px 22px; } }
-@media screen and (min-width: 640px) { .main-menu .nav a { background: #fff; font-family: "Roboto Slab", serif; font-size: 20px; padding: 0; color: black; } }
-@media screen and (max-width: 640px) { .main-menu .nav a:hover { background: #343434; } }
-@media screen and (min-width: 640px) { .main-menu .nav a:hover { color: #666; } }
+@media screen and (min-width: 640px) { .main-menu .nav a { background: #fff; font-family: "Roboto Slab", serif; font-size: 20px; font-weight: 300px; padding: 0; color: black; } }
+@media screen and (max-width: 640px) { .main-menu .nav a:hover { background: #fff200; color: black; } }
+@media screen and (min-width: 640px) { .main-menu .nav a:hover { border-bottom: 3px solid #fff200; } }
 
 .site-footer { background: #fff200; font-family: "Roboto Slab", serif; }
-@media screen and (min-width: 860px) { .site-footer { font-size: 20px; line-height: 26px; padding: 75px 0 0; } }
+@media screen and (min-width: 860px) { .site-footer { font-size: 20px; line-height: 26px; padding: 45px 0 0; } }
 .site-footer h4 { font-family: "Roboto Slab", serif; font-weight: 600; }
-@media screen and (min-width: 860px) { .site-footer h4 { font-size: 20px; line-height: 26px; } }
+@media screen and (min-width: 860px) { .site-footer h4 { font-size: 20px; line-height: 26px; margin-bottom: 24px; letter-spacing: -0.5px; } }
 .site-footer a, .site-footer a:visited { color: #333; border: 0; }
 .site-footer ul { list-style: none; margin-left: 0; }
-.site-footer .copyright { margin: 100px 0 0; }
+.site-footer .copyright { margin: 45px 0 0; }
 .site-footer .foot-item { width: 100%; }
 @media screen and (max-width: 640px) { .site-footer .foot-item { display: none; }
   .site-footer .foot-item.foot-address { display: inherit; } }
@@ -131,8 +133,7 @@ header h1.entry-title, .strap { font-family: "Roboto Slab", serif; font-weight: 
   .project-item:nth-child(odd) { margin-right: 1%; }
   .project-item:nth-child(even) { margin-left: 1%; } }
 @media screen and (min-width: 860px) { .project-item { margin: 0 0 10px !important; padding: 0 1% 0 0; overflow: hidden; }
-  .project-item.featured { width: 65.66%; padding: 0 !important; }
-  .project-item.featured img { max-height: 506px; } }
+  .project-item.featured { width: 65.66%; padding: 0 !important; } }
 .project-item .entry-content { background: #000; }
 .project-item header { position: absolute; top: 0; bottom: 0; left: 0; right: 0; z-index: 100; }
 .project-item img { display: block; line-height: 0; transition: all 0.5s ease; opacity: 1; transition: all 0.5s ease; }
@@ -154,9 +155,9 @@ header h1.entry-title, .strap { font-family: "Roboto Slab", serif; font-weight: 
 
 .post-wrap h3 { font-size: 18px; margin-bottom: 10px; }
 .post-wrap .post-img-wrap img { margin-bottom: 1em; max-width: 100%; height: auto; }
-.post-wrap .post-content-wrap .read-more { font-weight: bold; }
+.post-wrap .post-content-wrap .read-more { font-weight: normal; }
 @media screen and (min-width: 860px) { .post-wrap blockquote p { max-width: 90%; }
-  .post-wrap .post-content-wrap { float: left; width: 33%; }
+  .post-wrap .post-content-wrap { float: left; width: 33%; padding-right: 25px; }
   .post-wrap .post-img-wrap { float: right; width: 66%; }
   .post-wrap .post-img-wrap a { border: 0; }
   .post-wrap .post-img-wrap img { margin-bottom: 1em; } }
@@ -165,7 +166,7 @@ header h1.entry-title, .strap { font-family: "Roboto Slab", serif; font-weight: 
 
 .post-wrap blockquote p { padding: 5%; background: #f7f7f7; }
 
-@media screen and (min-width: 860px) { .page-services .intro { margin-bottom: 45px; } }
+@media screen and (min-width: 860px) { .page-services .intro { margin-bottom: 0; } }
 
 .service-list { width: 100%; clear: both; }
 .service-list .service { margin: 25px 0 20px; }
@@ -178,11 +179,11 @@ header h1.entry-title, .strap { font-family: "Roboto Slab", serif; font-weight: 
 .process, .testimonial { background: #f2f2f2; }
 
 @media screen and (min-width: 640px) { .process { padding-top: 15px; } }
-@media screen and (min-width: 860px) { .process { padding-top: 50px; } }
-.process h4 { font-size: 16px; margin-bottom: 5px; }
+@media screen and (min-width: 860px) { .process { padding-top: 50px; padding-bottom: 50px; } }
+.process h4 { font-size: 18px; margin-bottom: 5px; }
 .process p { max-width: 678px; }
 
-.process-stages { list-style: none; margin: 0; }
+.process-stages { list-style: none; margin: 0; padding-bottom: 20px; }
 .process-stages li { display: inline-block; float: left; padding: 0 5px; text-align: center; width: 50%; }
 @media screen and (min-width: 640px) { .process-stages li { width: 33%; } }
 @media screen and (min-width: 860px) { .process-stages li { width: 16.5%; } }
@@ -190,7 +191,7 @@ header h1.entry-title, .strap { font-family: "Roboto Slab", serif; font-weight: 
 @media screen and (min-width: 640px) { .process-stages li img { margin-top: 15px; margin-bottom: 10px; } }
 @media screen and (min-width: 860px) { .process-stages li img { margin-bottom: 15px; } }
 .process-stages p { line-height: 24px; }
-@media screen and (min-width: 860px) { .process-stages p { margin-bottom: 90px; } }
+@media screen and (min-width: 860px) { .process-stages p { margin-bottom: 0px; } }
 
 @media screen and (min-width: 860px) { .clients { padding: 66px 0 0; } }
 .clients ul { list-style: none; margin-left: 0; }
@@ -221,7 +222,7 @@ header h1.entry-title, .strap { font-family: "Roboto Slab", serif; font-weight: 
   .studio-images-lg.grid__item { padding-left: 10px; } }
 
 .staff-wrap { background: #f2f2f2; }
-@media screen and (min-width: 860px) { .staff-wrap { margin-top: 52px; padding-top: 58px; padding-bottom: 58px; } }
+@media screen and (min-width: 860px) { .staff-wrap { padding-top: 58px; padding-bottom: 58px; } }
 
 .person { margin: 0 0 45px; }
 .person:last-child { margin: 0; }
