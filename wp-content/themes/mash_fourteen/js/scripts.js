@@ -88,6 +88,8 @@ jQuery(document).ready(function($){
 
 			clearheight('.service-list header');
 			clearheight('.service-list .entry-content');
+
+			$('.process-stages li').equalHeights();
 		};
 
 		var displayDesktop = function() {
