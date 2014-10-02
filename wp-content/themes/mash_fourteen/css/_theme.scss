@@ -365,11 +365,9 @@ header h1.entry-title,
 		overflow: hidden;
 
 		&.featured {
+			max-height: 579px;
 			width: 65.66%;
 			padding: 0 !important;
-			img {
-				// max-height:506px;
-			}
 		}
 	}
 	.entry-content {
@@ -637,6 +635,12 @@ header h1.entry-title,
 
 // Studio Page 
 .page-studio {
+	.intro,
+	.address {
+		@media screen and (min-width: $desk-start) {
+			margin-bottom: 45px; 
+		}
+	}
 	.intro {			
 		width: 100%;
 		@media screen and (min-width: $desk-start) {
@@ -726,6 +730,12 @@ header h1.entry-title,
 }
 .intro { max-width: 678px; }
 .page-contact {
+	.intro,
+	.address {
+		@media screen and (min-width: $desk-start) {
+			margin-bottom: 45px; 
+		}
+	}
 	.intro,
 	.map-canvas {			
 		width: 100%;

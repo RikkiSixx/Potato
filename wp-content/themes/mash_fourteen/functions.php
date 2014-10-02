@@ -18,7 +18,7 @@ add_action( 'after_setup_theme', 'mash_fourteen_setup' );
 		// Thumbnail Image Support			
 		add_theme_support('post-thumbnails');
 	
-     	add_image_size( 'project-lg', 776, 602, true );
+     	add_image_size( 'project-lg', 786, 592, true );
 		add_image_size( 'project-sm', 393, 296, true );
 	
 
@@ -73,6 +73,17 @@ add_filter( 'the_title', 'mash_fourteen_title' );
 			return $title;
 		}
 	}
+
+// Prevent wrappimg links around uploaded images.
+function mash_fourteen_imagelink_setup() {
+	$image_set = get_option( 'image_default_link_type' );
+	
+	if ($image_set !== 'none') {
+		update_option('image_default_link_type', 'none');
+	}
+}
+add_action('admin_init', 'mash_fourteen_imagelink_setup', 10);
+
 
 add_filter( 'wp_title', 'mash_fourteen_filter_wp_title' );
 function mash_fourteen_filter_wp_title( $title ) {
