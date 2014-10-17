@@ -4,7 +4,7 @@
 
 
 
-	<p class="strap">Mash is a full service creative design agency based in Shoreditch, London.</p>
+	<p class="strap">Mash is a design agency specialising in bespoke solutions for the <a href="mash2014/legal-sector">legal</a> and <a href="mash2014/third-sector">third sector</a> industries.</p>
 	
 	<section class="project-grid cf">
 
